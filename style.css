@@ -117,6 +117,11 @@ body {
   width: 30%;
   min-width: 300px;
   text-decoration: none;
+  transition: transform 0.5s ease;
+}
+
+.project-tile:hover {
+  transform: scale(1.05);
 }
 
 .projects__images {
