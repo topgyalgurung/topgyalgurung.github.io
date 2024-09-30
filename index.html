@@ -6,6 +6,19 @@
     <title>Topgyal Gurung</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- customize own config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
     <!-- =====BOX ICONS===== -->
     <link
       href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
@@ -206,6 +219,18 @@
         <h2>Here are some of my projects</h2>
         <div class="projects__div">
           <a
+            href="https://space-mission-control-2.onrender.com/"
+            target="_blank"
+            class="project-tile"
+          >
+            <img
+              class="projects__images"
+              src="./assets/space-mission-control.png"
+            />
+            <p class="projects__p">Space Mission Control</p>
+          </a>
+
+          <a
             href="http://topgyalgurung.me/jeopardy-game/"
             target="_blank"
             class="project-tile"
@@ -249,7 +274,7 @@
             <p class="projects__p">Emotion AI Detector</p>
           </a>
           <a
-            href="https://github.com/topgyalgurung/space-battle-simulator"
+            href="https://space-battle-simulator.onrender.com/"
             target="_blank"
             class="project-tile"
           >
