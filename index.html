@@ -146,16 +146,37 @@
       >
         <div class="md:w-1/2">
           <h1 class="text-4xl md:text-6xl font-bold mb-4">
-            Hi,<br />I'm <span class="text-clifford">Topgyal,</span><br />
-            Software Engineer
+            <span id="typed-heading"></span>
           </h1>
           <h2 class="text-xl md:text-2xl text-gray-700 mb-6">
-            <span class="font-semibold">Currently:</span> Software Engineering
-            Trainee @ Springboard
-            <br />
-            <span class="font-semibold">Education:</span> Bachelor's in Computer
-            Science
+            <span id="typed-subheading"></span>
           </h2>
+          <script>
+            const headingText = "Hi,\nI'm Topgyal,\nSoftware Engineer";
+            const subheadingText = "Currently: Software Engineering Trainee @ Springboard with \nBachelor's in Computer Science";
+            let headingIndex = 0;
+            let subheadingIndex = 0;
+
+            function typeHeading() {
+              if (headingIndex < headingText.length) {
+                document.getElementById('typed-heading').innerHTML += headingText.charAt(headingIndex);
+                headingIndex++;
+                setTimeout(typeHeading, 50);
+              } else {
+                typeSubheading();
+              }
+            }
+
+            function typeSubheading() {
+              if (subheadingIndex < subheadingText.length) {
+                document.getElementById('typed-subheading').innerHTML += subheadingText.charAt(subheadingIndex);
+                subheadingIndex++;
+                setTimeout(typeSubheading, 30);
+              }
+            }
+
+            window.onload = typeHeading;
+          </script>
 
           <a
             href="mailto:topgyaltsering3@gmail.com"
