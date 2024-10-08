@@ -83,7 +83,60 @@
           </button>
         </div>
       </nav>
+
+      <!-- Mobile menu, toggle classes based on menu state. -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <li>
+            <a
+              href="#home"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#work"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50"
+              >Work</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
     </header>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        navToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+      });
+    </script>
 
     <main class="container mx-auto px-6 py-8">
       <!--===== HOME =====-->
