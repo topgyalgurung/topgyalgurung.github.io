@@ -172,53 +172,88 @@
             >Contact</a
           >
         </div>
-
-        <div class="md:w-1/2 mt-8 md:mt-0">
-          <svg
-            class="w-full h-auto"
-            viewBox="0 0 479 467"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <mask id="mask0" mask-type="alpha">
-              <path
-                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
-              />
-            </mask>
-            <g mask="url(#mask0)">
-              <path
-                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
-                fill="#F2F2F2"
-              />
-              <image
-                class="w-3/4 h-3/4"
-                x="50"
-                y="60"
-                href="assets/profile.png"
-                loading="lazy"
-                decoding="async"
-              />
-            </g>
-          </svg>
-          <div class="flex justify-center space-x-4 mt-4">
-            
-            
-            <h5> Find me online </h5>
-          
-            <a
-              href="https://www.linkedin.com/in/topgyal/"
-              class="text-3xl text-blue-600 hover:text-blue-700"
-              ><i class="bx bxl-linkedin"></i
-            ></a>
-            <a
-              href="https://github.com/topgyalgurung"
-              class="text-3xl text-gray-800 hover:text-gray-900"
-              ><i class="bx bxl-github"></i
-            ></a>
-          
+        <div class="relative">
+            <svg
+              class="w-3/4 h-auto mx-auto transform transition-transform duration-500 hover:scale-105"
+              viewBox="0 0 479 467"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <defs>
+                <linearGradient id="blob-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1">
+                    <animate attributeName="stop-color" 
+                      values="#FF6B6B;#4ECDC4;#45B7D1;#FF6B6B"
+                      dur="6s" repeatCount="indefinite"/>
+                  </stop>
+                  <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:1">
+                    <animate attributeName="stop-color"
+                      values="#4ECDC4;#45B7D1;#FF6B6B;#4ECDC4" 
+                      dur="6s" repeatCount="indefinite"/>
+                  </stop>
+                  <stop offset="100%" style="stop-color:#45B7D1;stop-opacity:1">
+                    <animate attributeName="stop-color"
+                      values="#45B7D1;#FF6B6B;#4ECDC4;#45B7D1"
+                      dur="6s" repeatCount="indefinite"/>
+                  </stop>
+                </linearGradient>
+              </defs>
+              <mask id="mask0" mask-type="alpha">
+                <path
+                  d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    type="scale"
+                    values="1;1.05;1"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                </path>
+              </mask>
+              <g mask="url(#mask0)">
+                <path
+                  d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
+                  fill="url(#blob-gradient)"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    type="scale"
+                    values="1;1.05;1"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                </path>
+                <image
+                  class="w-3/4 h-3/4"
+                  x="50"
+                  y="60"
+                  href="assets/profile.png"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </g>
+            </svg>
+            <div class="flex flex-col items-center mt-6">
+              <h5 class="text-lg font-medium bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse"> Find me online </h5>
+              <div class="flex space-x-6 mt-3">
+                <a
+                  href="https://www.linkedin.com/in/topgyal/"
+                  class="text-4xl transform hover:scale-110 transition-transform duration-300"
+                  style="background: linear-gradient(45deg, #0077B5, #00A0DC); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+                ><i class="bx bxl-linkedin"></i></a>
+                <a
+                  href="https://github.com/topgyalgurung"
+                  class="text-4xl transform hover:scale-110 transition-transform duration-300"
+                  style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+                ><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+        <div class="md:w-1/2 mt-8 md:mt-0">
+       
 
       <!--===== SKILLS =====-->
       <section id="skills" class="mb-16 container mx-auto px-4">
@@ -331,66 +366,8 @@
           </section>
     </section>
 
-      <section id="progress" class="mb-16">
-        <h2 class="text-3xl font-bold text-center mb-8">
-          Monthly Learning
-        </h2>
-        <div class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105">
-          <div class="p-6">
-            <div class="flex items-center justify-between mb-4">
-              <p class="text-xl font-bold text-gray-800">March 2025</p>
-              <span class="px-3 py-1 text-sm font-medium text-white bg-clifford rounded-full">Current</span>
-            </div>
-            
-            <div class="space-y-4">
-              <div class="border-l-4 border-clifford pl-4">
-                <h3 class="font-semibold text-gray-800 mb-2">Next.js In-Depth</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-600">
-                  <li>Completing Ultimate Nextjs Ebook by JS Mastery (75% completed)</li>
-                  <li>Completed Fireship Nextjs full course - Next.js 14 and App Router fundamentals (Needs revision)</li>
-                </ul>
-              </div>
+     
 
-              <div class="border-l-4 border-green-500 pl-4">
-                <h3 class="font-semibold text-gray-800 mb-2">Python Deep Dive</h3>
-                <p class="text-gray-600">Revisiting Python fundamentals based on the roadmap.sh guide</p>
-              </div>
-
-              <div class="border-l-4 border-blue-500 pl-4">
-                <h3 class="font-semibold text-gray-800 mb-2">Data Structures & Algorithms</h3>
-                <p class="text-gray-600">Intensive focus on solving DSA problems to build strong problem-solving skills</p>
-              </div>
-
-              <div class="border-l-4 border-purple-500 pl-4">
-                <h3 class="font-semibold text-gray-800 mb-2">Capstone Next.js Project</h3>
-                <p class="text-gray-600">Target: 80-90% completion of planned features from Figma UI design and project proposal</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-          <div
-            class=" mt-5 block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
-          >
-            <div class="p-4">
-              <p class="text-lg font-semibold">February 2025</p>
-              
-              <div class="flex justify-center items-center mt-4">
-                
-                
-                <ul>
-                    <li><strong>Next.js In-Depth:</strong> Understanding SSR, SSG, API routes, and middleware.</li>
-                    <li><strong>Full-Stack Fundamentals:</strong> Backend architecture, authentication, database management with PostgreSQL & Prisma.</li>
-                    <li><strong>JavaScript Deep Dive:</strong> Revisiting JavaScript fundamentals based on the roadmap.sh guide.</li>
-                    <li><strong>Google Maps Integration:</strong> Implementing maps, geolocation, and custom markers for my Next.js project.</li>
-                    <li><strong>Homepage Completion:</strong> Finalizing the homepage design and functionality for my Next.js app.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-
-      </section>
 
 
       <!--===== WORK =====-->
