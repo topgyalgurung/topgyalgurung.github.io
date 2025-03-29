@@ -252,6 +252,38 @@
           </div>
         </div>
       </section>
+      <div class="max-w-lg mx-auto bg-white shadow-lg rounded-lg p-6 text-center border border-gray-200">
+        <!-- Resume Header -->
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">My Resume</h2>
+        <p class="text-gray-600 mb-4">Click below to view or download my resume.</p>
+        
+        <!-- Resume Preview (Optional) -->
+        <div class="bg-gray-100 p-4 rounded-lg mb-4">
+            <embed src="/assets/resume.pdf" type="application/pdf" class="w-full h-40 rounded-md" />
+        </div>
+        
+        <!-- Buttons -->
+        <div class="flex justify-center space-x-4">
+            <!-- View Resume Button -->
+            <a href="/assets/resume.pdf" target="_blank"
+               class="flex items-center px-4 py-2 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M8 4a1 1 0 012 0v5h2V4a1 1 0 112 0v5h2a1 1 0 110 2h-2v5a1 1 0 11-2 0v-5h-2v5a1 1 0 11-2 0v-5H6a1 1 0 110-2h2V4z" clip-rule="evenodd"/>
+                </svg>
+                View Resume
+            </a>
+    
+            <!-- Download Resume Button -->
+            <a href="/assets/resume.pdf" download="resume.pdf"
+               class="flex items-center px-4 py-2 text-white bg-green-600 rounded-lg shadow-md hover:bg-green-700 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h3V4a1 1 0 112 0v5h3a1 1 0 110 2h-3v5a1 1 0 11-2 0v-5H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                    <path fill-rule="evenodd" d="M3 16a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                </svg>
+                Download
+            </a>
+        </div>
+    </div>
 
        
 
