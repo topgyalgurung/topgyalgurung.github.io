@@ -21,6 +21,7 @@
       };
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
 
     <!-- =====BOX ICONS===== -->
      <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
@@ -284,9 +285,9 @@
 
       <!--===== SKILLS =====-->
       <section id="skills" class="mb-16 container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12">Skills</h2>
 
         <div class="flex flex-col items-center justify-center">
+          <h2 class="text-4xl font-bold text-center mt-5">Skills</h2>
           <section class="max-w-2xl w-full">
             <h3 class="text-2xl font-semibold mb-6 text-center">
               Full-stack Software Engineer 
@@ -416,123 +417,138 @@
         
       </section> -->
 
-      <section>
-      <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 text-center border border-gray-200">
-        <!-- Section Title -->
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">📚 Books Currently Reading</h2>
-        
-        <!-- Book Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            
-            <!-- Book 1 -->
-            <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
-              <img src="https://www.scylladb.com/wp-content/uploads/oreilly-designing-data-intensive-book-2.png" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
-              <h3 class="text-lg font-semibold mt-2">Designing Data-Intensive Applications</h3>
-              <p class="text-gray-600 text-sm">By Martin Kleppmann</p>
-          </div>
-    
-            <!-- Book 2 -->
+     
 
-            <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
-              <img src="https://elementsofprogramminginterviews.com/img/python-cover-blog.png" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
-              <h3 class="text-lg font-semibold mt-2">Elements of Programming Interview in Python (Best interview book)</h3>
-              <p class="text-gray-600 text-sm">By Aziz, Lee, Prakash</p>
-              <a href="https://elementsofprogramminginterviews.com/"> Reference</a>
-          </div>
-           
-    
-            <!-- Book 3 -->
-            <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
-              <img src="https://www.briansnotes.io/wp-content/uploads/2021/01/code-complete-2-350x350.jpg" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
-              <h3 class="text-lg font-semibold mt-2"> Code Complete 2</h3>
-              <p class="text-gray-600 text-sm">By Steve McConnell </p>
-          </div>
-            
-    
-            <!-- Book 4 (Optional) -->
-          
-    
-        </div>
-    </div>
-  </section>
-
-      <!--===== WORK =====-->
-      <section id="work" class="mb-16">
-        <h2 class="text-3xl font-bold text-center mb-8">
-          Explore My Projects
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
+  <div class="w-full max-w-lg mx-auto">
+    <div class="space-y-2">
+      <h2 class="text-3xl font-bold text-center mb-8">
+        Explore My Projects
+      </h2>
+        <!--  Section 1 -->
+        <div class="border border-gray-300 rounded-lg overflow-hidden">
+            <h2>
+                <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                    onclick="toggleAccordion('collapseOne')">
+                    Next.JS Full stack Web App
+                    <span class="transition-transform" id="iconOne">▼</span>
+                </button>
+            </h2>
+            <div id="collapseOne" class="hidden px-4 py-3 bg-white">
+                <!-- <a href="https://topgyaltsering.com/cv/" class="text-blue-600 underline">CV</a> -->
+                    <p class="text-gray-600"></p>
+                <div
             class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
           >
+      
             <div class="p-4">
-              <p class="text-lg font-semibold">Comprehensive Next.js FullStack Web Application </p>
+              <p class="text-lg font-semibold"> Himalayan Connect NYC - Fullstack web app using Next.js, React, Prisma ORM for PostgreSQL
+              </p>
               <div class="flex justify-center items-center mt-4">
                 <p>COMING SOON...</p>
               </div>
             </div>
           </div>
-          <div
-            class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
-          >
-            <img
-              class="w-full h-48 object-cover rounded-t-lg"
-              src="./assets/spacetravel.png"
-              alt="Spacetravel"
-            />
-            <div class="p-4">
-              <p class="text-lg font-semibold">Space Travel</p>
-              <div class="flex justify-between items-center mt-4">
-                <a
-                  href="https://space-travel-jj1w.onrender.com/"
-                  target="_blank"
-                  rel="noopener"
-                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                >
-                  View Live
-                </a>
-                <a
-                  href="https://github.com/topgyalgurung/space-travel"
-                  target="_blank"
-                  rel="noopener"
-                  class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                >
-                  GitHub
-                </a>
+            </div>
+        </div>
+
+        <!-- Blogs Section -->
+        <div class="border border-gray-300 rounded-lg overflow-hidden">
+            <h2>
+                <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                    onclick="toggleAccordion('collapseTwo')">
+                    Space Travel React.JS App
+                    <span class="transition-transform" id="iconTwo">▼</span>
+                </button>
+            </h2>
+            <div id="collapseTwo" class="hidden px-4 py-3 bg-white">
+                <!-- <a href="https://topgyaltsering.medium.com" class="text-blue-600 underline">Medium Blog</a>
+                <p class="text-gray-600">Essays, tech blogs</p> -->
+                <div
+                class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
+              >
+                <img
+                  class="w-full h-48 object-cover rounded-t-lg"
+                  src="./assets/spacetravel.png"
+                  alt="Spacetravel"
+                />
+                <div class="p-4">
+                  <p class="text-lg font-semibold">Space Travel</p>
+                  <div class="flex justify-between items-center mt-4">
+                    <a
+                      href="https://space-travel-jj1w.onrender.com/"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    >
+                      View Live
+                    </a>
+                    <a
+                      href="https://github.com/topgyalgurung/space-travel"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
-          >
-            <img
-              class="w-full h-48 object-cover rounded-t-lg"
-              src="./assets/pokedox.png"
-              alt="Pokedox"
-            />
-            <div class="p-4">
-              <p class="text-lg font-semibold">Pokedox</p>
-              <div class="flex justify-between items-center mt-4">
-                <a
-                  href="https://pokedex-lj55.onrender.com/"
-                  target="_blank"
-                  rel="noopener"
-                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                >
-                  View Live
-                </a>
-                <a
-                  href="https://github.com/topgyalgurung/pokedox"
-                  target="_blank"
-                  rel="noopener"
-                  class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                >
-                  GitHub
-                </a>
+        </div>
+
+        <!-- Data Science Blogs Section -->
+        <div class="border border-gray-300 rounded-lg overflow-hidden">
+            <h2>
+                <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                    onclick="toggleAccordion('collapseThree')">
+                    Pokedox
+                    <span class="transition-transform" id="iconThree">▼</span>
+                </button>
+            </h2>
+            <div id="collapseThree" class="hidden px-4 py-3 bg-white">
+              <div
+              class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
+            >
+              <img
+                class="w-full h-48 object-cover rounded-t-lg"
+                src="./assets/pokedox.png"
+                alt="Pokedox"
+              />
+              <div class="p-4">
+                <p class="text-lg font-semibold">Pokedox</p>
+                <div class="flex justify-between items-center mt-4">
+                  <a
+                    href="https://pokedex-lj55.onrender.com/"
+                    target="_blank"
+                    rel="noopener"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  >
+                    View Live
+                  </a>
+                  <a
+                    href="https://github.com/topgyalgurung/pokedox"
+                    target="_blank"
+                    rel="noopener"
+                    class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                  >
+                    GitHub
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div
+            </div>
+        </div>
+        <!--  -->
+        <div class="border border-gray-300 rounded-lg overflow-hidden">
+          <h2>
+              <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                  onclick="toggleAccordion('collapseThree')">
+                  Space Mission Control
+                  <span class="transition-transform" id="iconThree">▼</span>
+              </button>
+          </h2>
+          <div id="collapseThree" class="hidden px-4 py-3 bg-white">
+            <div
             class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
           >
             <img
@@ -562,19 +578,108 @@
               </div>
             </div>
           </div>
+          </div>
+      </div>
+      <!--  -->
+      <div class="border border-gray-300 rounded-lg overflow-hidden">
+        <h2>
+            <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                onclick="toggleAccordion('collapseThree')">
+                Jeopardy Game
+                <span class="transition-transform" id="iconThree">▼</span>
+            </button>
+        </h2>
+        <div id="collapseThree" class="hidden px-4 py-3 bg-white">
           <div
+          class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
+        >
+          <img
+            class="w-full h-48 object-cover rounded-t-lg"
+            src="./assets/jeopardy.png"
+            alt="Jeopardy Game"
+          />
+          <div class="p-4">
+            <p class="text-lg font-semibold">Jeopardy Game</p>
+            <div class="flex justify-between items-center mt-4">
+              <a
+                href="http://topgyalgurung.me/jeopardy-game/"
+                target="_blank"
+                rel="noopener"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >
+                View Live
+              </a>
+              <a
+                href="https://github.com/topgyalgurung/jeopardy-game/"
+                target="_blank"
+                rel="noopener"
+                class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+         <!--  -->
+      <div class="border border-gray-300 rounded-lg overflow-hidden">
+        <h2>
+            <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                onclick="toggleAccordion('collapseThree')">
+                Emotion AI Detector
+                <span class="transition-transform" id="iconThree">▼</span>
+            </button>
+        </h2>
+        <div id="collapseThree" class="hidden px-4 py-3 bg-white">
+          <div
+          class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
+        >
+          <img
+            class="w-full h-48 object-cover rounded-t-lg"
+            src="./assets/emotion-detector.png"
+            alt="Emotion AI Detector"
+          />
+          <div class="p-4">
+            <p class="text-lg font-semibold">Emotion AI Detector</p>
+            <div class="flex justify-between items-center mt-4">
+              <a
+                href="https://github.com/topgyalgurung/Emotion-AI-Detector"
+                target="_blank"
+                rel="noopener"
+                class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+    </div>
+    </div>
+</div>
+<br/>
+
+
+      <!--===== WORK =====-->
+      <!-- <section id="work" class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-8">
+          Explore My Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> -->
+          <!-- <div
             class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
           >
             <img
               class="w-full h-48 object-cover rounded-t-lg"
-              src="./assets/jeopardy.png"
-              alt="Jeopardy Game"
+              src="./assets/space-mission-control.png"
+              alt="Space Mission Control"
             />
             <div class="p-4">
-              <p class="text-lg font-semibold">Jeopardy Game</p>
+              <p class="text-lg font-semibold">Space Mission Control</p>
               <div class="flex justify-between items-center mt-4">
                 <a
-                  href="http://topgyalgurung.me/jeopardy-game/"
+                  href="https://space-mission-control-2.onrender.com/"
                   target="_blank"
                   rel="noopener"
                   class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -582,7 +687,7 @@
                   View Live
                 </a>
                 <a
-                  href="https://github.com/topgyalgurung/jeopardy-game/"
+                  href="https://github.com/topgyalgurung/space-mission-control"
                   target="_blank"
                   rel="noopener"
                   class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
@@ -591,35 +696,52 @@
                 </a>
               </div>
             </div>
-          </div>
-        
-          <div
-            class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
-          >
-            <img
-              class="w-full h-48 object-cover rounded-t-lg"
-              src="./assets/emotion-detector.png"
-              alt="Emotion AI Detector"
-            />
-            <div class="p-4">
-              <p class="text-lg font-semibold">Emotion AI Detector</p>
-              <div class="flex justify-between items-center mt-4">
-                <a
-                  href="https://github.com/topgyalgurung/Emotion-AI-Detector"
-                  target="_blank"
-                  rel="noopener"
-                  class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                >
-                  GitHub
-                </a>
-              </div>
+          </div> 
+      </section>-->
+
+      <!-- next section start -->
+
+      <section>
+        <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 text-center border border-gray-200">
+          <!-- Section Title -->
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">📚 Books Currently Reading</h2>
+          
+          <!-- Book Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              
+              <!-- Book 1 -->
+              <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
+                <img src="https://www.scylladb.com/wp-content/uploads/oreilly-designing-data-intensive-book-2.png" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
+                <h3 class="text-lg font-semibold mt-2">Designing Data-Intensive Applications</h3>
+                <p class="text-gray-600 text-sm">By Martin Kleppmann</p>
             </div>
+      
+              <!-- Book 2 -->
+  
+              <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
+                <img src="https://elementsofprogramminginterviews.com/img/python-cover-blog.png" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
+                <h3 class="text-lg font-semibold mt-2">Elements of Programming Interview in Python (Best interview book)</h3>
+                <p class="text-gray-600 text-sm">By Aziz, Lee, Prakash</p>
+                <a href="https://elementsofprogramminginterviews.com/"> Reference</a>
+            </div>
+             
+      
+              <!-- Book 3 -->
+              <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
+                <img src="https://www.briansnotes.io/wp-content/uploads/2021/01/code-complete-2-350x350.jpg" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
+                <h3 class="text-lg font-semibold mt-2"> Code Complete 2</h3>
+                <p class="text-gray-600 text-sm">By Steve McConnell </p>
+            </div>
+              
+      
+              <!-- Book 4 (Optional) -->
+            
           </div>
-        </div>
-      </section>
+      </div>
+    </section>
 
       <section id="learning" class="mb-16">
-        <h2 class="text-3xl font-bold text-center mb-8">Favorite Tech YouTube Channels</h2>
+        <h2 class="text-3xl font-bold text-center mb-8">Favorite Tech Learning Channels</h2>
         <div class="flex flex-wrap justify-center items-center">
           <div class="w-full md:w-1/2 lg:w-1/3 p-4">
             <ul class="list-disc pl-5">
@@ -662,7 +784,7 @@
             <i class="bx bxl-medium"></i>
           </a>
         </div>
-        <p>&copy; 2024 Topgyal Gurung</p>
+        <p>&copy; 2025 Topgyal Gurung</p>
       </div>
     </footer>
 
@@ -671,5 +793,18 @@
 
     <!--===== MAIN JS =====-->
     <script src="assets/sript/main.js"></script>
+    <script>
+      function toggleAccordion(id) {
+          const content = document.getElementById(id);
+          const icon = document.getElementById("icon" + id.charAt(id.length - 1));
+          if (content.classList.contains("hidden")) {
+              content.classList.remove("hidden");
+              icon.style.transform = "rotate(180deg)";
+          } else {
+              content.classList.add("hidden");
+              icon.style.transform = "rotate(0deg)";
+          }
+      }
+  </script>
   </body>
 </html>
