@@ -1,0 +1,32 @@
+const express = require("express");
+const cors = require("cors");
+const { google } = require("googleapis");
+require("dotenv").config();
+
+const app = express();
+app.use(cors());
+
+// Your API endpoint
+app.get("/api/leetcode", async (req, res) => {
+  try {
+    const auth = new google.auth.GoogleAuth({
+      credentials: {
+        client_email: process.env.GOOGLE_CLIENT_EMAIL,
+        private_key: process.env.GOOGLE_PRIVATE_KEY,
+      },
+      scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
+    });
+
+    const sheets = google.sheets({ version: "v4", auth });
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: process.env.SPREADSHEET_ID,
+      range: "Sheet1!A:D",
+    });
+
+    res.json(response.data.values);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch data" });
+  }
+});
+
+app.listen(3000, () => console.log("Server running on port 3000"));
