@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
@@ -8,18 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
- 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: "#da373d",
-            },
-          },
-        },
-      };
-    </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     
 
@@ -42,7 +31,7 @@
         <div>
           <a
             href="#"
-            class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-clifford to-red-500"
+            class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 to-gray-500"
             >Topgyal Gurung</a
           >
         </div>
@@ -65,16 +54,16 @@
             </li>
             <li>
               <a
-                href="#work"
+                href="#projects"
                 class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out"
-                >Work</a
+                >Projects</a
               >
             </li>
             <li>
               <a
-                href="#contact"
+                href="#resources"
                 class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out"
-                >Contact</a
+                >Resources</a
               >
             </li>
           </ul>
@@ -126,7 +115,9 @@
     </header>
 
     <main class="container mx-auto px-6 py-8">
-      <!--===== HOME =====-->
+
+      <!-- Home Section -->
+
       <section
         id="home"
         class="flex flex-col md:flex-row items-center justify-between mb-16"
@@ -139,9 +130,9 @@
             <span id="typed-subheading"></span>
           </h2>
           <script>
-            const headingText = "Hi,\nI'm Topgyal,\nSoftware Engineer";
+            const headingText = "Hi,\nI'm Topgyal";
             const subheadingText =
-              "Currently: Software Engineering Trainee @ Springboard with \nBachelor's in Computer Science";
+              "Software Engineer with Bachelor's in Computer Science";
             let headingIndex = 0;
             let subheadingIndex = 0;
 
@@ -168,11 +159,7 @@
             window.onload = typeHeading;
           </script>
 
-          <a
-            href="mailto:topgyaltsering3@gmail.com"
-            class="inline-block bg-clifford text-white px-6 py-2 rounded-full hover:bg-red-600 transition duration-300"
-            >Contact</a
-          >
+          
         </div>
         <div class="relative">
             <svg
@@ -254,6 +241,9 @@
           </div>
         </div>
       </section>
+
+      <!-- Resume Section -->
+
         <div class="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-lg px-6 py-8 sm:px-8 text-left md:text-center border border-gray-200">
         <!-- Resume Header -->
         <h2 class="text-2xl font-bold text-gray-800 mb-2">My Resume</h2>
@@ -284,27 +274,27 @@
 
        
 
-      <!--===== SKILLS =====-->
+      <!-- Skills Section -->
+
       <section id="skills" class="mb-16 container mx-auto px-4">
 
         <div class="flex flex-col items-center justify-center">
-          <h2 class="text-4xl font-bold text-center mt-5">Skills</h2>
+          <h2 class="text-4xl font-bold text-center mt-5 mb-5">Skills</h2>
           <section class="max-w-2xl w-full">
-            <h3 class="text-2xl font-semibold mb-6 text-center">
-              Full Stack Software Engineer 
-            </h3>
+           
             <ul class="list-disc pl-5">
-              <li>Front-End Expertise: Proficient in React.js, Next.js, and component-based architectures. Experienced in state management, server-side rendering (SSR), and static site generation (SSG).</li>
-              <li>UI/UX & Design: Skilled in Figma for wireframing and prototyping, ensuring visually appealing and accessible designs. Experienced with Tailwind CSS and Material UI for responsive and scalable styling.</li>
-              <li>Asynchronous & API Handling: Deep understanding of AJAX, Axios, Fetch, async/await for efficient data fetching and API integration.</li>
-              <li>Performance & Optimization: Strong grasp of data structures, algorithms, and performance tuning for optimal web performance.</li>
-              <li>Tooling & Best Practices: Experienced with version control (Git, GitHub), CLI tools (Bash, Zsh), and testing frameworks like Jest & Cypress.</li>
-              <li>Current Focus: Expanding expertise in TypeScript, authentication strategies, caching solutions (Redis), and MongoDB (NoSQL) for full-stack scalability. Deepening knowledge in designing full-stack applications that are scalable, maintainable, and production-ready.</li>
+              <li><strong>Front-End Expertise:</strong> Proficient in React.js, Next.js, and component-based architectures.</li>
+              <li><strong>UI/UX & Design:</strong> Skilled in Figma for wireframing and prototyping, ensuring visually appealing and accessible designs. Experienced with Tailwind CSS and Material UI </li>
+              <li><strong>Asynchronous & API Handling:</strong> Deep understanding of AJAX, Axios, Fetch, async/await for efficient data fetching and API integration.</li>
+              <li><strong>Performance & Optimization:</strong> Strong grasp of data structures, algorithms, and performance tuning for optimal web performance.</li>
+              <li><strong>Tooling & Best Practices:</strong> version control (Git, GitHub), CLI tools (Bash, Zsh), and testing frameworks like Jest,Mocha, Chai and React Testing Library. </li>
+              <li><strong></strong>Current Focus:</strong> Expanding expertise in TypeScript, authentication strategies, caching solutions (Redis), and MongoDB (NoSQL) for full-stack scalability. Deepening knowledge in designing full-stack applications that are scalable, maintainable, and production-ready.</li>
             </ul>
             </section>
-            <section>
 
-            <div class="flex flex-wrap justify-center items-center gap-4">
+            <!-- Skills Section -->
+            <section>
+            <div class="flex flex-wrap justify-center items-center gap-4 mt-5">
               <div class="flex items-center justify-center">
                 <div class="flex items-center justify-center">
                   <div class="flex items-center justify-center bg-gradient-to-r from-yellow-100 to-yellow-200 p-3 rounded-lg shadow-md w-1/3 mb-4">
@@ -395,31 +385,9 @@
           </section>
     </section>
 
-      <!-- <section id="progress" class="mb-16"> -->
-          <!-- <div
-            class=" mt-5 block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
-          >
-            <div class="p-4">
-              <p class="text-lg font-semibold">February 2025</p>
-              
-              <div class="flex justify-center items-center mt-4">
-  
-                
-                <ul>
-                    <li><strong>Next.js In-Depth:</strong> Understanding SSR, SSG, API routes, and middleware.</li>
-                    <li><strong>Full-Stack Fundamentals:</strong> Backend architecture, authentication, database management with PostgreSQL & Prisma.</li>
-                    <li><strong>JavaScript Deep Dive:</strong> Revisiting JavaScript fundamentals based on the roadmap.sh guide.</li>
-                    <li><strong>Google Maps Integration:</strong> Implementing maps, geolocation, and custom markers for my Next.js project.</li>
-                    <li><strong>Homepage Completion:</strong> Finalizing the homepage design and functionality for my Next.js app.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        
-      </section> -->
 
-     
-
+     <!-- Projects Section -->
+<section id="projects" class="mb-16 container mx-auto px-4">
     <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="space-y-2">
       <h2 class="text-3xl font-bold text-center mb-8">
@@ -435,40 +403,23 @@
                 </button>
             </h2>
             <div id="collapseOne" class="hidden px-4 py-3 bg-white">
-                <!-- <a href="https://topgyaltsering.com/cv/" class="text-blue-600 underline">CV</a> -->
-                    <p class="text-gray-600"></p>
-                <div
-            class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
-          >
-      
-            <div class="p-4">
-              <p class="text-lg font-semibold"> Himalayan Connect NYC - Full Stack Web App using Next.js, React, Prisma ORM for PostgreSQL
-              </p>
-              <div class="flex justify-between items-center mt-4">
-                <div class="flex justify-center items-center mt-4">
-                  <a
-                  href="https://himalayan-connect-nyc.vercel.app/"
-                  target="_blank"
-                  rel="noopener"
-                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                >
-                  View Live
-                </a>
+                <div class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105">
+                    <div class="p-4">
+                        <p class="text-lg font-semibold">Himalayan Connect NYC - Full Stack Web App using Next.js, React, Prisma ORM for PostgreSQL</p>
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://himalayan-connect-nyc.vercel.app/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                View Live
+                            </a>
+                            <a href="https://github.com/topgyalgurung/nextjs-fullstack-app" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              <a
-                      href="https://github.com/topgyalgurung/nextjs-fullstack-app"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                    >
-                      GitHub
-                    </a>
-            </div>
-          </div>
             </div>
         </div>
 
-        <!-- Blogs Section -->
+        <!-- Space Travel Section -->
         <div class="border border-gray-300 rounded-lg overflow-hidden">
             <h2>
                 <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
@@ -478,42 +429,24 @@
                 </button>
             </h2>
             <div id="collapseTwo" class="hidden px-4 py-3 bg-white">
-                <!-- <a href="https://topgyaltsering.medium.com" class="text-blue-600 underline">Medium Blog</a>
-                <p class="text-gray-600">Essays, tech blogs</p> -->
-                <div
-                class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
-              >
-                <img
-                  class="w-full h-48 object-cover rounded-t-lg"
-                  src="./assets/spacetravel.png"
-                  alt="Spacetravel"
-                />
-                <div class="p-4">
-                  <p class="text-lg font-semibold">Space Travel</p>
-                  <div class="flex justify-between items-center mt-4">
-                    <a
-                      href="https://space-travel-jj1w.onrender.com/"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                    >
-                      View Live
-                    </a>
-                    <a
-                      href="https://github.com/topgyalgurung/space-travel"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                    >
-                      GitHub
-                    </a>
-                  </div>
+                <div class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105">
+                    <img class="w-full h-48 object-cover rounded-t-lg" src="./assets/spacetravel.png" alt="Spacetravel"/>
+                    <div class="p-4">
+                        <p class="text-lg font-semibold">Space Travel</p>
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://space-travel-jj1w.onrender.com/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                View Live
+                            </a>
+                            <a href="https://github.com/topgyalgurung/space-travel" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
         </div>
 
-        <!-- Data Science Blogs Section -->
+        <!-- Pokedox Section -->
         <div class="border border-gray-300 rounded-lg overflow-hidden">
             <h2>
                 <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
@@ -523,159 +456,90 @@
                 </button>
             </h2>
             <div id="collapseThree" class="hidden px-4 py-3 bg-white">
-              <div
-              class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
-            >
-              <img
-                class="w-full h-48 object-cover rounded-t-lg"
-                src="./assets/pokedox.png"
-                alt="Pokedox"
-              />
-              <div class="p-4">
-                <p class="text-lg font-semibold">Pokedox</p>
-                <div class="flex justify-between items-center mt-4">
-                  <a
-                    href="https://pokedex-lj55.onrender.com/"
-                    target="_blank"
-                    rel="noopener"
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                  >
-                    View Live
-                  </a>
-                  <a
-                    href="https://github.com/topgyalgurung/pokedox"
-                    target="_blank"
-                    rel="noopener"
-                    class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                  >
-                    GitHub
-                  </a>
+                <div class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105">
+                    <img class="w-full h-48 object-cover rounded-t-lg" src="./assets/pokedox.png" alt="Pokedox"/>
+                    <div class="p-4">
+                        <p class="text-lg font-semibold">Pokedox</p>
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://pokedex-lj55.onrender.com/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                View Live
+                            </a>
+                            <a href="https://github.com/topgyalgurung/pokedox" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
             </div>
         </div>
-        <!--  -->
+
+        <!-- Space Mission Control Section -->
         <div class="border border-gray-300 rounded-lg overflow-hidden">
-          <h2>
-              <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                  onclick="toggleAccordion('collapseFour')">
-                  Space Mission Control
-                  <span class="transition-transform" id="iconFour">▼</span>
-              </button>
-          </h2>
-          <div id="collapseFour" class="hidden px-4 py-3 bg-white">
-            <div
-            class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
-          >
-            <img
-              class="w-full h-48 object-cover rounded-t-lg"
-              src="./assets/space-mission-control.png"
-              alt="Space Mission Control"
-            />
-            <div class="p-4">
-              <p class="text-lg font-semibold">Space Mission Control</p>
-              <div class="flex justify-between items-center mt-4">
-                <a
-                  href="https://space-mission-control-2.onrender.com/"
-                  target="_blank"
-                  rel="noopener"
-                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                >
-                  View Live
-                </a>
-                <a
-                  href="https://github.com/topgyalgurung/space-mission-control"
-                  target="_blank"
-                  rel="noopener"
-                  class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                >
-                  GitHub
-                </a>
-              </div>
+            <h2>
+                <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                    onclick="toggleAccordion('collapseFour')">
+                    Space Mission Control
+                    <span class="transition-transform" id="iconFour">▼</span>
+                </button>
+            </h2>
+            <div id="collapseFour" class="hidden px-4 py-3 bg-white">
+                <div class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105">
+                    <img class="w-full h-48 object-cover rounded-t-lg" src="./assets/space-mission-control.png" alt="Space Mission Control"/>
+                    <div class="p-4">
+                        <p class="text-lg font-semibold">Space Mission Control</p>
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://space-mission-control-2.onrender.com/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                View Live
+                            </a>
+                            <a href="https://github.com/topgyalgurung/space-mission-control" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          </div>
-      </div>
-      <!--  5-->
-      <div class="border border-gray-300 rounded-lg overflow-hidden">
-        <h2>
-            <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseFive')">
-                Jeopardy Game
-                <span class="transition-transform" id="iconFive">▼</span>
-            </button>
-        </h2>
-        <div id="collapseFive" class="hidden px-4 py-3 bg-white">
-          <div
-          class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
-        >
-          <img
-            class="w-full h-48 object-cover rounded-t-lg"
-            src="./assets/jeopardy.png"
-            alt="Jeopardy Game"
-          />
-          <div class="p-4">
-            <p class="text-lg font-semibold">Jeopardy Game</p>
-            <div class="flex justify-between items-center mt-4">
-              <a
-                href="http://topgyalgurung.me/jeopardy-game/"
-                target="_blank"
-                rel="noopener"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              >
-                View Live
-              </a>
-              <a
-                href="https://github.com/topgyalgurung/jeopardy-game/"
-                target="_blank"
-                rel="noopener"
-                class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-              >
-                GitHub
-              </a>
+        </div>
+
+        <!-- Jeopardy Game Section -->
+        <div class="border border-gray-300 rounded-lg overflow-hidden">
+            <h2>
+                <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                    onclick="toggleAccordion('collapseFive')">
+                    Jeopardy Game
+                    <span class="transition-transform" id="iconFive">▼</span>
+                </button>
+            </h2>
+            <div id="collapseFive" class="hidden px-4 py-3 bg-white">
+                <div class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105">
+                    <img class="w-full h-48 object-cover rounded-t-lg" src="./assets/jeopardy.png" alt="Jeopardy Game"/>
+                    <div class="p-4">
+                        <p class="text-lg font-semibold">Jeopardy Game</p>
+                        <div class="flex gap-4 mt-4">
+                            <a href="http://topgyalgurung.me/jeopardy-game/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                View Live
+                            </a>
+                            <a href="https://github.com/topgyalgurung/jeopardy-game/" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        </div>
+
+               
          <!--  -->
-      <div class="border border-gray-300 rounded-lg overflow-hidden">
-        <h2>
-            <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseSix')">
-                Emotion AI Detector
-                <span class="transition-transform" id="iconSix">▼</span>
-            </button>
-        </h2>
-        <div id="collapseSix" class="hidden px-4 py-3 bg-white">
-          <div
-          class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105"
-        >
-          <img
-            class="w-full h-48 object-cover rounded-t-lg"
-            src="./assets/emotion-detector.png"
-            alt="Emotion AI Detector"
-          />
-          <div class="p-4">
-            <p class="text-lg font-semibold">Emotion AI Detector</p>
-            <div class="flex justify-between items-center mt-4">
-              <a
-                href="https://github.com/topgyalgurung/Emotion-AI-Detector"
-                target="_blank"
-                rel="noopener"
-                class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-              >
-                GitHub
-              </a>
-            </div>
-          </div>
+     
         </div>
       </div>
         </div>
     </div>
     </div>
 </div>
-<br/>
+</section>
+
+
+
 
 <!-- Replace the existing coding progress section with this -->
 <section id="coding-stats" class="mb-16">
@@ -775,59 +639,135 @@
 </section>
 
 <!-- Books section continues here -->
-<section>
+<section id="resources" class="mb-16">
+  
   <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 text-center border border-gray-200">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">📚 Key Reading</h2>
     <!-- Section Title -->
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">📚 Books Currently Reading</h2>
+
     
     <!-- Book Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         
         <!-- Book 1 -->
         <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://www.scylladb.com/wp-content/uploads/oreilly-designing-data-intensive-book-2.png" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
-          <h3 class="text-lg font-semibold mt-2">Designing Data-Intensive Applications</h3>
-          <p class="text-gray-600 text-sm">By Martin Kleppmann</p>
-      </div>
+          <a href="https://dataintensive.net/" target="_blank" rel="noopener">
+            <img src="https://www.scylladb.com/wp-content/uploads/oreilly-designing-data-intensive-book-2.png" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
+            <h3 class="text-lg font-semibold mt-2">Designing Data-Intensive Applications</h3>
+            <p class="text-gray-600 text-sm">By Martin Kleppmann</p>
+          </a>
+        </div>
   
         <!-- Book 2 -->
 
         <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
+          <a href="https://elementsofprogramminginterviews.com/" target="_blank" rel="noopener">
           <img src="https://elementsofprogramminginterviews.com/img/python-cover-blog.png" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
           <h3 class="text-lg font-semibold mt-2">Elements of Programming Interview in Python (Best interview book)</h3>
           <p class="text-gray-600 text-sm">By Aziz, Lee, Prakash</p>
-          <a href="https://elementsofprogramminginterviews.com/"> Reference</a>
+          </a>
       </div>
        
 
         <!-- Book 3 -->
         <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://www.briansnotes.io/wp-content/uploads/2021/01/code-complete-2-350x350.jpg" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
-          <h3 class="text-lg font-semibold mt-2"> Code Complete 2</h3>
-          <p class="text-gray-600 text-sm">By Steve McConnell </p>
+          <a href="https://a.co/d/4r5uBF9" target="_blank" rel="noopener"> 
+            <img src="https://www.briansnotes.io/wp-content/uploads/2021/01/code-complete-2-350x350.jpg" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
+            <h3 class="text-lg font-semibold mt-2"> Code Complete 2</h3>
+            <p class="text-gray-600 text-sm">By Steve McConnell </p>
+          </a>
       </div>
-        
-
-        <!-- Book 4 (Optional) -->
+      
       
     </div>
 </div>
-</section>
 
-    <section id="learning" class="mb-16">
-      <h2 class="text-3xl font-bold text-center mb-2 mt-8">Favorite Tech Learning Channels</h2>
-      <div class="flex flex-wrap justify-center items-center">
-        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-          <ul class="list-disc pl-5">
-            <li><a href="https://www.youtube.com/@Fireship" target="_blank" class="text-blue-500 hover:text-blue-700">Fireship (Favorite so far)</a></li>
-            <li><a href="https://www.youtube.com/@NetNinja" target="_blank" class="text-blue-500 hover:text-blue-700">Net Ninja</a></li>
-            <li><a href="https://www.youtube.com/@academind" target="_blank" class="text-blue-500 hover:text-blue-700">Academind</a></li>
-            <li><a href="https://www.youtube.com/@programmingwithmosh" target="_blank" class="text-blue-500 hover:text-blue-700" >Programming with Mosh</a></li>
-            <li><a href="https://www.youtube.com/@ByteByteGo" target="_blank" class="text-blue-500 hover:text-blue-700">ByteByteGo</a></li>
-            <li><a href="https://www.youtube.com/@TheCodingTrain" target="_blank" class="text-blue-500 hover:text-blue-700">The Coding Train</a></li>
-          </ul>
+      <div class="max-w-4xl mx-auto px-4 mt-10">
+
+        <h2 class="text-3xl font-bold text-center mb-8">Favorite Tech Learning Channels</h2>
+        
+        <!-- Category Tabs -->
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+          <button class="category-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="general">General</button>
+          <button class="category-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="javascript">JavaScript</button>
+          <button class="category-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="react">React.js</button>
+          <button class="category-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="nextjs">Next.js</button>
+        </div>
+
+        <!-- Content Container -->
+        <div class="text-center gap-8">
+          
+          <!-- General Section -->
+          <div class="category-content bg-white rounded-lg shadow-md p-6" data-category="general">
+            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">General Resources</h3>
+            <ul class="space-y-3">
+              <li><a href="https://www.youtube.com/@Fireship" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Fireship</a></li>
+              <li><a href="https://www.freecodecamp.org" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>freeCodeCamp</a></li>
+              <li><a href="https://www.youtube.com/@ByteByteGo" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>ByteByteGo</a></li>
+            
+            </ul>
+          </div>
+
+          <!-- JavaScript Section -->
+          <div class="category-content bg-white rounded-lg shadow-md p-6 hidden" data-category="javascript">
+            <h3 class="text-xl font-semibold mb-4 text-gray-800">JavaScript Resources</h3>
+            <ul class="space-y-3">
+              <!-- Add JavaScript resources here -->
+              <li><a href="https://www.youtube.com/@academind" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Academind</a></li>
+              <li><a href="https://www.youtube.com/@javascriptmastery" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>JavaScript Mastery</a></li>
+              <li><a href="https://www.youtube.com/@programmingwithmosh" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Programming with Mosh</a></li>
+              <li><a href="https://www.youtube.com/@TheCodingTrain" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>The Coding Train</a></li>
+            </ul>
+          </div>
+
+          <!-- React Section -->
+          <div class="category-content bg-white rounded-lg shadow-md p-6 hidden" data-category="react">
+            <h3 class="text-xl font-semibold mb-4 text-gray-800">React.js Resources</h3>
+            <ul class="space-y-3">
+              <!-- Add React resources here -->
+              <li><a href="https://www.youtube.com/@jherr" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Jack Herrington</a></li>
+              <li><a href="https://www.youtube.com/@cosdensolutions" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Cosden Solutions</a></li>
+            </ul>
+          </div>
+
+          <!-- Next.js Section -->
+          <div class="category-content bg-white rounded-lg shadow-md p-6 hidden" data-category="nextjs">
+            <h3 class="text-xl font-semibold mb-4 text-gray-800">Next.js Resources</h3>
+            <ul class="space-y-3">
+              <!-- Add Next.js resources here -->
+              <li><a href="https://www.youtube.com/@ByteGrad" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>ByteGrad</a></li>
+              <li><a href="https://www.youtube.com/@VercelHQ" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>VercelHQ</a></li>
+              <li><a href="https://www.youtube.com/channel/UCXgGY0wkgOzynnHvSEVmE3A" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Hitesh Choudhary</a></li>
+            </ul>
+          </div>
         </div>
       </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const tabs = document.querySelectorAll('.category-tab');
+          const contents = document.querySelectorAll('.category-content');
+
+          tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+              // Remove active class from all tabs
+              tabs.forEach(t => t.classList.remove('active', 'bg-blue-500', 'text-white'));
+              tabs.forEach(t => t.classList.add('bg-gray-200', 'text-gray-700'));
+
+              // Add active class to clicked tab
+              tab.classList.add('active', 'bg-blue-500', 'text-white');
+              tab.classList.remove('bg-gray-200', 'text-gray-700');
+
+              // Hide all content
+              contents.forEach(content => content.classList.add('hidden'));
+
+              // Show selected content
+              const category = tab.getAttribute('data-category');
+              document.querySelector(`.category-content[data-category="${category}"]`).classList.remove('hidden');
+            });
+          });
+        });
+      </script>
     </section>
     <!-- watching -->
     <!-- <section id="learning" class="mb-16"></section>
@@ -851,14 +791,6 @@
     <!--===== FOOTER =====-->
     <footer class="bg-gray-800 text-white py-8">
       <div class="container mx-auto px-6 flex flex-col items-center">
-        <div class="flex space-x-4 mb-4">
-          <a
-            href="https://medium.com/@topgyalgurung"
-            class="text-2xl hover:text-gray-400 transition duration-300"
-          >
-            <i class="bx bxl-medium"></i>
-          </a>
-        </div>
         <p>&copy; 2025 Topgyal Gurung</p>
       </div>
     </footer>
