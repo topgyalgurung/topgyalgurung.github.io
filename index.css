@@ -34,3 +34,30 @@ body {
   max-width: 800px;
   margin: 0 auto;
 }
+
+.stats-card {
+  @apply bg-gray-50 rounded-lg p-3;
+}
+
+.stats-card h4 {
+  @apply mb-1;
+}
+
+.stats-card p {
+  @apply transition-all duration-300;
+}
+
+section {
+  display: grid;
+  min-height: 100vh;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  
+}

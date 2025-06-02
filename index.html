@@ -1,706 +1,523 @@
 <!DOCTYPE html>
 
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Topgyal Gurung</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    
 
-    <!-- =====BOX ICONS===== -->
-     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/stats.css">
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Topgyal Gurung</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="script.js"></script>
+  <!--===== SCROLL REVEAL =====-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- =====BOX ICONS===== -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/stats.css">
+</head>
 
-  <body class="font-sans bg-gradient-to-r from-gray-100 to-gray-200">
-  
+<!-- BODY -->
 
-    <header
-      class="bg-white mb-16 container mx-auto px-4 shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-30 sticky top-0 z-50"
-    >
-      <nav
-        class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 container mx-auto px-6 py-4 flex justify-between items-center"
-      >
-        <div>
-          <a
-            href="#"
-            class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 to-gray-500"
-            >Topgyal Gurung</a
-          >
-        </div>
+<body class="font-sans bg-gradient-to-r from-gray-100 to-gray-200">
 
-        <div class="hidden md:flex">
-          <ul class="flex space-x-6">
-            <li>
-              <a
-                href="#home"
-                class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#skills"
-                class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out"
-                >Skills</a
-              >
-            </li>
-            <li>
-              <a
-                href="#projects"
-                class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out"
-                >Projects</a
-              >
-            </li>
-            <li>
-              <a
-                href="#resources"
-                class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out"
-                >Resources</a
-              >
-            </li>
-          </ul>
-        </div>
+  <!-- HEADER START  -->
 
-        <div class="md:hidden">
-          <button
-            id="nav-toggle"
-            class="text-gray-500 hover:text-clifford transition duration-300 ease-in-out"
-          >
-            <i class="bx bx-menu text-3xl"></i>
-          </button>
-        </div>
-      </nav>
+  <header class="bg-white mb-16 container mx-auto px-4 shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-30 sticky top-0 z-50">
+    <nav class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 container mx-auto px-6 py-4 flex justify-between items-center">
+      <div>
+        <a href="#" class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 to-gray-500">Topgyal Gurung</a>
+      </div>
 
-      <!-- Mobile menu, toggle classes based on menu state. -->
-      <div id="mobile-menu" class="md:hidden hidden">
-        
-        <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <div class="hidden md:flex">
+        <ul class="flex space-x-6">
           <li>
-            <a
-              href="#home"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50"
-              >Home</a
-            >
+            <a href="#home" class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out">Home</a>
           </li>
           <li>
-            <a
-              href="#skills"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50"
-              >Skills</a
-            >
+            <a href="#skills" class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out">Skills</a>
           </li>
           <li>
-            <a
-              href="#work"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50"
-              >Work</a
-            >
+            <a href="#projects" class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out">Projects</a>
           </li>
           <li>
-            <a
-              href="#contact"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50"
-              >Contact</a
-            >
+            <a href="#resources" class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out">Resources</a>
           </li>
         </ul>
       </div>
-    </header>
 
-    <main class="container mx-auto px-6 py-8">
+      <div class="md:hidden">
+        <button id="nav-toggle" class="text-gray-500 hover:text-clifford transition duration-300 ease-in-out">
+          <i class="bx bx-menu text-3xl"></i>
+        </button>
+      </div>
+    </nav>
 
-      <!-- Home Section -->
+    <!-- Mobile menu, toggle classes based on menu state. -->
+    <div id="mobile-menu" class="md:hidden hidden">
 
-      <section
+      <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <li>
+          <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50">Home</a>
+        </li>
+        <li>
+          <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50">Skills</a>
+        </li>
+        <li>
+          <a href="#work" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50">Work</a>
+        </li>
+        <li>
+          <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </header>
 
-        id="home"
-        class="mb-16 container mx-auto px-4"
-      >
-        <div class=w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 class="text-4xl md:text-6xl text-center font-bold mb-4 text-col">
-            <span id="typed-heading"></span>
-          </h1>
-          <h2 class="text-xl md:text-2xl text-center text-gray-700 mb-6">
-            <span id="typed-subheading"></span>
-          </h2>
-          <script>
-            const headingText = "Hi,\nI'm Topgyal";
-            const subheadingText =
-              "Software Engineer with Bachelor's in Computer Science";
-            let headingIndex = 0;
-            let subheadingIndex = 0;
+  <!-- HEADER END -->
 
-            function typeHeading() {
-              if (headingIndex < headingText.length) {
-                document.getElementById("typed-heading").innerHTML +=
-                  headingText.charAt(headingIndex);
-                headingIndex++;
-                setTimeout(typeHeading, 50);
-              } else {
-                typeSubheading();
-              }
-            }
+  <main class="container mx-auto px-6 py-8">
 
-            function typeSubheading() {
-              if (subheadingIndex < subheadingText.length) {
-                document.getElementById("typed-subheading").innerHTML +=
-                  subheadingText.charAt(subheadingIndex);
-                subheadingIndex++;
-                setTimeout(typeSubheading, 30);
-              }
-            }
 
-            window.onload = typeHeading;
-          </script>
+    <section id="home" class="mb-16 container mx-auto px-4" data-observe>
 
-          
-        </div>
-        <div class="relative">
-            <svg
-              class="w-1/6 h-auto mx-auto transform transition-transform duration-500 hover:scale-105"
-              viewBox="0 0 479 467"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-              <defs>
-                <linearGradient id="blob-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1">
-                    <animate attributeName="stop-color" 
-                      values="#FF6B6B;#4ECDC4;#45B7D1;#FF6B6B"
-                      dur="6s" repeatCount="indefinite"/>
-                  </stop>
-                  <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:1">
-                    <animate attributeName="stop-color"
-                      values="#4ECDC4;#45B7D1;#FF6B6B;#4ECDC4" 
-                      dur="6s" repeatCount="indefinite"/>
-                  </stop>
-                  <stop offset="100%" style="stop-color:#45B7D1;stop-opacity:1">
-                    <animate attributeName="stop-color"
-                      values="#45B7D1;#FF6B6B;#4ECDC4;#45B7D1"
-                      dur="6s" repeatCount="indefinite"/>
-                  </stop>
-                </linearGradient>
-              </defs>
-              <mask id="mask0" mask-type="alpha">
-                <path
-                  d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
-                >
-                  <animateTransform
-                    attributeName="transform"
-                    type="scale"
-                    values="1;1.05;1"
-                    dur="3s"
-                    repeatCount="indefinite"
-                  />
-                </path>
-              </mask>
-              <g mask="url(#mask0)">
-                <path
-                  d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
-                  fill="url(#blob-gradient)"
-                >
-                  <animateTransform
-                    attributeName="transform"
-                    type="scale"
-                    values="1;1.05;1"
-                    dur="3s"
-                    repeatCount="indefinite"
-                  />
-                </path>
-                <image
-                  class="w-1/2 h-1/2"
-                  x="120"
-                  y="120"
-                  href="assets/profile.png"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </g>
-            </svg>
-            <div class="flex flex-col items-center mt-6">
-              <h5 class="text-lg font-medium bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse"> Find me online </h5>
-              <div class="flex space-x-6 mt-3">
-                <a
-                  href="https://www.linkedin.com/in/topgyal/"
-                  class="text-4xl transform hover:scale-110 transition-transform duration-300"
-                  style="background: linear-gradient(45deg, #0077B5, #00A0DC); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
-                ><i class="bx bxl-linkedin"></i></a>
-                <a
-                  href="https://github.com/topgyalgurung"
-                  class="text-4xl transform hover:scale-110 transition-transform duration-300"
-                  style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
-                ><i class="bx bxl-github"></i></a>
-                  <a
-                  href="https://topgyalgurung.medium.com/"
-                  class="text-4xl transform hover:scale-110 transition-transform duration-300"
-                  style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
-                ><i class="bx bxl-medium"></i></a>
-              </div>
-            </div>
+      <!-- typed name and software engineer  -->
+
+      <div class=w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 delay-75" data-observe>
+        <h1 class="text-4xl md:text-6xl text-center font-bold mb-4 text-col">
+          <span id="typed-heading"></span>
+        </h1>
+        <h2 class="text-xl md:text-2xl text-center text-gray-700 mb-6">
+          <span id="typed-subheading"></span>
+        </h2>
+      </div>
+
+      <!--  profile image  -->
+
+      <div class="relative">
+        <svg class="w-1/4 h-auto mx-auto transform transition-transform duration-500 hover:scale-105" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs>
+            <linearGradient id="blob-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1">
+                <animate attributeName="stop-color" values="#FF6B6B;#4ECDC4;#45B7D1;#FF6B6B" dur="6s" repeatCount="indefinite" />
+              </stop>
+              <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:1">
+                <animate attributeName="stop-color" values="#4ECDC4;#45B7D1;#FF6B6B;#4ECDC4" dur="6s" repeatCount="indefinite" />
+              </stop>
+              <stop offset="100%" style="stop-color:#45B7D1;stop-opacity:1">
+                <animate attributeName="stop-color" values="#45B7D1;#FF6B6B;#4ECDC4;#45B7D1" dur="6s" repeatCount="indefinite" />
+              </stop>
+            </linearGradient>
+          </defs>
+          <mask id="mask0" mask-type="alpha">
+            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z">
+              <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="3s" repeatCount="indefinite" />
+            </path>
+          </mask>
+          <g mask="url(#mask0)">
+            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" fill="url(#blob-gradient)">
+              <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="3s" repeatCount="indefinite" />
+            </path>
+            <image class="w-1/2 h-1/2" x="120" y="120" href="assets/profile.png" loading="lazy" decoding="async" />
+          </g>
+        </svg>
+
+        <!-- social links  -->
+
+        <div class="flex flex-col items-center mt-6">
+          <h5 class="text-lg font-medium bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse"> Find me online </h5>
+          <div class="flex space-x-6 mt-3">
+            <a href="https://www.linkedin.com/in/topgyal/" class="text-4xl transform hover:scale-110 transition-transform duration-300" style="background: linear-gradient(45deg, #0077B5, #00A0DC); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://github.com/topgyalgurung" class="text-4xl transform hover:scale-110 transition-transform duration-300" style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"><i class="bx bxl-github"></i></a>
+            <a href="https://topgyalgurung.medium.com/" class="text-4xl transform hover:scale-110 transition-transform duration-300" style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"><i class="bx bxl-medium"></i></a>
           </div>
         </div>
-      </section>
-      <!-- About Me Section -->
+        <!-- social link ends  -->
+      </div>
+      </div>
+    </section>
 
-      <section id="about" class="mb-16 container mx-auto px-4">
-       
-          <!-- Elevator Pitch -->
-          <div class=" w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
-       
-            <p class="text-gray-700 leading-relaxed">
-              From the mountainside of Nepal to the heart of NYC, my journey has been shaped by curiosity, resilience and a deep love for technology. I've always been drawn to understanding how things work at a deeper level and find real fulfillment in building systems from the ground up. As a full-stack developer, I craft scalable, user-focused solutions that blend logic, creativity, and impact—bringing ideas to life through code. I love working across the stack — from intuitive frontends with React and Next.js to clean, scalable backends with Node.js and PostgreSQL. What drives me most is the challenge of turning ideas into real-world applications that solve problems and create value. I'm constantly learning, collaborating, and refining my craft — excited by what's possible and committed to building with purpose.
-            </p>
-          </div>
-        </div>
-      </section>
+    <!-- About Me Section -->
 
-      <!-- Resume Section -->
+    <section id="about" class="mb-16 container mx-auto px-4 delay-300 duration-300" data-observe>
 
-        <div class="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-lg px-6 py-8 sm:px-8 text-left md:text-center border border-gray-200">
+      <!-- Elevator Pitch -->
+
+      <div class=" w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
+
+        <p class="text-gray-700 leading-relaxed">
+          From the mountainside of Nepal to the heart of NYC, my journey has been shaped by curiosity, resilience and a deep love for technology. I've always been drawn to understanding how things work at a deeper level and find real fulfillment in building systems from the ground up. As a full-stack developer, I craft scalable, user-focused solutions that blend logic, creativity, and impact—bringing ideas to life through code. I love working across the stack — from intuitive frontends with React and Next.js to clean, scalable backends with Node.js and PostgreSQL. What drives me most is the challenge of turning ideas into real-world applications that solve problems and create value. I'm constantly learning, collaborating, and refining my craft — excited by what's possible and committed to building with purpose.
+        </p>
+      </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section >
+      <div class="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-lg px-6 py-8 sm:px-8 text-left md:text-center border border-gray-200">
         <!-- Resume Header -->
         <h2 class="text-2xl font-bold text-gray-800 mb-2">My Resume</h2>
         <p class="text-gray-600 mb-4">Click below to view or download my resume.</p>
-        
+
         <!-- Resume Preview (Optional) -->
         <div class="bg-gray-100 p-4 rounded-lg mb-4">
-            <embed src="/assets/Resume.pdf" type="application/pdf" class="w-full h-40 rounded-md" />
+          <embed src="/assets/Resume.pdf" type="application/pdf" class="w-full h-40 rounded-md" />
         </div>
-        
+
         <!-- Buttons -->
         <div class="flex justify-center space-x-4">
-            <!-- View Resume Button -->
-            <a href="/assets/Resume.pdf" target="_blank"
-               class="flex items-center px-4 py-2 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition">
-                
-                View Resume
-            </a>
-    
-            <!-- Download Resume Button -->
-            <a href="/assets/Resume.pdf" download="resume.pdf"
-               class="flex items-center px-4 py-2 text-white bg-green-600 rounded-lg shadow-md hover:bg-green-700 transition">
-           
-                Download
-            </a>
+          <!-- View Resume Button -->
+          <a href="/assets/Resume.pdf" target="_blank" class="flex items-center px-4 py-2 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition">
+
+            View Resume
+          </a>
+
+          <!-- Download Resume Button -->
+          <a href="/assets/Resume.pdf" download="resume.pdf" class="flex items-center px-4 py-2 text-white bg-green-600 rounded-lg shadow-md hover:bg-green-700 transition">
+
+            Download
+          </a>
         </div>
-    </div>
-
-       
-
-      <!-- Skills Section -->
-
-      <section id="skills" class="mb-16 container mx-auto px-4">
-
-        <div class="flex flex-col items-center justify-center">
-          <h2 class="text-4xl font-bold text-center mt-5 mb-5">Skills</h2>
-          <section class="max-w-2xl w-full">
-           
-            
-            </section>
-
-            <!-- Skills Section -->
-            <section>
-            <div class="flex flex-wrap justify-center items-center gap-4 mt-5">
-              <div class="flex items-center justify-center">
-                <div class="flex items-center justify-center">
-                  <div class="flex items-center justify-center bg-gradient-to-r from-yellow-100 to-yellow-200 p-3 rounded-lg shadow-md w-1/3 mb-4">
-                    <div class="flex items-center">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Next.js" class="h-6 w-6" />
-                      <span class="font-medium">Next.js</span>
-                    </div>
-                    <div class="w-1/2">
-                      <div class="w-full bg-white rounded-full h-3">
-                        <div class="w-4/5 bg-yellow-500 h-3 rounded-full relative">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex items-center justify-center">
-                  <div class="flex items-center justify-center bg-gradient-to-r from-blue-100 to-blue-200 p-3 rounded-lg shadow-md w-1/3 mb-4">
-                    <div class="flex items-center">
-                      <i class="bx bxl-react text-3xl text-blue-500 mr-3"></i>
-                      <span class="font-medium">React</span>
-                    </div>
-                    <div class="w-1/2">
-                      <div class="w-full bg-white rounded-full h-3">
-                        <div class="w-4/5 bg-blue-500 h-3 rounded-full relative">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex items-center justify-center">
-                  <div class="flex items-center justify-center bg-gradient-to-r from-green-100 to-green-200 p-3 rounded-lg shadow-md w-1/3 mb-4">
-                    <div class="flex items-center">
-                      <i class="bx bxl-nodejs text-3xl text-green-500 mr-3"></i>
-                      <span class="font-medium">Node.js</span>
-                    </div>
-                    <div class="w-1/2">
-                      <div class="w-full bg-white rounded-full h-3">
-                        <div class="w-4/5 bg-green-500 h-3 rounded-full relative">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex items-center justify-center">
-                  <div class="flex items-center justify-center bg-gradient-to-r from-green-100 to-green-200 p-3 rounded-lg shadow-md w-1/3 mb-4">
-                    <div class="flex items-center">
-                      <box-icon class="bx bxl-python text-3xl text-green-500 mr-3"></box-icon>
-                      <span class="font-medium">Python</span>
-                    </div>
-                    <div class="w-1/2">
-                      <div class="w-full bg-white rounded-full h-3">
-                        <div class="w-4/5 bg-green-500 h-3 rounded-full relative">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex items-center justify-center">
-                  <div class="flex items-center justify-center bg-gradient-to-r from-blue-100 to-blue-200 p-3 rounded-lg shadow-md w-1/3 mb-4">
-                    <div class="flex items-center">
-                      <i class="bx bx-data text-3xl text-blue-500 mr-3"></i>
-                      <span class="font-medium">SQL</span>
-                    </div>
-                    <div class="w-1/2">
-                      <div class="w-full bg-white rounded-full h-3">
-                        <div class="w-4/5 bg-blue-500 h-3 rounded-full relative">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex items-center justify-center">
-                  <div class="flex items-center justify-center bg-gradient-to-r from-purple-100 to-purple-200 p-3 rounded-lg shadow-md w-1/3 mb-4">
-                    <div class="flex items-center">
-                      <i class="bx bxl-figma text-3xl text-purple-500 mr-3"></i>
-                      <span class="font-medium">Figma</span>
-                    </div>
-                    <div class="w-1/2">
-                      <div class="w-full bg-white rounded-full h-3">
-                        <div class="w-4/5 bg-purple-500 h-3 rounded-full relative">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+      </div>
     </section>
 
 
-     <!-- Projects Section -->
-<section id="projects" class="mb-16 container mx-auto px-4">
-    <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="space-y-2">
-      <h2 class="text-3xl font-bold text-center mb-8">
-        Explore My Projects
-      </h2>
-        <!--  Section 1 -->
-        <div class="border border-gray-300 rounded-lg overflow-hidden">
+
+    <!-- Skills Section -->
+
+    <section id="skills" class="mb-16 container mx-auto px-4 delay-500" data-observe>
+
+      <div class="flex flex-col items-center justify-center">
+        <h2 class="text-4xl font-bold text-center mt-5 mb-5">Skills</h2>
+        <section class="max-w-2xl w-full">
+
+
+        </section>
+
+        <!-- Skills Section -->
+        <section>
+          <div class="flex flex-wrap justify-center items-center gap-4 mt-5">
+            <div class="flex items-center justify-center">
+              <div class="flex items-center justify-center">
+                <div class="flex items-center justify-center bg-gradient-to-r from-yellow-100 to-yellow-200 p-3 rounded-lg shadow-md w-1/3 mb-4">
+                  <div class="flex items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Next.js" class="h-6 w-6" />
+                    <span class="font-medium">Next.js</span>
+                  </div>
+                  <div class="w-1/2">
+                    <div class="w-full bg-white rounded-full h-3">
+                      <div class="w-4/5 bg-yellow-500 h-3 rounded-full relative">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div class="flex items-center justify-center bg-gradient-to-r from-blue-100 to-blue-200 p-3 rounded-lg shadow-md w-1/3 mb-4">
+                  <div class="flex items-center">
+                    <i class="bx bxl-react text-3xl text-blue-500 mr-3"></i>
+                    <span class="font-medium">React</span>
+                  </div>
+                  <div class="w-1/2">
+                    <div class="w-full bg-white rounded-full h-3">
+                      <div class="w-4/5 bg-blue-500 h-3 rounded-full relative">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div class="flex items-center justify-center bg-gradient-to-r from-green-100 to-green-200 p-3 rounded-lg shadow-md w-1/3 mb-4">
+                  <div class="flex items-center">
+                    <i class="bx bxl-nodejs text-3xl text-green-500 mr-3"></i>
+                    <span class="font-medium">Node.js</span>
+                  </div>
+                  <div class="w-1/2">
+                    <div class="w-full bg-white rounded-full h-3">
+                      <div class="w-4/5 bg-green-500 h-3 rounded-full relative">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div class="flex items-center justify-center bg-gradient-to-r from-green-100 to-green-200 p-3 rounded-lg shadow-md w-1/3 mb-4">
+                  <div class="flex items-center">
+                    <box-icon class="bx bxl-python text-3xl text-green-500 mr-3"></box-icon>
+                    <span class="font-medium">Python</span>
+                  </div>
+                  <div class="w-1/2">
+                    <div class="w-full bg-white rounded-full h-3">
+                      <div class="w-4/5 bg-green-500 h-3 rounded-full relative">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div class="flex items-center justify-center bg-gradient-to-r from-blue-100 to-blue-200 p-3 rounded-lg shadow-md w-1/3 mb-4">
+                  <div class="flex items-center">
+                    <i class="bx bx-data text-3xl text-blue-500 mr-3"></i>
+                    <span class="font-medium">SQL</span>
+                  </div>
+                  <div class="w-1/2">
+                    <div class="w-full bg-white rounded-full h-3">
+                      <div class="w-4/5 bg-blue-500 h-3 rounded-full relative">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div class="flex items-center justify-center bg-gradient-to-r from-purple-100 to-purple-200 p-3 rounded-lg shadow-md w-1/3 mb-4">
+                  <div class="flex items-center">
+                    <i class="bx bxl-figma text-3xl text-purple-500 mr-3"></i>
+                    <span class="font-medium">Figma</span>
+                  </div>
+                  <div class="w-1/2">
+                    <div class="w-full bg-white rounded-full h-3">
+                      <div class="w-4/5 bg-purple-500 h-3 rounded-full relative">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </section>
+
+
+    <!-- Projects Section -->
+
+    <section id="projects" class="mb-16 container mx-auto px-4">
+      <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-2">
+          <h2 class="text-3xl font-bold text-center mb-8">
+            Explore My Projects
+          </h2>
+          <!--  Section 1 -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden delay-75" data-observe>
             <h2>
-                <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                    onclick="toggleAccordion('collapseOne')">
-                    Next.js Full Stack Web App
-                    <span class="transition-transform" id="iconOne">▼</span>
-                </button>
+              <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center" onclick="toggleAccordion('collapseOne')">
+                Next.js Full Stack Web App
+                <span class="transition-transform" id="iconOne">▼</span>
+              </button>
             </h2>
             <div id="collapseOne" class="hidden px-4 py-3 bg-white">
-                <div class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105">
-                    <div class="p-4">
-                        <p class="text-lg font-semibold">Himalayan Connect NYC - Full Stack Web App using Next.js, React, Prisma ORM for PostgreSQL</p>
-                        <div class="flex gap-4 mt-4">
-                            <a href="https://himalayan-connect-nyc.vercel.app/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                View Live
-                            </a>
-                            <a href="https://github.com/topgyalgurung/nextjs-fullstack-app" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
+              <div class="block bg-white rounded-lg shadow-md">
+                <div class="p-4">
+                  <p class="text-lg font-semibold">Himalayan Connect NYC
+                  <h4> Full Stack Web App using Next.js, React, Prisma ORM for PostgreSQL</h4>
+                  </p>
+                  <div class="flex gap-4 mt-4">
+                    <a href="https://himalayan-connect-nyc.vercel.app/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                      View Live
+                    </a>
+                    <a href="https://github.com/topgyalgurung/nextjs-fullstack-app" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                      GitHub
+                    </a>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <!-- Space Travel Section -->
-        <div class="border border-gray-300 rounded-lg overflow-hidden">
+          <!-- Space Travel Section -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden duration-300" data-observe">
             <h2>
-                <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                    onclick="toggleAccordion('collapseTwo')">
-                    Space Travel React App
-                    <span class="transition-transform" id="iconTwo">▼</span>
-                </button>
+              <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center" onclick="toggleAccordion('collapseTwo')">
+                Space Travel React App
+                <span class="transition-transform" id="iconTwo">▼</span>
+              </button>
             </h2>
             <div id="collapseTwo" class="hidden px-4 py-3 bg-white">
-                <div class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105">
-                    <img class="w-full h-48 object-cover rounded-t-lg" src="./assets/spacetravel.png" alt="Spacetravel"/>
-                    <div class="p-4">
-                        <p class="text-lg font-semibold">Space Travel</p>
-                        <div class="flex gap-4 mt-4">
-                            <a href="https://space-travel-jj1w.onrender.com/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                View Live
-                            </a>
-                            <a href="https://github.com/topgyalgurung/space-travel" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
+              <div class="block bg-white rounded-lg shadow-md">
+                <img class="w-full h-48 object-cover rounded-t-lg" src="./assets/spacetravel.png" alt="Spacetravel" />
+                <div class="p-4">
+                  <p class="text-lg font-semibold">Space Travel</p>
+                  <div class="flex gap-4 mt-4">
+                    <a href="https://space-travel-jj1w.onrender.com/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                      View Live
+                    </a>
+                    <a href="https://github.com/topgyalgurung/space-travel" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                      GitHub
+                    </a>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <!-- Pokedox Section -->
-        <div class="border border-gray-300 rounded-lg overflow-hidden">
+          <!-- Pokedox Section -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden duration-500" data-observe="">
             <h2>
-                <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                    onclick="toggleAccordion('collapseThree')">
-                    Pokedox
-                    <span class="transition-transform" id="iconThree">▼</span>
-                </button>
+              <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center" onclick="toggleAccordion('collapseThree')">
+                Pokedox
+                <span class="transition-transform" id="iconThree">▼</span>
+              </button>
             </h2>
             <div id="collapseThree" class="hidden px-4 py-3 bg-white">
-                <div class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105">
-                    <img class="w-full h-48 object-cover rounded-t-lg" src="./assets/pokedox.png" alt="Pokedox"/>
-                    <div class="p-4">
-                        <p class="text-lg font-semibold">Pokedox</p>
-                        <div class="flex gap-4 mt-4">
-                            <a href="https://pokedex-lj55.onrender.com/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                View Live
-                            </a>
-                            <a href="https://github.com/topgyalgurung/pokedox" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
+              <div class="block bg-white rounded-lg shadow-md overflow-hidden">
+                <img class="w-full h-48 object-cover rounded-t-lg" src="./assets/pokedox.png" alt="Pokedox" />
+                <div class="p-4">
+                  <p class="text-lg font-semibold">Pokedox</p>
+                  <div class="flex gap-4 mt-4">
+                    <a href="https://pokedex-lj55.onrender.com/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                      View Live
+                    </a>
+                    <a href="https://github.com/topgyalgurung/pokedox" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                      GitHub
+                    </a>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <!-- Space Mission Control Section -->
-        <div class="border border-gray-300 rounded-lg overflow-hidden">
+          <!-- Space Mission Control Section -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
             <h2>
-                <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                    onclick="toggleAccordion('collapseFour')">
-                    Space Mission Control
-                    <span class="transition-transform" id="iconFour">▼</span>
-                </button>
+              <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center" onclick="toggleAccordion('collapseFour')">
+                Space Mission Control
+                <span class="transition-transform" id="iconFour">▼</span>
+              </button>
             </h2>
             <div id="collapseFour" class="hidden px-4 py-3 bg-white">
-                <div class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105">
-                    <img class="w-full h-48 object-cover rounded-t-lg" src="./assets/space-mission-control.png" alt="Space Mission Control"/>
-                    <div class="p-4">
-                        <p class="text-lg font-semibold">Space Mission Control</p>
-                        <div class="flex gap-4 mt-4">
-                            <a href="https://space-mission-control-2.onrender.com/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                View Live
-                            </a>
-                            <a href="https://github.com/topgyalgurung/space-mission-control" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
+              <div class="block bg-white rounded-lg shadow-md ">
+                <img class="w-full h-48 object-cover rounded-t-lg" src="./assets/space-mission-control.png" alt="Space Mission Control" />
+                <div class="p-4">
+                  <p class="text-lg font-semibold">Space Mission Control</p>
+                  <div class="flex gap-4 mt-4 text-center">
+                    <a href="https://space-mission-control-2.onrender.com/" target="_blank" rel="noopener" class="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                      View Live
+                    </a>
+                    <a href="https://github.com/topgyalgurung/space-mission-control" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                      GitHub
+                    </a>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
 
-        <!-- Jeopardy Game Section -->
-        <div class="border border-gray-300 rounded-lg overflow-hidden">
+          <!-- Jeopardy Game Section -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
             <h2>
-                <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                    onclick="toggleAccordion('collapseFive')">
-                    Jeopardy Game
-                    <span class="transition-transform" id="iconFive">▼</span>
-                </button>
+              <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center" onclick="toggleAccordion('collapseFive')">
+                Jeopardy Game
+                <span class="transition-transform" id="iconFive">▼</span>
+              </button>
             </h2>
             <div id="collapseFive" class="hidden px-4 py-3 bg-white">
-                <div class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:scale-105">
-                    <img class="w-full h-48 object-cover rounded-t-lg" src="./assets/jeopardy.png" alt="Jeopardy Game"/>
-                    <div class="p-4">
-                        <p class="text-lg font-semibold">Jeopardy Game</p>
-                        <div class="flex gap-4 mt-4">
-                            <a href="http://topgyalgurung.me/jeopardy-game/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                View Live
-                            </a>
-                            <a href="https://github.com/topgyalgurung/jeopardy-game/" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
+              <div class="block bg-white rounded-lg shadow-md overflow-hidden">
+                <img class="w-full h-48 object-cover rounded-t-lg" src="./assets/jeopardy.png" alt="Jeopardy Game" />
+                <div class="p-4">
+                  <p class="text-lg font-semibold text-center ">Jeopardy Game</p>
+                  <div class="flex gap-4 mt-4 text-center">
+                    <a href="http://topgyalgurung.me/jeopardy-game/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                      View Live
+                    </a>
+                    <a href="https://github.com/topgyalgurung/jeopardy-game/" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                      GitHub
+                    </a>
+                  </div>
                 </div>
-            </div>
-        </div>
-
-               
-         <!--  -->
-     
-        </div>
-      </div>
-        </div>
-    </div>
-    </div>
-</div>
-</section>
-
-
-
-
-<!-- Replace the existing coding progress section with this -->
-<section id="coding-stats" class="mb-16">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Problem Solving is my Happy Place</h2>
-    
-    <!-- Stats Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- LeetCode Stats -->
-      <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition duration-300">
-        <div class="flex items-center justify-between mb-4">
-          <h3 class="text-xl font-semibold text-gray-800">LeetCode</h3>
-          <i class="bx bx-code-alt text-2xl text-blue-500"></i>
-        </div>
-        <div class="space-y-6">
-          <!-- Overall Stats -->
-          <div>
-            <h4 class="text-sm font-medium text-gray-600 mb-3">Overall Progress</h4>
-            <div class="stats-card">
-              <h4 class="text-sm font-medium text-gray-600">Total Solved</h4>
-              <p id="leetcode-total" class="text-2xl font-bold text-blue-600">0</p>
-            </div>
-            <div class="grid grid-cols-3 gap-4 mt-3">
-              <div class="stats-card">
-                <h4 class="text-sm font-medium text-gray-600">Easy</h4>
-                <p id="leetcode-easy" class="text-xl font-bold text-green-600">0</p>
-              </div>
-              <div class="stats-card">
-                <h4 class="text-sm font-medium text-gray-600">Medium</h4>
-                <p id="leetcode-medium" class="text-xl font-bold text-yellow-600">0</p>
-              </div>
-              <div class="stats-card">
-                <h4 class="text-sm font-medium text-gray-600">Hard</h4>
-                <p id="leetcode-hard" class="text-xl font-bold text-red-600">0</p>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Blind 75 Progress -->
-          <div class="pt-4 border-t border-gray-200">
-            <h4 class="text-sm font-medium text-gray-600 mb-3">Blind 75 Progress</h4>
-            <div class="stats-card">
-              <h4 class="text-sm font-medium text-gray-600">Total Completed</h4>
-              <p id="blind75-total" class="text-2xl font-bold text-purple-600">33</p>
+    <!-- coding stat  -->
+
+    <section id="coding-stats" class="mb-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Problem Solving = Happy Place</h3>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- LeetCode Stats -->
+          <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold text-gray-800">LeetCode</h3>
+              <i class="bx bx-code-alt text-2xl text-blue-500"></i>
             </div>
-            <!-- <div class="grid grid-cols-3 gap-4 mt-3">
-              <div class="stats-card">
-                <h4 class="text-sm font-medium text-gray-600">Easy</h4>
-                <p id="blind75-easy" class="text-xl font-bold text-green-600">25</p>
+            <div class="space-y-6">
+              <!-- Overall Stats -->
+              <div>
+                <h4 class="text-sm font-medium text-gray-600 mb-3">Overall Progress</h4>
+                <div class="stats-card">
+                  <h4 class="text-sm font-medium text-gray-600">Total Solved</h4>
+                  <p id="leetcode-total" class="text-2xl font-bold text-blue-600">0</p>
+                </div>
+                <div class="grid grid-cols-3 gap-4 mt-3">
+                  <div class="stats-card">
+                    <h4 class="text-sm font-medium text-gray-600">Easy</h4>
+                    <p id="leetcode-easy" class="text-xl font-bold text-green-600">0</p>
+                  </div>
+                  <div class="stats-card">
+                    <h4 class="text-sm font-medium text-gray-600">Medium</h4>
+                    <p id="leetcode-medium" class="text-xl font-bold text-yellow-600">0</p>
+                  </div>
+                  <div class="stats-card">
+                    <h4 class="text-sm font-medium text-gray-600">Hard</h4>
+                    <p id="leetcode-hard" class="text-xl font-bold text-red-600">0</p>
+                  </div>
+                </div>
               </div>
-              <div class="stats-card">
-                <h4 class="text-sm font-medium text-gray-600">Medium</h4>
-                <p id="blind75-medium" class="text-xl font-bold text-yellow-600">0</p>
-              </div>
-              <div class="stats-card">
-                <h4 class="text-sm font-medium text-gray-600">Hard</h4>
-                <p id="blind75-hard" class="text-xl font-bold text-red-600">0</p>
-              </div>
-            </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Books section continues here -->
+
+    <section id="resources" class="mb-16">
+
+      <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 text-center border border-gray-200">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">📚 Key Reading</h2>
+
+        <!-- Book Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+          <!-- Book 1 -->
+          <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
+            <a href="https://dataintensive.net/" target="_blank" rel="noopener">
+              <img src="https://www.scylladb.com/wp-content/uploads/oreilly-designing-data-intensive-book-2.png" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
+              <h3 class="text-lg font-semibold mt-2">Designing Data-Intensive Applications</h3>
+              <p class="text-gray-600 text-sm">By Martin Kleppmann</p>
+            </a>
+          </div>
+
+          <!-- Book 2 -->
+
+          <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
+            <a href="https://elementsofprogramminginterviews.com/" target="_blank" rel="noopener">
+              <img src="https://elementsofprogramminginterviews.com/img/python-cover-blog.png" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
+              <h3 class="text-lg font-semibold mt-2">Elements of Programming Interview in Python (Best interview book)</h3>
+              <p class="text-gray-600 text-sm">By Aziz, Lee, Prakash</p>
+            </a>
+          </div>
+
+
+          <!-- Book 3 -->
+          <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
+            <a href="https://a.co/d/4r5uBF9" target="_blank" rel="noopener">
+              <img src="https://www.briansnotes.io/wp-content/uploads/2021/01/code-complete-2-350x350.jpg" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
+              <h3 class="text-lg font-semibold mt-2"> Code Complete 2</h3>
+              <p class="text-gray-600 text-sm">By Steve McConnell </p>
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- NeetCode Progress -->
-      <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition duration-300">
-        <div class="flex items-center justify-between mb-4">
-          <h3 class="text-xl font-semibold text-gray-800">NeetCode Progress</h3>
-          <i class="bx bx-book text-2xl text-purple-500"></i>
-        </div>
-
-        <div class="space-y-6">
-          <!-- Blind 75 Progress -->
-          <!-- <div>
-            <h4 class="text-sm font-medium text-gray-600 mb-3">Blind 75</h4>
-            <div class="stats-card">
-              <h4 class="text-sm font-medium text-gray-600">Total Completed</h4>
-              <p id="neetcode-blind75-total" class="text-2xl font-bold text-purple-600">33</p>
-            </div>
-          
-          </div> -->
-
-          <!-- NeetCode 150 Progress -->
-          <div class="pt-4 border-t border-gray-200">
-            <h4 class="text-sm font-medium text-gray-600 mb-3">NeetCode 150</h4>
-            <div class="stats-card">
-              <h4 class="text-sm font-medium text-gray-600">Total Completed</h4>
-              <p id="neetcode150-total" class="text-2xl font-bold text-blue-600">41</p>
-            </div>
-
-          </div>
-
-         
-          <!--  -->
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Books section continues here -->
-<section id="resources" class="mb-16">
-  
-  <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 text-center border border-gray-200">
-    <h2 class="text-2xl font-bold text-gray-800 mb-4">📚 Key Reading</h2>
-    <!-- Section Title -->
-
-    
-    <!-- Book Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        
-        <!-- Book 1 -->
-        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
-          <a href="https://dataintensive.net/" target="_blank" rel="noopener">
-            <img src="https://www.scylladb.com/wp-content/uploads/oreilly-designing-data-intensive-book-2.png" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
-            <h3 class="text-lg font-semibold mt-2">Designing Data-Intensive Applications</h3>
-            <p class="text-gray-600 text-sm">By Martin Kleppmann</p>
-          </a>
-        </div>
-  
-        <!-- Book 2 -->
-
-        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
-          <a href="https://elementsofprogramminginterviews.com/" target="_blank" rel="noopener">
-          <img src="https://elementsofprogramminginterviews.com/img/python-cover-blog.png" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
-          <h3 class="text-lg font-semibold mt-2">Elements of Programming Interview in Python (Best interview book)</h3>
-          <p class="text-gray-600 text-sm">By Aziz, Lee, Prakash</p>
-          </a>
-      </div>
-       
-
-        <!-- Book 3 -->
-        <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition">
-          <a href="https://a.co/d/4r5uBF9" target="_blank" rel="noopener"> 
-            <img src="https://www.briansnotes.io/wp-content/uploads/2021/01/code-complete-2-350x350.jpg" alt="Book Cover" class="mx-auto w-32 h-40 rounded">
-            <h3 class="text-lg font-semibold mt-2"> Code Complete 2</h3>
-            <p class="text-gray-600 text-sm">By Steve McConnell </p>
-          </a>
-      </div>
-      
-      
-    </div>
-</div>
 
       <div class="max-w-4xl mx-auto px-4 mt-10">
-
         <h2 class="text-3xl font-bold text-center mb-8">Favorite Tech Learning Channels</h2>
-        
         <!-- Category Tabs -->
         <div class="flex flex-wrap justify-center gap-4 mb-8">
           <button class="category-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors" data-category="general">General</button>
@@ -711,7 +528,7 @@
 
         <!-- Content Container -->
         <div class="text-center gap-8">
-          
+
           <!-- General Section -->
           <div class="category-content bg-white rounded-lg shadow-md p-6" data-category="general">
             <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">General Resources</h3>
@@ -719,7 +536,7 @@
               <li><a href="https://www.youtube.com/@Fireship" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Fireship</a></li>
               <li><a href="https://www.freecodecamp.org" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>freeCodeCamp</a></li>
               <li><a href="https://www.youtube.com/@ByteByteGo" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>ByteByteGo</a></li>
-            
+
             </ul>
           </div>
 
@@ -757,51 +574,8 @@
           </div>
         </div>
       </div>
-
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const tabs = document.querySelectorAll('.category-tab');
-          const contents = document.querySelectorAll('.category-content');
-
-          tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-              // Remove active class from all tabs
-              tabs.forEach(t => t.classList.remove('active', 'bg-blue-500', 'text-white'));
-              tabs.forEach(t => t.classList.add('bg-gray-200', 'text-gray-700'));
-
-              // Add active class to clicked tab
-              tab.classList.add('active', 'bg-blue-500', 'text-white');
-              tab.classList.remove('bg-gray-200', 'text-gray-700');
-
-              // Hide all content
-              contents.forEach(content => content.classList.add('hidden'));
-
-              // Show selected content
-              const category = tab.getAttribute('data-category');
-              document.querySelector(`.category-content[data-category="${category}"]`).classList.remove('hidden');
-            });
-          });
-        });
-      </script>
     </section>
-    <!-- watching -->
-    <!-- <section id="learning" class="mb-16"></section>
-      <h2 class="text-3xl font-bold text-center mb-8">Watching</h2>
-      <div class="flex flex-wrap justify-center items-center">
-        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/318elIq37PE?si=sy3Lkb3mVgeXJaX7"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-  </div>
-</div>
-</section> -->
+
 
     <!--===== FOOTER =====-->
     <footer class="bg-gray-800 text-white py-8">
@@ -810,22 +584,18 @@
       </div>
     </footer>
 
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!--===== MAIN JS =====-->
-    <script src="assets/sript/main.js"></script>
     <script>
       function toggleAccordion(id) {
-          const content = document.getElementById(id);
-          const icon = document.getElementById("icon" + id.charAt(id.length - 1));
-          if (content.classList.contains("hidden")) {
-              content.classList.remove("hidden");
-              icon.style.transform = "rotate(180deg)";
-          } else {
-              content.classList.add("hidden");
-              icon.style.transform = "rotate(0deg)";
-          }
+        const content = document.getElementById(id);
+        const icon = document.getElementById("icon" + id.charAt(id.length - 1));
+        if (content.classList.contains("hidden")) {
+          content.classList.remove("hidden");
+          icon.style.transform = "rotate(180deg)";
+        } else {
+          content.classList.add("hidden");
+          icon.style.transform = "rotate(0deg)";
+        }
       }
     </script>
 
@@ -860,146 +630,6 @@
         </form>
       </div>
     </div>
+</body>
 
-    <script>
-    function showBlind75Form() {
-      document.getElementById('blind75Modal').classList.remove('hidden');
-      document.getElementById('blind75Modal').classList.add('flex');
-    }
-
-    function hideBlind75Form() {
-      document.getElementById('blind75Modal').classList.add('hidden');
-      document.getElementById('blind75Modal').classList.remove('flex');
-    }
-
-    document.getElementById('blind75Form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const easy = document.getElementById('blind75EasyInput').value;
-      const medium = document.getElementById('blind75MediumInput').value;
-      const hard = document.getElementById('blind75HardInput').value;
-      
-      // Update the display
-      document.getElementById('blind75-easy').textContent = easy;
-      document.getElementById('blind75-medium').textContent = medium;
-      document.getElementById('blind75-hard').textContent = hard;
-      
-      // Calculate total
-      const total = parseInt(easy) + parseInt(medium) + parseInt(hard);
-      document.getElementById('blind75-total').textContent = total;
-      
-      // Save to localStorage
-      localStorage.setItem('blind75Progress', JSON.stringify({
-        easy,
-        medium,
-        hard,
-        total
-      }));
-      
-      hideBlind75Form();
-    });
-
-    // Load saved Blind 75 progress on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      const savedBlind75Progress = localStorage.getItem('blind75Progress');
-      if (savedBlind75Progress) {
-        const progress = JSON.parse(savedBlind75Progress);
-        document.getElementById('blind75-easy').textContent = progress.easy;
-        document.getElementById('blind75-medium').textContent = progress.medium;
-        document.getElementById('blind75-hard').textContent = progress.hard;
-        document.getElementById('blind75-total').textContent = progress.total;
-      }
-    });
-    </script>
-
-    <script>
-    // Load LeetCode and Blind 75 progress from LeetCode API
-    async function loadLeetCodeProgress() {
-      try {
-        const response = await fetch('/api/leetcode-progress');
-        const data = await response.json();
-        
-        // Update overall LeetCode stats
-        document.getElementById('leetcode-easy').textContent = data.overall?.easy || 0;
-        document.getElementById('leetcode-medium').textContent = data.overall?.medium || 0;
-        document.getElementById('leetcode-hard').textContent = data.overall?.hard || 0;
-        document.getElementById('leetcode-total').textContent = data.overall?.total || 0;
-
-        // Only update Blind 75 progress if API provides data
-        if (data.blind75) {
-          document.getElementById('blind75-easy').textContent = data.blind75.easy || 25;
-          document.getElementById('blind75-medium').textContent = data.blind75.medium || 0;
-          document.getElementById('blind75-hard').textContent = data.blind75.hard || 0;
-          document.getElementById('blind75-total').textContent = data.blind75.total || 25;
-        }
-      } catch (error) {
-        console.error('Error loading LeetCode progress:', error);
-      }
-    }
-
-    // Load progress when the page loads
-    document.addEventListener('DOMContentLoaded', loadLeetCodeProgress);
-    </script>
-
-    <script>
-    // Load NeetCode progress from Google Sheets
-    async function loadNeetCodeProgress() {
-      try {
-        // Replace with your Google Sheets API endpoint
-        const response = await fetch('https://sheets.googleapis.com/v4/spreadsheets/YOUR_SPREADSHEET_ID/values/Sheet1!A1:D4?key=YOUR_API_KEY');
-        const data = await response.json();
-        
-        if (data.values) {
-          // Assuming the sheet has this structure:
-          // Category | Easy | Medium | Hard
-          // Blind 75 | 25   | 0      | 0
-          // 150      | 0    | 0      | 0
-          // 250      | 0    | 0      | 0
-          
-          // Update Blind 75 progress
-          const blind75 = data.values[1];
-          document.getElementById('neetcode-blind75-easy').textContent = blind75[1] || 0;
-          document.getElementById('neetcode-blind75-medium').textContent = blind75[2] || 0;
-          document.getElementById('neetcode-blind75-hard').textContent = blind75[3] || 0;
-          document.getElementById('neetcode-blind75-total').textContent = 
-            parseInt(blind75[1] || 0) + parseInt(blind75[2] || 0) + parseInt(blind75[3] || 0);
-
-          // Update NeetCode 150 progress
-          const neetcode150 = data.values[2];
-          document.getElementById('neetcode150-easy').textContent = neetcode150[1] || 0;
-          document.getElementById('neetcode150-medium').textContent = neetcode150[2] || 0;
-          document.getElementById('neetcode150-hard').textContent = neetcode150[3] || 0;
-          document.getElementById('neetcode150-total').textContent = 
-            parseInt(neetcode150[1] || 0) + parseInt(neetcode150[2] || 0) + parseInt(neetcode150[3] || 0);
-
-          // Update NeetCode 250 progress
-          const neetcode250 = data.values[3];
-          document.getElementById('neetcode250-easy').textContent = neetcode250[1] || 0;
-          document.getElementById('neetcode250-medium').textContent = neetcode250[2] || 0;
-          document.getElementById('neetcode250-hard').textContent = neetcode250[3] || 0;
-          document.getElementById('neetcode250-total').textContent = 
-            parseInt(neetcode250[1] || 0) + parseInt(neetcode250[2] || 0) + parseInt(neetcode250[3] || 0);
-        }
-      } catch (error) {
-        console.error('Error loading NeetCode progress:', error);
-      }
-    }
-
-    // Load progress when the page loads
-    document.addEventListener('DOMContentLoaded', loadNeetCodeProgress);
-    </script>
-
-    <style>
-    .stats-card {
-      @apply bg-gray-50 rounded-lg p-3;
-    }
-
-    .stats-card h4 {
-      @apply mb-1;
-    }
-
-    .stats-card p {
-      @apply transition-all duration-300;
-    }
-    </style>
-  </body>
 </html>
