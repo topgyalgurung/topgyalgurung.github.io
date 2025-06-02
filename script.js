@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
     hamburger.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
+
+    // Add click event listeners to all mobile menu links
+    const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
   }
 });
 
