@@ -141,3 +141,59 @@ async function loadLeetCodeProgress() {
 
 // Load progress when the page loads
 document.addEventListener("DOMContentLoaded", loadLeetCodeProgress);
+
+// Load books from Open Library API
+async function loadBooks() {
+  try {
+    // Fetch currently reading books
+    const readingResponse = await fetch("/api/reading-list");
+    const readingData = await readingResponse.json();
+
+    // Update currently reading section
+    const readingContainer = document.getElementById("currently-reading");
+    if (readingContainer && readingData) {
+      readingContainer.innerHTML = readingData.reading_log_entries
+        .map((book) => {
+          // Get the work ID from the book data
+          const workId = book.work.key.split("/").pop();
+          // Construct the cover image URL
+          const coverUrl = `https://covers.openlibrary.org/b/id/${book.work.cover_id}-L.jpg`;
+
+          return `
+            <div class="book-card p-4 bg-white rounded-lg shadow-md">
+              <img src="${coverUrl}" 
+                   alt="${book.work.title}" 
+                   class="w-32 h-48 object-cover mx-auto mb-4"
+                   onerror="this.src='https://via.placeholder.com/128x192?text=No+Cover'">
+              <h3 class="text-lg font-semibold text-center">${
+                book.work.title
+              }</h3>
+              <p class="text-sm text-gray-600 text-center">by ${
+                book.work.author_names
+                  ? book.work.author_names.join(", ")
+                  : "Unknown Author"
+              }</p>
+            </div>
+          `;
+        })
+        .join("");
+    }
+  } catch (error) {
+    console.error("Error loading books:", error);
+    // Show error message in the container
+    const readingContainer = document.getElementById("currently-reading");
+    if (readingContainer) {
+      readingContainer.innerHTML = `
+        <div class="text-center text-gray-600">
+          <p>Unable to load books at the moment. Please try again later.</p>
+        </div>
+      `;
+    }
+  }
+}
+
+// Load books when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+  loadBooks();
+  // ... existing DOMContentLoaded code ...
+});
