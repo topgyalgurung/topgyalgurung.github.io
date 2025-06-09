@@ -42,6 +42,9 @@
             <a href="#skills" class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out">Skills</a>
           </li>
           <li>
+            <a href="#certifications" class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out">Certifications</a>
+          </li>
+          <li>
             <a href="#projects" class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out">Projects</a>
           </li>
           <li>
@@ -69,6 +72,9 @@
           <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50">Skills</a>
         </li>
         <li>
+          <a href="#certifications" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50">Certifications</a>
+        </li>
+        <li>
           <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50">Projects</a>
         </li>
         <li>
@@ -84,60 +90,53 @@
 
 
     <section id="home" class="mb-16 container mx-auto px-4" data-observe>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <!-- Left side: Text content -->
+        <div class="w-full md:w-1/2 text-center md:text-left">
+          <h1 class="text-4xl md:text-6xl font-bold mb-4 text-col">
+            <span id="typed-heading"></span>
+          </h1>
+          <h2 class="text-xl md:text-2xl text-gray-700 mb-6">
+            <span id="typed-subheading"></span>
+          </h2>
+        </div>
 
-      <!-- typed name and software engineer  -->
+        <!-- Right side: Profile image and social links -->
+        <div class="w-full md:w-1/2 flex flex-col items-center">
+          <!-- Profile image -->
+          <div class="relative w-64 h-64 md:w-80 md:h-80 mb-8">
+            <img 
+              src="assets/profile.png" 
+              alt="Profile" 
+              class="w-full h-full object-cover rounded-full shadow-xl transform transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
 
-      <div class=w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 delay-75" data-observe>
-        <h1 class="text-4xl md:text-6xl text-center font-bold mb-4 text-col">
-          <span id="typed-heading"></span>
-        </h1>
-        <h2 class="text-xl md:text-2xl text-center text-gray-700 mb-6">
-          <span id="typed-subheading"></span>
-        </h2>
-      </div>
-
-      <!--  profile image  -->
-
-      <div class="relative">
-        <svg class="w-1/4 h-auto mx-auto transform transition-transform duration-500 hover:scale-105" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <defs>
-            <linearGradient id="blob-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1">
-                <animate attributeName="stop-color" values="#FF6B6B;#4ECDC4;#45B7D1;#FF6B6B" dur="6s" repeatCount="indefinite" />
-              </stop>
-              <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:1">
-                <animate attributeName="stop-color" values="#4ECDC4;#45B7D1;#FF6B6B;#4ECDC4" dur="6s" repeatCount="indefinite" />
-              </stop>
-              <stop offset="100%" style="stop-color:#45B7D1;stop-opacity:1">
-                <animate attributeName="stop-color" values="#45B7D1;#FF6B6B;#4ECDC4;#45B7D1" dur="6s" repeatCount="indefinite" />
-              </stop>
-            </linearGradient>
-          </defs>
-          <mask id="mask0" mask-type="alpha">
-            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z">
-              <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="3s" repeatCount="indefinite" />
-            </path>
-          </mask>
-          <g mask="url(#mask0)">
-            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" fill="url(#blob-gradient)">
-              <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="3s" repeatCount="indefinite" />
-            </path>
-            <image class="w-1/2 h-1/2" x="120" y="120" href="assets/profile.png" loading="lazy" decoding="async" />
-          </g>
-        </svg>
-
-        <!-- social links  -->
-
-        <div class="flex flex-col items-center mt-6">
-          <h5 class="text-lg font-medium bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse"> Find me online </h5>
-          <div class="flex space-x-6 mt-3">
-            <a href="https://www.linkedin.com/in/topgyal/" class="text-4xl transform hover:scale-110 transition-transform duration-300" style="background: linear-gradient(45deg, #0077B5, #00A0DC); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"><i class="bx bxl-linkedin"></i></a>
-            <a href="https://github.com/topgyalgurung" class="text-4xl transform hover:scale-110 transition-transform duration-300" style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"><i class="bx bxl-github"></i></a>
-            <a href="https://topgyalgurung.medium.com/" class="text-4xl transform hover:scale-110 transition-transform duration-300" style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"><i class="bx bxl-medium"></i></a>
+          <!-- Social links -->
+          <div class="flex flex-col items-center">
+            <h5 class="text-lg font-medium bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse mb-4">
+              Find me online
+            </h5>
+            <div class="flex space-x-8">
+              <a href="https://www.linkedin.com/in/topgyal/" 
+                 class="text-4xl transform hover:scale-110 transition-transform duration-300" 
+                 style="background: linear-gradient(45deg, #0077B5, #00A0DC); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+              <a href="https://github.com/topgyalgurung" 
+                 class="text-4xl transform hover:scale-110 transition-transform duration-300" 
+                 style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                <i class="bx bxl-github"></i>
+              </a>
+              <a href="https://topgyalgurung.medium.com/" 
+                 class="text-4xl transform hover:scale-110 transition-transform duration-300" 
+                 style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                <i class="bx bxl-medium"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <!-- social link ends  -->
-      </div>
       </div>
     </section>
 
@@ -419,6 +418,30 @@
               </div>
             </div>
           </div>
+           <!-- Cybersecurity  Section -->
+          <div class="border border-gray-300 rounded-lg overflow-hidden">
+            <h2>
+              <button class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center" onclick="toggleAccordion('collapseSix')">
+                 Cybersecurity
+                <span class="transition-transform" id="iconSix">▼</span>
+              </button>
+            </h2>
+            <div id="collapseFive" class="hidden px-4 py-3 bg-white">
+              <div class="block bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-4">
+                  <p class="text-lg font-semibold text-center ">Cybersecurity tasks</p>
+                  <div class="flex gap-4 mt-4 text-center">
+                    <a href="https://github.com/topgyaltsering/cyberhw" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                      View Live
+                    </a>
+                    <a href="https://github.com/topgyaltsering/cyberhw" target="_blank" rel="noopener" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -605,6 +628,98 @@
               <li><a href="https://www.youtube.com/@VercelHQ" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>VercelHQ</a></li>
               <li><a href="https://www.youtube.com/channel/UCXgGY0wkgOzynnHvSEVmE3A" target="_blank" rel="noopener" class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span class="w-2 h-2 bg-blue-500 rounded-full"></span>Hitesh Choudhary</a></li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="mb-16 container mx-auto px-4" data-observe>
+      <div class="flex flex-col items-center justify-center">
+        <h2 class="text-4xl font-bold text-center my-8">Certifications</h2>
+        
+        <div class="w-full max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Springboard Software Engineering -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition duration-300">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">Springboard Software Engineering</h3>
+                <i class="bx bx-code-alt text-3xl text-blue-500"></i>
+              </div>
+              <div class="space-y-3">
+                <p class="text-gray-600">Springboard</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                  <li>Full-stack web development with JavaScript, React, and Node.js</li>
+                  <li>Data structures, algorithms, and system design</li>
+                  <li>Agile methodologies and collaborative development</li>
+                </ul>
+              </div>
+              <div class="mt-4">
+                <a href="/assets/springboard.pdf" target="_blank" class="flex items-center px-4 py-2 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition">
+                  View Certificate
+                </a>
+              </div>
+            </div>
+
+             <!-- CodePath Cyber Security Tech Fellow -->
+             <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition duration-300">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">CodePath Cyber Security Course</h3>
+                <i class="bx bx-shield text-3xl text-blue-500"></i>
+              </div>
+              <div class="space-y-3">
+                <p class="text-gray-600">CodePath</p>
+                <p class="text-sm text-gray-500">Sep 2020 - Apr 2021 · 8 mos</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                  <li>Completed 14-week cybersecurity course with hands-on training in web app security</li>
+                  <li>Identified and exploited vulnerabilities (SQL injection, XSS, CSRF, session hijacking)</li>
+                  <li>Gained experience with industry tools (Metasploit, Wireshark, Kali Linux, Burp Suite)</li>
+                  <li>Developed technical documentation and security reports for real-world exploits</li>
+                </ul>
+                <div class="mt-4">
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-sm">Kali Linux</span>
+                    <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-sm">CSRF</span>
+                    <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-sm">Cryptography</span>
+                    <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-sm">NetSec</span>
+                    <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-sm">CTF</span>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <a href="/assets/cybersecurity.pdf" target="_blank" class="flex items-center px-4 py-2 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition">
+                    View Certificate
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+
+
+            <!-- AWS Certification -->
+            <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition duration-300">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">AWS Certified Cloud Practitioner</h3>
+                <i class="bx bxl-aws text-3xl text-orange-500"></i>
+              </div>
+              <div class="space-y-3">
+                <p class="text-gray-600">Amazon Web Services</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                  <li>Gained foundational knowledge of AWS services including EC2, S3, Lambda, RDS, and IAM</li>
+                  <li>Understood key cloud concepts: global infrastructure, pricing models, scalability, and security best practices</li>
+                  <li>Completed hands-on exercises deploying web apps using EC2, configuring S3 buckets, setting IAM roles, and triggering Lambda functions</li>
+                  <li>Practiced real-world use cases involving networking (VPC), monitoring (CloudWatch), and auto-scaling configurations</li>
+                </ul>
+                <div class="mt-4">
+                  <img src="./assets/aws.png" alt="CompTIA Security+ Certificate" class="w-full h-auto rounded">
+                </div>
+               
+              </div>
+            </div>
+
+          
+
+            <!-- Add more certifications as needed -->
           </div>
         </div>
       </div>
