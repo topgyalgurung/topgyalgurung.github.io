@@ -107,40 +107,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Load LeetCode and Blind 75 progress from LeetCode API
+// Load LeetCode progress
 async function loadLeetCodeProgress() {
   try {
-    const response = await fetch("/api/leetcode-progress");
-    const data = await response.json();
-
-    // Update overall LeetCode stats
-    document.getElementById("leetcode-easy").textContent =
-      data.overall?.easy || 0;
-    document.getElementById("leetcode-medium").textContent =
-      data.overall?.medium || 0;
-    document.getElementById("leetcode-hard").textContent =
-      data.overall?.hard || 0;
-    document.getElementById("leetcode-total").textContent =
-      data.overall?.total || 0;
-
-    // Only update Blind 75 progress if API provides data
-    if (data.blind75) {
-      document.getElementById("blind75-easy").textContent =
-        data.blind75.easy || 25;
-      document.getElementById("blind75-medium").textContent =
-        data.blind75.medium || 0;
-      document.getElementById("blind75-hard").textContent =
-        data.blind75.hard || 0;
-      document.getElementById("blind75-total").textContent =
-        data.blind75.total || 25;
-    }
+    const leetcodeData = await LeetCodeStats.fetchData();
+    LeetCodeStats.updateStats(leetcodeData);
   } catch (error) {
     console.error("Error loading LeetCode progress:", error);
+    // Set default values in case of error
+    const defaultData = {
+      totalSolved: 0,
+      easySolved: 0,
+      mediumSolved: 0,
+      hardSolved: 0,
+    };
+    LeetCodeStats.updateStats(defaultData);
   }
 }
 
 // Load progress when the page loads
-document.addEventListener("DOMContentLoaded", loadLeetCodeProgress);
+document.addEventListener("DOMContentLoaded", () => {
+  loadLeetCodeProgress();
+  // Refresh LeetCode stats every 5 minutes
+  setInterval(loadLeetCodeProgress, 5 * 60 * 1000);
+});
 
 // Load books from Open Library API
 async function loadBooks() {
