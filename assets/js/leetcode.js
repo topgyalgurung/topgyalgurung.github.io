@@ -5,13 +5,8 @@ class LeetCodeStats {
   static async fetchData() {
     try {
       const response = await fetch(
-        `https://leetcode-stats.herokuapp.com/${LEETCODE_USERNAME}`
+        `https://leetcode-stats-api.herokuapp.com/${LEETCODE_USERNAME}`
       );
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
       const data = await response.json();
       return {
         totalSolved: data.totalSolved || 0,
