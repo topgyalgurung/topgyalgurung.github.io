@@ -248,3 +248,8 @@ class DailyJoke {
     if (errorElement) errorElement.classList.remove("hidden");
   }
 }
+
+// Initialize daily joke when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  new DailyJoke();
+});
