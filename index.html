@@ -8,7 +8,6 @@
   <title>Topgyal Gurung</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="script.js"></script>
   <!--===== SCROLL REVEAL =====-->
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -754,39 +753,9 @@
       }
     </script>
 
+    <!-- Load main script after DOM elements are ready -->
+    <script src="script.js"></script>
 
-
-    <!-- Before closing body tag -->
-    <script type="module" src="assets/js/stats.js"></script>
-
-    <!-- Blind 75 Progress Modal -->
-    <div id="blind75Modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
-      <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4">
-        <h3 class="text-xl font-bold mb-4">Update Blind 75 Progress</h3>
-        <form id="blind75Form" class="space-y-4">
-          <div>
-            <label for="blind75EasyInput" class="block text-sm font-medium text-gray-700">Easy Problems</label>
-            <input type="number" id="blind75EasyInput" name="blind75EasyInput" min="0" max="25" placeholder="Enter number of easy problems solved" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500">
-          </div>
-          <div>
-            <label for="blind75MediumInput" class="block text-sm font-medium text-gray-700">Medium Problems</label>
-            <input type="number" id="blind75MediumInput" name="blind75MediumInput" min="0" max="25" placeholder="Enter number of medium problems solved" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500">
-          </div>
-          <div>
-            <label for="blind75HardInput" class="block text-sm font-medium text-gray-700">Hard Problems</label>
-            <input type="number" id="blind75HardInput" name="blind75HardInput" min="0" max="25" placeholder="Enter number of hard problems solved" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500">
-          </div>
-          <div class="flex justify-end space-x-3">
-            <button type="button" onclick="hideBlind75Form()" class="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200">
-              Cancel
-            </button>
-            <button type="submit" class="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600">
-              Save
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
 </body>
 
 </html>

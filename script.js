@@ -34,7 +34,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function observeHandler(ob) {
   ob.forEach((el) => {
-    el.target.style.opacity = ob[0].intersectionRatio;
+    // Set full opacity when element is at least 30% visible, otherwise fade based on ratio
+    if (el.intersectionRatio > 0.3) {
+      el.target.style.opacity = 1;
+    } else {
+      el.target.style.opacity = el.intersectionRatio * 2; // Faster fade-in
+    }
   });
 }
 
