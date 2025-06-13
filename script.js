@@ -182,8 +182,111 @@ async function loadBooks() {
   }
 }
 
+// Daily Joke functionality
+class DailyJoke {
+  constructor() {
+    this.apiUrl = "https://official-joke-api.appspot.com/random_joke";
+    this.storageKey = "dailyJoke";
+    this.dateKey = "dailyJokeDate";
+    this.init();
+  }
+
+  init() {
+    this.loadJoke();
+    this.setupEventListeners();
+  }
+
+  setupEventListeners() {
+    const refreshButton = document.getElementById("refresh-joke");
+    if (refreshButton) {
+      refreshButton.addEventListener("click", () => this.fetchNewJoke());
+    }
+  }
+
+  async loadJoke() {
+    const today = new Date().toDateString();
+    const storedDate = localStorage.getItem(this.dateKey);
+    const storedJoke = localStorage.getItem(this.storageKey);
+
+    // Check if we have a joke for today
+    if (storedDate === today && storedJoke) {
+      this.displayJoke(JSON.parse(storedJoke));
+    } else {
+      await this.fetchNewJoke();
+    }
+  }
+
+  async fetchNewJoke() {
+    this.showLoading();
+
+    try {
+      const response = await fetch(this.apiUrl);
+      if (!response.ok) {
+        throw new Error("Failed to fetch joke");
+      }
+
+      const joke = await response.json();
+
+      // Store the joke with today's date
+      const today = new Date().toDateString();
+      localStorage.setItem(this.storageKey, JSON.stringify(joke));
+      localStorage.setItem(this.dateKey, today);
+
+      this.displayJoke(joke);
+    } catch (error) {
+      console.error("Error fetching joke:", error);
+      this.showError();
+    }
+  }
+
+  displayJoke(joke) {
+    const loadingElement = document.getElementById("joke-loading");
+    const contentElement = document.getElementById("joke-content");
+    const errorElement = document.getElementById("joke-error");
+    const setupElement = document.getElementById("joke-setup");
+    const punchlineElement = document.getElementById("joke-punchline");
+    const typeElement = document.getElementById("joke-type");
+
+    // Hide loading and error states
+    if (loadingElement) loadingElement.classList.add("hidden");
+    if (errorElement) errorElement.classList.add("hidden");
+
+    // Show content
+    if (contentElement) contentElement.classList.remove("hidden");
+
+    // Populate joke content
+    if (setupElement) setupElement.textContent = joke.setup;
+    if (punchlineElement) punchlineElement.textContent = joke.punchline;
+    if (typeElement)
+      typeElement.textContent =
+        joke.type.charAt(0).toUpperCase() + joke.type.slice(1);
+  }
+
+  showLoading() {
+    const loadingElement = document.getElementById("joke-loading");
+    const contentElement = document.getElementById("joke-content");
+    const errorElement = document.getElementById("joke-error");
+
+    if (loadingElement) loadingElement.classList.remove("hidden");
+    if (contentElement) contentElement.classList.add("hidden");
+    if (errorElement) errorElement.classList.add("hidden");
+  }
+
+  showError() {
+    const loadingElement = document.getElementById("joke-loading");
+    const contentElement = document.getElementById("joke-content");
+    const errorElement = document.getElementById("joke-error");
+
+    if (loadingElement) loadingElement.classList.add("hidden");
+    if (contentElement) contentElement.classList.add("hidden");
+    if (errorElement) errorElement.classList.remove("hidden");
+  }
+}
+
 // Load books when the page loads
 document.addEventListener("DOMContentLoaded", () => {
   loadBooks();
+  // Initialize daily joke
+  new DailyJoke();
   // ... existing DOMContentLoaded code ...
 });
