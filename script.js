@@ -18,45 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     console.log(entry);
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add("show");
-//     } else {
-//       entry.target.classList.remove("show");
-//     }
-//   });
-// });
-
-// const hiddenElements = document.querySelectorAll(".hidden");
-// hiddenElements.forEach((el) => observer.observe(el));
-
-function observeHandler(ob) {
-  ob.forEach((el) => {
-    // Set full opacity when element is at least 30% visible, otherwise fade based on ratio
-    if (el.intersectionRatio > 0.3) {
-      el.target.style.opacity = 1;
-    } else {
-      el.target.style.opacity = el.intersectionRatio * 2; // Faster fade-in
-    }
-  });
-}
-
-let options = {
-  root: document,
-  rootMargin: "0px",
-  threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-};
-
-let observer = new IntersectionObserver(this.observeHandler, options);
-
-let els = document.querySelectorAll("[data-observe]");
-
-els.forEach((el) => {
-  observer.observe(el);
-});
-
 const headingText = "Hi,\nI'm Topgyal";
 const subheadingText = "Software Engineer with Bachelor's in Computer Science";
 let headingIndex = 0;
@@ -287,11 +248,3 @@ class DailyJoke {
     if (errorElement) errorElement.classList.remove("hidden");
   }
 }
-
-// Load books when the page loads
-document.addEventListener("DOMContentLoaded", () => {
-  loadBooks();
-  // Initialize daily joke
-  new DailyJoke();
-  // ... existing DOMContentLoaded code ...
-});
