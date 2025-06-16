@@ -8,11 +8,13 @@
   <title>Topgyal Gurung</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <!--===== SCROLL REVEAL =====-->
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
   <!-- =====BOX ICONS===== -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -92,39 +94,41 @@
 
 
     <section id="home" class="mb-16 container mx-auto px-4">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-        <!-- Left side: Text content -->
-        <div class="w-full md:w-1/2 text-center md:text-left">
-          <h1 class="text-4xl md:text-6xl font-bold mb-4 text-col">
-            <span id="typed-heading"></span>
-          </h1>
-          <h2 class="text-xl md:text-2xl text-gray-700 mb-6">
-            <span id="typed-subheading"></span>
-          </h2>
-        </div>
-
-        <!-- Right side: Profile image and social links -->
-        <div class="w-full md:w-1/2 flex flex-col items-center">
-          <!-- Profile image -->
-          <div class="relative w-64 h-64 md:w-80 md:h-80 mb-8">
-            <img src="assets/profile.png" alt="Profile" class="w-full h-full object-cover rounded-full shadow-xl transform transition-transform duration-500 hover:scale-105" loading="lazy" />
+      <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+          <!-- Left side: Text content -->
+          <div class="w-full md:w-1/2 text-center md:text-left">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-col">
+              <span id="typed-heading"></span>
+            </h1>
+            <h2 class="text-xl md:text-2xl text-gray-700 mb-6">
+              <span id="typed-subheading"></span>
+            </h2>
           </div>
 
-          <!-- Social links -->
-          <div class="flex flex-col items-center">
-            <h5 class="text-lg font-medium bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse mb-4">
-              Find me online
-            </h5>
-            <div class="flex space-x-8">
-              <a href="https://www.linkedin.com/in/topgyal/" class="text-4xl transform hover:scale-110 transition-transform duration-300" style="background: linear-gradient(45deg, #0077B5, #00A0DC); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                <i class="bx bxl-linkedin"></i>
-              </a>
-              <a href="https://github.com/topgyalgurung" class="text-4xl transform hover:scale-110 transition-transform duration-300" style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                <i class="bx bxl-github"></i>
-              </a>
-              <a href="https://topgyalgurung.medium.com/" class="text-4xl transform hover:scale-110 transition-transform duration-300" style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                <i class="bx bxl-medium"></i>
-              </a>
+          <!-- Right side: Profile image and social links -->
+          <div class="w-full md:w-1/2 flex flex-col items-center">
+            <!-- Profile image -->
+            <div class="relative w-64 h-64 md:w-80 md:h-80 mb-8">
+              <img src="assets/profile.png" alt="Profile" class="w-full h-full object-cover rounded-full shadow-xl transform transition-transform duration-500 hover:scale-105" loading="lazy" />
+            </div>
+
+            <!-- Social links -->
+            <div class="flex flex-col items-center">
+              <h5 class="text-lg font-medium bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse mb-4">
+                Find me online
+              </h5>
+              <div class="flex space-x-8">
+                <a href="https://www.linkedin.com/in/topgyal/" class="text-4xl transform hover:scale-110 transition-transform duration-300" style="background: linear-gradient(45deg, #0077B5, #00A0DC); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="https://github.com/topgyalgurung" class="text-4xl transform hover:scale-110 transition-transform duration-300" style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                  <i class="bx bxl-github"></i>
+                </a>
+                <a href="https://topgyalgurung.medium.com/" class="text-4xl transform hover:scale-110 transition-transform duration-300" style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                  <i class="bx bxl-medium"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -132,22 +136,15 @@
     </section>
 
     <!-- About Me Section -->
-
     <section id="about" class="mb-16 container mx-auto px-4">
-
-      <!-- Elevator Pitch -->
-
-      <div class=" w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
-
+      <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <p class="text-gray-700 leading-relaxed">
-        <h3 class="mb-3 ">I'm a full-stack developer with a unique journey — from growing up in the countryside of Nepal to building a life in New York City. I've always been drawn to understanding how things work. In school, math and science were my strongest subjects, and problem-solving quickly became something I genuinely enjoyed.</h3>
+          <h3 class="mb-3">I'm a full-stack developer with a unique journey — from growing up in the countryside of Nepal to building a life in New York City. I've always been drawn to understanding how things work. In school, math and science were my strongest subjects, and problem-solving quickly became something I genuinely enjoyed.</h3>
 
-        <h3 class="mb-3">That early interest evolved into a passion for technology and building. Though I entered the tech field a bit later than some, I dove in fully — from formal education to hands-on projects. I find real fulfillment in creating things from the ground up and learning through doing.</h3>
+          <h3 class="mb-3">That early interest evolved into a passion for technology and building. Though I entered the tech field a bit later than some, I dove in fully — from formal education to hands-on projects. I find real fulfillment in creating things from the ground up and learning through doing.</h3>
 
-        <h3>Today, I enjoy working across the stack — crafting intuitive frontends with React and Next.js, and designing scalable backends with Node.js, PostgreSQL, and Prisma. For me, software engineering is the ideal blend of logic, creativity, and real-world impact — and I'm excited to keep learning and building meaningful tools for people</h3>
-        </h3>
+          <h3>Today, I enjoy working across the stack — crafting intuitive frontends with React and Next.js, and designing scalable backends with Node.js, PostgreSQL, and Prisma. For me, software engineering is the ideal blend of logic, creativity, and real-world impact — and I'm excited to keep learning and building meaningful tools for people</h3>
         </p>
-      </div>
       </div>
     </section>
 
@@ -180,96 +177,6 @@
       </div>
     </section>
 
-
-
-    <!-- Skills Section -->
-
-    <!-- <section id="skills" class="mb-16 container mx-auto px-4 delay-500">
-      <div class="flex flex-col items-center justify-center">
-        <h2 class="text-4xl font-bold text-center mt-5 mb-5">Skills</h2> -->
-
-    <!-- Skills Grid -->
-    <!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-6xl px-4"> -->
-    <!-- Next.js -->
-    <!-- <div class="flex items-center justify-center bg-gradient-to-r from-yellow-100 to-yellow-200 p-3 rounded-lg shadow-md">
-            <div class="flex items-center w-full">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Next.js" class="h-6 w-6" />
-              <span class="font-medium ml-2">Next.js</span>
-              <div class="ml-auto w-1/2">
-                <div class="w-full bg-white rounded-full h-3">
-                  <div class="w-4/5 bg-yellow-500 h-3 rounded-full"></div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-    <!-- React -->
-    <!-- <div class="flex items-center justify-center bg-gradient-to-r from-blue-100 to-blue-200 p-3 rounded-lg shadow-md">
-            <div class="flex items-center w-full">
-              <i class="bx bxl-react text-3xl text-blue-500"></i>
-              <span class="font-medium ml-2">React</span>
-              <div class="ml-auto w-1/2">
-                <div class="w-full bg-white rounded-full h-3">
-                  <div class="w-4/5 bg-blue-500 h-3 rounded-full"></div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-    <!-- Node.js -->
-    <!-- <div class="flex items-center justify-center bg-gradient-to-r from-green-100 to-green-200 p-3 rounded-lg shadow-md">
-            <div class="flex items-center w-full">
-              <i class="bx bxl-nodejs text-3xl text-green-500"></i>
-              <span class="font-medium ml-2">Node.js</span>
-              <div class="ml-auto w-1/2">
-                <div class="w-full bg-white rounded-full h-3">
-                  <div class="w-4/5 bg-green-500 h-3 rounded-full"></div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-    <!-- Python -->
-    <!-- <div class="flex items-center justify-center bg-gradient-to-r from-green-100 to-green-200 p-3 rounded-lg shadow-md">
-            <div class="flex items-center w-full">
-              <box-icon class="bx bxl-python text-3xl text-green-500"></box-icon>
-              <span class="font-medium ml-2">Python</span>
-              <div class="ml-auto w-1/2">
-                <div class="w-full bg-white rounded-full h-3">
-                  <div class="w-4/5 bg-green-500 h-3 rounded-full"></div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-    <!-- SQL -->
-    <!-- <div class="flex items-center justify-center bg-gradient-to-r from-blue-100 to-blue-200 p-3 rounded-lg shadow-md">
-            <div class="flex items-center w-full">
-              <i class="bx bx-data text-3xl text-blue-500"></i>
-              <span class="font-medium ml-2">SQL</span>
-              <div class="ml-auto w-1/2">
-                <div class="w-full bg-white rounded-full h-3">
-                  <div class="w-4/5 bg-blue-500 h-3 rounded-full"></div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-    <!-- Figma -->
-    <!-- <div class="flex items-center justify-center bg-gradient-to-r from-purple-100 to-purple-200 p-3 rounded-lg shadow-md">
-            <div class="flex items-center w-full">
-              <i class="bx bxl-figma text-3xl text-purple-500"></i>
-              <span class="font-medium ml-2">Figma</span>
-              <div class="ml-auto w-1/2">
-                <div class="w-full bg-white rounded-full h-3">
-                  <div class="w-4/5 bg-purple-500 h-3 rounded-full"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
 
     <!-- Projects Section -->
