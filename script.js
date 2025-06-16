@@ -1,14 +1,3 @@
-  const button = document.getElementById("generate-joke");
-  const displayDiv = document.getElementById("joke-display");
-
-
-  button.addEventListener("click", async () => {
-    getRandomJoke();
-  }
-)
-
-"https://official-joke-api.appspot.com/random_joke
-
 // hamburger menu
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.getElementById("hamburger");
@@ -60,6 +49,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll(".category-tab");
   const contents = document.querySelectorAll(".category-content");
 
+  // Initialize - hide all content except general
+  contents.forEach((content) => {
+    if (content.getAttribute("data-category") === "general") {
+      content.classList.remove("hidden");
+    } else {
+      content.classList.add("hidden");
+    }
+  });
+
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       // Remove active class from all tabs
@@ -83,32 +81,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-async function fetchNewJoke() {
-  const response = await axios.get(
-    "https://official-joke-api.appspot.com/random_joke"
-  );
-
-  displayDiv.innerHTML = "";
-
-  // create new div 
-  let newDiv = document.createElement("div");
-  let h3 = document.createElement("h3");
-
-  h3.innerHTML = response .data.setup;
-  newDiv.appendChild(h3);
-  let p = document.createElement("p");
-  p.innerHTML = response.data.punchline;
-  newDiv.appendChild(p);
-  displayDiv.appendChild(newDiv);
-  displayDiv.classList.remove("hidden");
-  return newDiv;
-}
-
-
-  if (response.status === 200) {
-    return response.data;
-  } else {
-    throw new Error("Failed to fetch joke");
-  }
-
