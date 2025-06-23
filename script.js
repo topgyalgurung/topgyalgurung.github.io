@@ -45,11 +45,17 @@ function typeSubheading() {
 
 window.onload = typeHeading;
 
-// for section tech learning channel
+// Initialize resource category tabs (for tech learning channels)
 document.addEventListener("DOMContentLoaded", function () {
-  // Handle resource category tabs
+  initializeResourceTabs();
+  initializeProjectTabs();
+});
+
+function initializeResourceTabs() {
   const tabs = document.querySelectorAll(".category-tab");
   const contents = document.querySelectorAll(".category-content");
+
+  if (tabs.length === 0 || contents.length === 0) return;
 
   // Initialize - hide all content except general
   contents.forEach((content) => {
@@ -77,19 +83,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Show selected content
       const category = tab.getAttribute("data-category");
-      document
-        .querySelector(`.category-content[data-category="${category}"]`)
-        .classList.remove("hidden");
+      const targetContent = document.querySelector(
+        `.category-content[data-category="${category}"]`
+      );
+      if (targetContent) {
+        targetContent.classList.remove("hidden");
+      }
     });
   });
+}
 
-  // Handle project tabs for the projects section
+function initializeProjectTabs() {
   const projectTabs = document.querySelectorAll(".project-tab");
   const projectContents = document.querySelectorAll(
-    ".project-content[data-category]"
+    "#projects .project-content"
   );
 
-  // Initialize - show React projects by default
+  if (projectTabs.length === 0 || projectContents.length === 0) return;
+
+  // Initialize - show React projects by default and set first tab as active
   projectContents.forEach((content) => {
     if (content.getAttribute("data-category") === "react") {
       content.classList.remove("hidden");
@@ -98,39 +110,51 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Set first tab (React) as active initially
+  projectTabs.forEach((tab, index) => {
+    if (index === 0) {
+      tab.classList.add("active", "bg-blue-500", "text-white");
+      tab.classList.remove("bg-gray-200", "text-gray-700");
+    } else {
+      tab.classList.remove("active", "bg-blue-500", "text-white");
+      tab.classList.add("bg-gray-200", "text-gray-700");
+    }
+  });
+
   projectTabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
+    tab.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const category = tab.getAttribute("data-category");
+      console.log("Project tab clicked:", category); // Debug log
+
       // Remove active class from all project tabs
-      projectTabs.forEach((t) =>
-        t.classList.remove("active", "bg-blue-500", "text-white")
-      );
-      projectTabs.forEach((t) =>
-        t.classList.add("bg-gray-200", "text-gray-700")
-      );
+      projectTabs.forEach((t) => {
+        t.classList.remove("active", "bg-blue-500", "text-white");
+        t.classList.add("bg-gray-200", "text-gray-700");
+      });
 
       // Add active class to clicked tab
       tab.classList.add("active", "bg-blue-500", "text-white");
       tab.classList.remove("bg-gray-200", "text-gray-700");
 
       // Hide all project content
-      const projectSectionContents = document.querySelectorAll(
-        "#projects .project-content"
-      );
-      projectSectionContents.forEach((content) =>
-        content.classList.add("hidden")
-      );
+      projectContents.forEach((content) => {
+        content.classList.add("hidden");
+      });
 
       // Show selected project content
-      const category = tab.getAttribute("data-category");
       const targetContent = document.querySelector(
         `#projects .project-content[data-category="${category}"]`
       );
+      console.log("Target content found:", targetContent); // Debug log
+
       if (targetContent) {
         targetContent.classList.remove("hidden");
       }
     });
   });
-});
+}
 
 // Toggle accordion function
 function toggleAccordion(id) {
