@@ -45,6 +45,7 @@ function typeSubheading() {
 
 window.onload = typeHeading;
 
+// for section tech learning channel
 document.addEventListener("DOMContentLoaded", function () {
   // Handle resource category tabs
   const tabs = document.querySelectorAll(".category-tab");
@@ -82,10 +83,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Handle project tabs
+  // Handle project tabs for the projects section
   const projectTabs = document.querySelectorAll(".project-tab");
   const projectContents = document.querySelectorAll(
-    ".category-content[data-category]"
+    ".project-content[data-category]"
   );
 
   // Initialize - show React projects by default
@@ -113,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Hide all project content
       const projectSectionContents = document.querySelectorAll(
-        "#projects .category-content"
+        "#projects .project-content"
       );
       projectSectionContents.forEach((content) =>
         content.classList.add("hidden")
@@ -122,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Show selected project content
       const category = tab.getAttribute("data-category");
       const targetContent = document.querySelector(
-        `#projects .category-content[data-category="${category}"]`
+        `#projects .project-content[data-category="${category}"]`
       );
       if (targetContent) {
         targetContent.classList.remove("hidden");
