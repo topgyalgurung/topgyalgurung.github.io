@@ -1,787 +1,1131 @@
 <!DOCTYPE html>
-
 <html lang="en" class="scroll-smooth">
-
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Topgyal Gurung</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!--===== SCROLL REVEAL =====-->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-  <!-- =====BOX ICONS===== -->
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="assets/css/stats.css">
-</head>
-
-<!-- BODY -->
-
-<body class="font-sans bg-gradient-to-r from-gray-100 to-gray-200">
-
-  <!-- HEADER START  -->
-
-  <header
-    class="bg-white mb-16 container mx-auto px-4 shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-30 sticky top-0 z-10">
-    <nav
-      class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 container mx-auto px-6 py-4 flex justify-between items-center">
-
-      <div>
-        <a href="#"
-          class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 to-gray-500">Topgyal
-          Gurung</a>
-      </div>
-
-      <!-- nav menus  -->
-      <div class="hidden md:flex">
-        <ul class="flex space-x-6">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Topgyal Gurung</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/stats.css" />
+  </head>
+  <body class="font-sans bg-gradient-to-r from-gray-100 to-gray-200">
+    <!-- HEADER -->
+    <header
+      class="bg-white shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-30 sticky top-0 z-10"
+    >
+      <nav
+        class="max-w-4xl mx-auto flex justify-between items-center px-4 py-4"
+      >
+        <a
+          href="#"
+          class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 to-gray-500"
+          >Topgyal Gurung</a
+        >
+        <div class="hidden md:flex">
+          <ul class="flex space-x-6">
+            <li>
+              <a
+                href="#home"
+                class="text-gray-800 hover:text-blue-600 transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="text-gray-800 hover:text-blue-600 transition"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#resources"
+                class="text-gray-800 hover:text-blue-600 transition"
+                >Resources</a
+              >
+            </li>
+            <li>
+              <a
+                href="#certifications"
+                class="text-gray-800 hover:text-blue-600 transition"
+                >Certifications</a
+              >
+            </li>
+          </ul>
+        </div>
+        <button
+          id="hamburger"
+          class="md:hidden"
+          aria-label="Toggle mobile menu"
+        >
+          <svg class="h-6 w-6 fill-current text-gray-800" viewBox="0 0 24 24">
+            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+          </svg>
+        </button>
+      </nav>
+      <div id="mobile-menu" class="hidden md:hidden">
+        <ul class="flex flex-col space-y-4 px-4 py-2">
           <li>
-            <a href="#home" class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out">Home</a>
+            <a
+              href="#home"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+              >Home</a
+            >
           </li>
-          <!-- <li>
-            <a href="#skills" class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out">Skills</a>
-          </li> -->
-
           <li>
-            <a href="#projects"
-              class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out">Projects</a>
+            <a
+              href="#projects"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+              >Projects</a
+            >
           </li>
           <li>
-            <a href="#resources"
-              class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out">Resources</a>
+            <a
+              href="#resources"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+              >Resources</a
+            >
           </li>
           <li>
-            <a href="#certifications"
-              class="text-gray-800 hover:text-clifford transition duration-300 ease-in-out">Certifications</a>
+            <a
+              href="#certifications"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+              >Certifications</a
+            >
           </li>
         </ul>
       </div>
+    </header>
 
-      <!-- Hamburger Button (Mobile) -->
-      <button id="hamburger" class="md:hidden" aria-label="Toggle mobile menu">
-        <svg class="h-6 w-6 fill-current text-gray-800" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
-        </svg>
-      </button>
-    </nav>
-
-    <!-- Mobile menu, toggle classes based on menu state. -->
-    <div id="mobile-menu" class="hidden md:hidden">
-
-      <ul class="flex flex-col space-y-4 px-4 py-2">
-        <li>
-          <a href="#home"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50">Home</a>
-        </li>
-        <!-- <li>
-          <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50">Skills</a>
-        </li> -->
-
-        <li>
-          <a href="#projects"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50">Projects</a>
-        </li>
-        <li>
-          <a href="#resources"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50">Resources</a>
-        </li>
-        <li>
-          <a href="#certifications"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-clifford hover:bg-gray-50">Certifications</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- HEADER END -->
-
-  <main class="container mx-auto px-6 py-8">
-
-
-    <section id="home" class="mb-16 container mx-auto px-4">
-      <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-          <!-- Left side: Text content -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+      <!-- Home Section -->
+      <section id="home" class="mb-16">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-8"
+        >
           <div class="w-full md:w-1/2 text-center md:text-left">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-col">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
               <span id="typed-heading"></span>
             </h1>
             <h2 class="text-xl md:text-2xl text-gray-700 mb-6">
               <span id="typed-subheading"></span>
             </h2>
           </div>
-
-          <!-- Right side: Profile image and social links -->
           <div class="w-full md:w-1/2 flex flex-col items-center">
-            <!-- Profile image -->
-            <div class="relative w-64 h-64 md:w-80 md:h-80 mb-8">
-              <img src="assets/profile.png" alt="Profile"
-                class="w-full h-full object-cover rounded-full shadow-xl transform transition-transform duration-500 hover:scale-105"
-                loading="lazy" />
+            <div class="relative w-48 h-48 md:w-64 md:h-64 mb-6">
+              <img
+                src="assets/profile.png"
+                alt="Profile"
+                class="w-full h-full object-cover rounded-full shadow-xl transition-transform duration-500 hover:scale-105"
+                loading="lazy"
+              />
             </div>
-
-            <!-- Social links -->
             <div class="flex flex-col items-center">
               <h5
-                class="text-lg font-medium bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse mb-4">
+                class="text-lg font-medium bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse mb-3"
+              >
                 Find me online
               </h5>
-              <div class="flex space-x-8">
-                <a href="https://www.linkedin.com/in/topgyal/"
-                  class="text-4xl transform hover:scale-110 transition-transform duration-300"
-                  style="background: linear-gradient(45deg, #0077B5, #00A0DC); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                  <i class="bx bxl-linkedin"></i>
-                </a>
-                <a href="https://github.com/topgyalgurung"
-                  class="text-4xl transform hover:scale-110 transition-transform duration-300"
-                  style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                  <i class="bx bxl-github"></i>
-                </a>
-                <a href="https://topgyalgurung.medium.com/"
-                  class="text-4xl transform hover:scale-110 transition-transform duration-300"
-                  style="background: linear-gradient(45deg, #333, #4A4A4A); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                  <i class="bx bxl-medium"></i>
-                </a>
+              <div class="flex space-x-6">
+                <a
+                  href="https://www.linkedin.com/in/topgyal/"
+                  class="text-3xl hover:scale-110 transition-transform"
+                  style="
+                    background: linear-gradient(45deg, #0077b5, #00a0dc);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  "
+                  ><i class="bx bxl-linkedin"></i
+                ></a>
+                <a
+                  href="https://github.com/topgyalgurung"
+                  class="text-3xl hover:scale-110 transition-transform"
+                  style="
+                    background: linear-gradient(45deg, #333, #4a4a4a);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  "
+                  ><i class="bx bxl-github"></i
+                ></a>
+                <a
+                  href="https://topgyalgurung.medium.com/"
+                  class="text-3xl hover:scale-110 transition-transform"
+                  style="
+                    background: linear-gradient(45deg, #333, #4a4a4a);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  "
+                  ><i class="bx bxl-medium"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="mb-16 container mx-auto px-4">
-      <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="text-gray-700 leading-relaxed">
-        <h3 class="mb-3">I'm a full-stack developer with a unique journey — from growing up in the countryside of Nepal
-          to building a life in New York City. I've always been drawn to understanding how things work. In school, math
-          and science were my strongest subjects, and problem-solving quickly became something I genuinely enjoyed.</h3>
-
-        <h3 class="mb-3">That early interest evolved into a passion for technology and building. Though I entered the
-          tech field a bit later than some, I dove in fully — from formal education to hands-on projects. I find real
-          fulfillment in creating things from the ground up and learning through doing.</h3>
-
-        <h3>Today, I enjoy working across the stack — crafting intuitive frontends with React and Next.js, and designing
-          scalable backends with Node.js, PostgreSQL, and Prisma. For me, software engineering is the ideal blend of
-          logic, creativity, and real-world impact — and I'm excited to keep learning and building meaningful tools for
-          people</h3>
-        </p>
-      </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section>
-      <div
-        class="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-lg px-6 py-8 sm:px-8 text-left md:text-center border border-gray-200">
-        <!-- Resume Header -->
-        <h2 class="text-2xl font-bold text-gray-800 mb-2">My Resume</h2>
-        <p class="text-gray-600 mb-4">Click below to view or download my resume.</p>
-
-        <!-- Resume Preview (Optional) -->
-        <div class="bg-gray-100 p-4 rounded-lg mb-4">
-          <embed src="./assets/Resume.pdf" type="application/pdf" class="w-full h-40 rounded-md" />
+      <!-- About Section -->
+      <section id="about" class="mb-16">
+        <div>
+          <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+            <span class="block mb-3"
+              >Full-stack developer from rural Nepal to NYC. Passionate about
+              understanding how things work, with a strong background in math,
+              science, and problem-solving.</span
+            >
+            <span class="block mb-3"
+              >Transitioned into tech through formal education and hands-on
+              projects. Enjoys building from scratch and learning by
+              doing.</span
+            >
+            <span class="block"
+              >Works across the stack: React, Next.js, Node.js, PostgreSQL,
+              Prisma. Loves blending logic, creativity, and impact. Always
+              learning and building useful tools.</span
+            >
+          </p>
+          <!-- Resume Section -->
+          <div class="flex justify-center mt-4 space-x-4 mb-4">
+            <a
+              href="./assets/Resume.pdf"
+              target="_blank"
+              class="px-4 py-2 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition"
+              >View Resume</a
+            >
+            <a
+              href="./assets/Resume.pdf"
+              download="resume.pdf"
+              class="px-4 py-2 text-white bg-green-600 rounded-lg shadow-md hover:bg-green-700 transition"
+              >Download</a
+            >
+          </div>
         </div>
+      </section>
 
-        <!-- Buttons -->
-        <div class="flex justify-center space-x-4">
-          <!-- View Resume Button -->
-          <a href="./assets/Resume.pdf" target="_blank"
-            class="flex items-center px-4 py-2 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition">
-
-            View Resume
-          </a>
-
-          <!-- Download Resume Button -->
-          <a href="./assets/Resume.pdf" download="resume.pdf"
-            class="flex items-center px-4 py-2 text-white bg-green-600 rounded-lg shadow-md hover:bg-green-700 transition">
-
-            Download
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Main Capstone Project Section -->
-    <section class="mb-16 container mx-auto px-4">
-      <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-8">
-          <h2 class="text-3xl font-bold text-gray-800 mb-2">Featured Project</h2>
-          <p class="text-gray-600">My main full-stack capstone project</p>
-        </div>
-        
-        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl shadow-xl p-8 transform hover:scale-105 transition-all duration-300">
-          <div class="text-center">
-            <div class="mb-4">
-              <span class="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full mb-2">
-                🏆 Capstone Project
-              </span>
-            </div>
-            <h3 class="text-2xl font-bold text-gray-800 mb-2">Himalayan Connect NYC</h3>
-            <p class="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
-              A comprehensive full-stack web application built with Next.js, React, Prisma ORM, and PostgreSQL. 
-              Features user authentication, real-time data management, and responsive design.
-            </p>
-            
-            <!-- Tech Stack -->
-            <div class="flex flex-wrap justify-center gap-2 mb-6">
-              <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Next.js</span>
-              <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">React</span>
-              <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Prisma ORM</span>
-              <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">PostgreSQL</span>
-              <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Tailwind CSS</span>
-              <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">TypeScript</span>
-            </div>
-            
-            <!-- Action Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://himalayan-connect-nyc.vercel.app/" target="_blank" rel="noopener"
-                class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105">
-                <i class="bx bx-link-external mr-2"></i>
-                View Live Demo
-              </a>
-              <a href="https://github.com/topgyalgurung/nextjs-fullstack-app" target="_blank" rel="noopener"
-                class="inline-flex items-center px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-gray-900 transition-colors duration-300 transform hover:scale-105">
-                <i class="bx bxl-github mr-2"></i>
-                View Source Code
-              </a>
+      <!-- Featured Project -->
+      <section class="mb-16">
+        <div>
+          <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">
+              Featured Project
+            </h2>
+            <p class="text-gray-600">Main full-stack capstone project</p>
+          </div>
+          <div
+            class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl shadow-xl p-8 hover:scale-105 transition-all duration-300"
+          >
+            <div class="text-center">
+              <span
+                class="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full mb-2"
+                >🏆 Capstone Project</span
+              >
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                Himalayan Connect NYC
+              </h3>
+              <p class="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
+                Full-stack web app with Next.js, React, Prisma, PostgreSQL.
+                Features authentication, real-time data, and responsive design.
+              </p>
+              <div class="flex flex-wrap justify-center gap-2 mb-6">
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                  >Next.js</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                  >Prisma</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                  >PostgreSQL</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                  >Tailwind CSS</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                  >TypeScript</span
+                >
+              </div>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://himalayan-connect-nyc.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 hover:scale-105"
+                  ><i class="bx bx-link-external mr-2"></i>Live Demo</a
+                >
+                <a
+                  href="https://github.com/topgyalgurung/nextjs-fullstack-app"
+                  target="_blank"
+                  rel="noopener"
+                  class="inline-flex items-center px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-gray-900 transition-colors duration-300 hover:scale-105"
+                  ><i class="bx bxl-github mr-2"></i>Source Code</a
+                >
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="mb-16 container mx-auto px-4 mt-10">
-      <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="space-y-2">
+      <!-- Projects Section -->
+      <section id="projects" class="mb-16">
+        <div>
           <h2 class="text-3xl font-bold text-center mb-8">
             Explore My Projects
           </h2>
-  
-
-
-          <!-- Category Tabs -->
           <div class="flex flex-wrap justify-center gap-4 mb-8">
             <button
-              class="project-tab active px-6 py-3 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-colors"
-              data-category="react">React</button>
+              class="project-tab active px-6 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition"
+              data-category="react"
+            >
+              React
+            </button>
             <button
-              class="project-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors"
-              data-category="next">Next.js</button>
+              class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
+              data-category="next"
+            >
+              Next.js
+            </button>
             <button
-              class="project-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors"
-              data-category="node-express">Node/Express</button>
+              class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
+              data-category="node-express"
+            >
+              Node/Express
+            </button>
             <button
-              class="project-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors"
-              data-category="postgres">PostgreSQL</button>
+              class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
+              data-category="postgres"
+            >
+              PostgreSQL
+            </button>
             <button
-              class="project-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors"
-              data-category="mongodb">MongoDB</button>
+              class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
+              data-category="mongodb"
+            >
+              MongoDB
+            </button>
             <button
-              class="project-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors"
-              data-category="mongodb">Others</button>
-
+              class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
+              data-category="others"
+            >
+              Others
+            </button>
           </div>
-
-          <!-- React Category Content -->
-          <div class="project-content bg-white rounded-lg shadow-md p-6" data-category="react">
-            <!-- Section 1 -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <h2>
-                <button class="w-full text-center bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                  onclick="toggleAccordion('collapseOne')">
-                  Next.js Full Stack Web App
-                  <span class="transition-transform" id="iconOne">▼</span>
-                </button>
-              </h2>
+          <!-- React Projects -->
+          <div
+            class="project-content bg-white rounded-lg shadow-md p-6"
+            data-category="react"
+          >
+            <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
+              <button
+                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                onclick="toggleAccordion('collapseOne')"
+              >
+                Next.js Full Stack Web App
+                <span id="iconOne">▼</span>
+              </button>
               <div id="collapseOne" class="hidden px-4 py-3 bg-white">
-                <div class="block bg-white text-center rounded-lg shadow-md">
-                  <div class="p-4 flex flex-col items-center">
-                    <p class="text-lg font-semibold mb-1">Himalayan Connect NYC</p>
-                    <h4 class="text-base text-gray-700 mb-4">Full Stack Web App using Next.js, React, Prisma ORM for
-                      PostgreSQL</h4>
-                    <div class="flex gap-4">
-                      <a href="https://himalayan-connect-nyc.vercel.app/" target="_blank" rel="noopener"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        View Live
-                      </a>
-                      <a href="https://github.com/topgyalgurung/nextjs-fullstack-app" target="_blank" rel="noopener"
-                        class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                        GitHub
-                      </a>
-                    </div>
+                <div class="text-center">
+                  <p class="font-semibold mb-1">Himalayan Connect NYC</p>
+                  <h4 class="text-gray-700 mb-4">
+                    Full Stack Web App: Next.js, React, Prisma, PostgreSQL
+                  </h4>
+                  <div class="flex gap-4 justify-center">
+                    <a
+                      href="https://himalayan-connect-nyc.vercel.app/"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                      >Live</a
+                    >
+                    <a
+                      href="https://github.com/topgyalgurung/nextjs-fullstack-app"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                      >GitHub</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- Section 2: Space Travel React App -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <h2>
-                <button class="w-full text-center bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                  onclick="toggleAccordion('collapseTwo')">
-                  Space Travel React App
-                  <span class="transition-transform" id="iconTwo">▼</span>
-                </button>
-              </h2>
+            <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
+              <button
+                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                onclick="toggleAccordion('collapseTwo')"
+              >
+                Space Travel React App
+                <span id="iconTwo">▼</span>
+              </button>
               <div id="collapseTwo" class="hidden px-4 py-3 bg-white">
-                <div class="block bg-white text-center rounded-lg shadow-md">
-                  <div class="p-4 flex flex-col items-center">
-                    <p class="text-lg font-semibold mb-1">Space Travel</p>
-                    <h4 class="text-base text-gray-700 mb-4">React + Styled Components + Routing</h4>
-                    <div class="flex gap-4">
-                      <a href="https://space-travel-jj1w.onrender.com/" target="_blank" rel="noopener"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        View Live
-                      </a>
-                      <a href="https://github.com/topgyalgurung/space-travel" target="_blank" rel="noopener"
-                        class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                        GitHub
-                      </a>
-                    </div>
+                <div class="text-center">
+                  <p class="font-semibold mb-1">Space Travel</p>
+                  <h4 class="text-gray-700 mb-4">
+                    React, Styled Components, Routing
+                  </h4>
+                  <div class="flex gap-4 justify-center">
+                    <a
+                      href="https://space-travel-jj1w.onrender.com/"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                      >Live</a
+                    >
+                    <a
+                      href="https://github.com/topgyalgurung/space-travel"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                      >GitHub</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- Section 3: Pokedox -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <h2>
-                <button class="w-full text-center bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                  onclick="toggleAccordion('collapseThree')">
-                  Pokedox
-                  <span class="transition-transform" id="iconThree">▼</span>
-                </button>
-              </h2>
+            <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
+              <button
+                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                onclick="toggleAccordion('collapseThree')"
+              >
+                Pokedox
+                <span id="iconThree">▼</span>
+              </button>
               <div id="collapseThree" class="hidden px-4 py-3 bg-white">
-                <div class="block bg-white text-center rounded-lg shadow-md">
-                  <div class="p-4 flex flex-col items-center">
-                    <p class="text-lg font-semibold mb-1">Pokedox</p>
-                    <h4 class="text-base text-gray-700 mb-4">React App with Pokémon API</h4>
-                    <div class="flex gap-4">
-                      <a href="https://pokedex-lj55.onrender.com/" target="_blank" rel="noopener"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        View Live
-                      </a>
-                      <a href="https://github.com/topgyalgurung/pokedox" target="_blank" rel="noopener"
-                        class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                        GitHub
-                      </a>
-                    </div>
+                <div class="text-center">
+                  <p class="font-semibold mb-1">Pokedox</p>
+                  <h4 class="text-gray-700 mb-4">React App with Pokémon API</h4>
+                  <div class="flex gap-4 justify-center">
+                    <a
+                      href="https://pokedex-lj55.onrender.com/"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                      >Live</a
+                    >
+                    <a
+                      href="https://github.com/topgyalgurung/pokedox"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                      >GitHub</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- Section 4: Space Mission Control -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <h2>
-                <button class="w-full text-center bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                  onclick="toggleAccordion('collapseFour')">
-                  Space Mission Control
-                  <span class="transition-transform" id="iconFour">▼</span>
-                </button>
-              </h2>
+            <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
+              <button
+                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                onclick="toggleAccordion('collapseFour')"
+              >
+                Space Mission Control
+                <span id="iconFour">▼</span>
+              </button>
               <div id="collapseFour" class="hidden px-4 py-3 bg-white">
-                <div class="block bg-white text-center rounded-lg shadow-md">
-                  <div class="p-4 flex flex-col items-center">
-                    <p class="text-lg font-semibold mb-1">Space Mission Control</p>
-                    <h4 class="text-base text-gray-700 mb-4">Mission dashboard with React and REST API</h4>
-                    <div class="flex gap-4">
-                      <a href="https://space-mission-control-2.onrender.com/" target="_blank" rel="noopener"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        View Live
-                      </a>
-                      <a href="https://github.com/topgyalgurung/space-mission-control" target="_blank" rel="noopener"
-                        class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                        GitHub
-                      </a>
-                    </div>
+                <div class="text-center">
+                  <p class="font-semibold mb-1">Space Mission Control</p>
+                  <h4 class="text-gray-700 mb-4">React, REST API</h4>
+                  <div class="flex gap-4 justify-center">
+                    <a
+                      href="https://space-mission-control-2.onrender.com/"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                      >Live</a
+                    >
+                    <a
+                      href="https://github.com/topgyalgurung/space-mission-control"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                      >GitHub</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- Section 5: Jeopardy Game -->
             <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <h2>
-                <button class="w-full text-center bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                  onclick="toggleAccordion('collapseFive')">
-                  Jeopardy Game
-                  <span class="transition-transform" id="iconFive">▼</span>
-                </button>
-              </h2>
+              <button
+                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                onclick="toggleAccordion('collapseFive')"
+              >
+                Jeopardy Game
+                <span id="iconFive">▼</span>
+              </button>
               <div id="collapseFive" class="hidden px-4 py-3 bg-white">
-                <div class="block bg-white text-center rounded-lg shadow-md">
-                  <div class="p-4 flex flex-col items-center">
-                    <p class="text-lg font-semibold mb-1">Jeopardy Game</p>
-                    <h4 class="text-base text-gray-700 mb-4">Vanilla JS trivia game with score tracking</h4>
-                    <div class="flex gap-4">
-                      <a href="https://topgyalgurung.me/jeopardy-game/" target="_blank" rel="noopener"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        View Live
-                      </a>
-                      <a href="https://github.com/topgyalgurung/jeopardy-game/" target="_blank" rel="noopener"
-                        class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                        GitHub
-                      </a>
-                    </div>
+                <div class="text-center">
+                  <p class="font-semibold mb-1">Jeopardy Game</p>
+                  <h4 class="text-gray-700 mb-4">Vanilla JS trivia game</h4>
+                  <div class="flex gap-4 justify-center">
+                    <a
+                      href="https://topgyalgurung.me/jeopardy-game/"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                      >Live</a
+                    >
+                    <a
+                      href="https://github.com/topgyalgurung/jeopardy-game/"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                      >GitHub</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Next.js Category Content -->
-          <div class="project-content hidden bg-white rounded-lg shadow-md p-6" data-category="next">
-            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">Next.js Projects</h3>
+          <!-- Next.js Projects -->
+          <div
+            class="project-content hidden bg-white rounded-lg shadow-md p-6"
+            data-category="next"
+          >
+            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
+              Next.js Projects
+            </h3>
             <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <h2>
-                <button class="w-full text-center bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                  onclick="toggleAccordion('collapseNextJs')">
-                  Next.js Full Stack Web App
-                  <span class="transition-transform" id="iconNextJs">▼</span>
-                </button>
-              </h2>
+              <button
+                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                onclick="toggleAccordion('collapseNextJs')"
+              >
+                Next.js Full Stack Web App
+                <span id="iconNextJs">▼</span>
+              </button>
               <div id="collapseNextJs" class="hidden px-4 py-3 bg-white">
-                <div class="block bg-white text-center rounded-lg shadow-md">
-                  <div class="p-4 flex flex-col items-center">
-                    <p class="text-lg font-semibold mb-1">Himalayan Connect NYC</p>
-                    <h4 class="text-base text-gray-700 mb-4">Full Stack Web App using Next.js, React, Prisma ORM for
-                      PostgreSQL</h4>
-                    <div class="flex gap-4">
-                      <a href="https://himalayan-connect-nyc.vercel.app/" target="_blank" rel="noopener"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        View Live
-                      </a>
-                      <a href="https://github.com/topgyalgurung/nextjs-fullstack-app" target="_blank" rel="noopener"
-                        class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                        GitHub
-                      </a>
-                    </div>
+                <div class="text-center">
+                  <p class="font-semibold mb-1">Himalayan Connect NYC</p>
+                  <h4 class="text-gray-700 mb-4">
+                    Full Stack Web App: Next.js, React, Prisma, PostgreSQL
+                  </h4>
+                  <div class="flex gap-4 justify-center">
+                    <a
+                      href="https://himalayan-connect-nyc.vercel.app/"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                      >Live</a
+                    >
+                    <a
+                      href="https://github.com/topgyalgurung/nextjs-fullstack-app"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                      >GitHub</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Node/Express Projects -->
+          <div
+            class="project-content hidden bg-white rounded-lg shadow-md p-6"
+            data-category="node-express"
+          >
+            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
+              Node.js & Express Projects
+            </h3>
+            <!-- Express API -->
+            <div class="border border-gray-300 rounded-lg overflow-hidden">
+              <button
+                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                onclick="toggleAccordion('collapseNodeExpress')"
+              >
+                Express API
+                <span id="iconNodeExpress">▼</span>
+              </button>
+              <div id="collapseNodeExpress" class="hidden px-4 py-3 bg-white">
+                <div class="text-center">
+                  <p class="font-semibold mb-1">Mean Median Mode API</p>
+                  <h4 class="text-gray-700 mb-4">
+                    Express.js API for statistics
+                  </h4>
+                  <div class="flex gap-4 justify-center">
+                    <a
+                      href="https://github.com/topgyalgurung/nodejs_exercise/tree/master/express-meanMedianMode"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                      >GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Node Markov  -->
+            <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
+              <button
+                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                onclick="toggleAccordion('collapseNodeMarkov')"
+              >
+                Node Markov Machine
+                <span id="iconNodeMarkov">▼</span>
+              </button>
+              <div id="collapseNodeMarkov" class="hidden px-4 py-3 bg-white">
+                <div class="text-center">
+                  <p class="font-semibold mb-1">Node Markov Machine</p>
+                  <h4 class="text-gray-700 mb-4">
+                    An algorithm for generating realistic machine-made text from
+                    an original source text.
+                  </h4>
+                  <div class="flex gap-4 justify-center">
+                    <a
+                      href="https://github.com/topgyalgurung/nodejs_exercise/tree/master/node-markov"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                      >GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
 
-
-
-
-          <!-- Node/Express Category Content -->
-          <div class="project-content hidden bg-white rounded-lg shadow-md p-6" data-category="node-express">
-            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">Node.js & Express Projects</h3>
-            <p class="text-center text-gray-600">Node.js and Express projects will be displayed here.</p>
+            <!-- Node Shopping List -->
+            <!-- INSERT_YOUR_CODE -->
+            <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
+              <button
+                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                onclick="toggleAccordion('collapseNodeShoppingList')"
+              >
+                Node Shopping List API
+                <span id="iconNodeShoppingList">▼</span>
+              </button>
+              <div
+                id="collapseNodeShoppingList"
+                class="hidden px-4 py-3 bg-white"
+              >
+                <div class="text-center">
+                  <p class="font-semibold mb-1">Express Shopping List API</p>
+                  <h4 class="text-gray-700 mb-4">
+                    A simple JSON API application for storing a shopping list,
+                    demonstrating routing and middleware in Express.js.
+                  </h4>
+                  <div class="flex gap-4 justify-center">
+                    <a
+                      href="https://github.com/topgyalgurung/nodejs_exercise/tree/master/express-shopping-list"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                      >GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <!-- API Category Content -->
-          <div class="project-content hidden bg-white rounded-lg shadow-md p-6" data-category="api">
-            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">API Projects</h3>
-            <p class="text-center text-gray-600">API projects will be displayed here.</p>
+          <!-- PostgreSQL Projects -->
+          <div
+            class="project-content hidden bg-white rounded-lg shadow-md p-6"
+            data-category="postgres"
+          >
+            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
+              PostgreSQL Projects
+            </h3>
+            <p class="text-center text-gray-600">
+              PostgreSQL projects will be displayed here.
+            </p>
           </div>
-
-          <!-- PostgreSQL Category Content -->
-          <div class="project-content hidden bg-white rounded-lg shadow-md p-6" data-category="postgres">
-            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">PostgreSQL Projects</h3>
-            <p class="text-center text-gray-600">PostgreSQL projects will be displayed here.</p>
+          <!-- MongoDB Projects -->
+          <div
+            class="project-content hidden bg-white rounded-lg shadow-md p-6"
+            data-category="mongodb"
+          >
+            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
+              MongoDB Projects
+            </h3>
+            <p class="text-center text-gray-600">
+              MongoDB projects will be displayed here.
+            </p>
           </div>
-
-          <!-- MongoDB Category Content -->
-          <div class="project-content hidden bg-white rounded-lg shadow-md p-6" data-category="mongodb">
-            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">MongoDB Projects</h3>
-            <p class="text-center text-gray-600">MongoDB projects will be displayed here.</p>
+          <!-- Others -->
+          <div
+            class="project-content hidden bg-white rounded-lg shadow-md p-6"
+            data-category="others"
+          >
+            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
+              Other Projects
+            </h3>
+            <p class="text-center text-gray-600">
+              Other projects will be displayed here.
+            </p>
           </div>
-
-          <!-- end -->
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Favorite Tech Learning Channels -->
-    <section id="resources" class="max-w-4xl mx-auto px-4 mt-10">
-      <h2 class="text-3xl font-bold text-center mb-8">Favorite Tech Learning Channels</h2>
-      <!-- Category Tabs -->
-      <div class="flex flex-wrap justify-center gap-4 mb-8">
-        <button
-          class="category-tab active px-6 py-3 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-colors"
-          data-category="general">General</button>
-        <button
-          class="category-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors"
-          data-category="javascript">JavaScript</button>
-        <button
-          class="category-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors"
-          data-category="reactjs">React.js</button>
-        <button
-          class="category-tab px-6 py-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors"
-          data-category="nextjs">Next.js</button>
-      </div>
-
-      <!-- Content Container -->
-      <div class="text-center gap-8">
-        <!-- General Section -->
-        <div class="category-content bg-white rounded-lg shadow-md p-6" data-category="general">
-          <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">General Resources</h3>
-          <ul class="space-y-3">
-            <li><a href="https://www.youtube.com/@Fireship" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>Fireship</a></li>
-            <li><a href="https://www.freecodecamp.org" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>freeCodeCamp</a></li>
-            <li><a href="https://www.youtube.com/@ByteByteGo" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>ByteByteGo</a></li>
-            <li><a href="https://profy.dev/project/github-minesweeper" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>GitHub Minesweeper - Git Workflow & Continuous
-                Integration </a></li>
-            <li><a href="https://neetcode.io/" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>Neetcode - Prepare for Coding Interview or have fun
-                problem-solving </a></li>
-            <li><a href=" https://youtu.be/phWxA89Dy94?si=-INmnaJy1Ext7HGk" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>Learn Flexbox in 8 mins - Slaying the Dragon</a></li>
-            <li><a href=" https://youtu.be/EiNiSFIPIQE?si=zqirk8FjDrfX0DOM" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>Learn CSS Grid in 13 mins - Slaying the Dragon</a>
-            </li>
-            <li><a href=" https://youtu.be/K24lUqcT0Ms?si=WwXhp_v4bGbZ5TOm" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>Master Media Queries and Responsive Design Slaying the
-                Dragon</a></li>
-            <li><a href=" https://youtu.be/r2zuL9MW6wc?si=ZXT1bsPoFBvxOKm3" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>Kubernetes in 15 minutes - Travis Media</a></li>
-          </ul>
-        </div>
-
-        <!-- JavaScript Section -->
-        <div class="category-content hidden bg-white rounded-lg shadow-md p-6" data-category="javascript">
-          <h3 class="text-xl font-semibold mb-4 text-gray-800">JavaScript Resources</h3>
-          <ul class="space-y-3">
-            <li><a href="https://www.youtube.com/@academind" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>Academind</a></li>
-            <li><a href="https://www.youtube.com/@javascriptmastery" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>JavaScript Mastery</a></li>
-            <li><a href="https://www.youtube.com/@programmingwithmosh" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>Programming with Mosh</a></li>
-            <li><a href="https://www.youtube.com/@TheCodingTrain" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>The Coding Train</a></li>
-          </ul>
-        </div>
-
-        <!-- React Section -->
-        <div class="category-content hidden bg-white rounded-lg shadow-md p-6" data-category="reactjs">
-          <h3 class="text-xl font-semibold mb-4 text-gray-800">React.js Resources</h3>
-          <ul class="space-y-3">
-            <li><a href="https://www.youtube.com/@jherr" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>Jack Herrington</a></li>
-            <li><a href="https://www.youtube.com/@cosdensolutions" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>Cosden Solutions</a></li>
-          </ul>
-        </div>
-
-        <!-- Next.js Section -->
-        <div class="category-content hidden bg-white rounded-lg shadow-md p-6" data-category="nextjs">
-          <h3 class="text-xl font-semibold mb-4 text-gray-800">Next.js Resources</h3>
-          <ul class="space-y-3">
-            <li><a href="https://www.youtube.com/@ByteGrad" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>ByteGrad</a></li>
-            <li><a href="https://www.youtube.com/@VercelHQ" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>VercelHQ</a></li>
-            <li><a href="https://www.youtube.com/channel/UCXgGY0wkgOzynnHvSEVmE3A" target="_blank" rel="noopener"
-                class="text-blue-500 hover:text-blue-700 flex items-center gap-2"><span
-                  class="w-2 h-2 bg-blue-500 rounded-full"></span>Hitesh Choudhary</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- Certifications Section -->
-
-
-    <section id="certifications" class="mb-12 container mx-auto px-4">
-      <div class="flex flex-col items-center justify-center">
-        <h2 class="text-3xl font-bold text-center my-6">Certifications</h2>
-
-        <div class="w-full max-w-5xl mx-auto">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-            <!-- Springboard Software Engineering -->
+      <!-- Resources Section -->
+      <section id="resources" class="mb-16">
+        <div>
+          <h2 class="text-3xl font-bold text-center mb-8">
+            Favorite Tech Learning Channels
+          </h2>
+          <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <button
+              class="category-tab active px-6 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition"
+              data-category="general"
+            >
+              General
+            </button>
+            <button
+              class="category-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
+              data-category="javascript"
+            >
+              JavaScript
+            </button>
+            <button
+              class="category-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
+              data-category="reactjs"
+            >
+              React.js
+            </button>
+            <button
+              class="category-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
+              data-category="nextjs"
+            >
+              Next.js
+            </button>
+          </div>
+          <div>
             <div
-              class="bg-white rounded-lg shadow-md p-4 transform hover:scale-102 transition duration-300 border border-gray-100">
+              class="category-content bg-white rounded-lg shadow-md p-6"
+              data-category="general"
+            >
+              <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
+                General Resources
+              </h3>
+              <ul class="space-y-2 text-left max-w-xl mx-auto">
+                <li>
+                  <a
+                    href="https://www.youtube.com/@Fireship"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Fireship</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.freecodecamp.org"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >freeCodeCamp</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/@ByteByteGo"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >ByteByteGo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://profy.dev/project/github-minesweeper"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >GitHub Minesweeper</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://neetcode.io/"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Neetcode</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://youtu.be/phWxA89Dy94?si=-INmnaJy1Ext7HGk"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Flexbox in 8 mins</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://youtu.be/EiNiSFIPIQE?si=zqirk8FjDrfX0DOM"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >CSS Grid in 13 mins</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://youtu.be/K24lUqcT0Ms?si=WwXhp_v4bGbZ5TOm"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Responsive Design</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://youtu.be/r2zuL9MW6wc?si=ZXT1bsPoFBvxOKm3"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Kubernetes in 15 min</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- JavaScript Resources -->
+            <div
+              class="category-content hidden bg-white rounded-lg shadow-md p-6"
+              data-category="javascript"
+            >
+              <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
+                JavaScript Resources
+              </h3>
+              <ul class="space-y-2 text-left max-w-xl mx-auto">
+                <li>
+                  <a
+                    href="https://www.youtube.com/@academind"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Academind</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/@javascriptmastery"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >JavaScript Mastery</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/@programmingwithmosh"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Programming with Mosh</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/@TheCodingTrain"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >The Coding Train</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- React.js Resources -->
+            <div
+              class="category-content hidden bg-white rounded-lg shadow-md p-6"
+              data-category="reactjs"
+            >
+              <h3 class="text-xl text-center font-semibold mb-4 text-gray-800">
+                React.js Resources
+              </h3>
+              <ul class="space-y-2 text-left max-w-xl mx-auto">
+                <li>
+                  <a
+                    href="https://www.youtube.com/@jherr"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Jack Herrington</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/@cosdensolutions"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Cosden Solutions</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Next.js Resources -->
+            <div
+              class="category-content hidden bg-white rounded-lg shadow-md p-6"
+              data-category="nextjs"
+            >
+              <h3 class="text-xl text-center font-semibold mb-4 text-gray-800">
+                Next.js Resources
+              </h3>
+              <ul class="space-y-2 text-left max-w-xl mx-auto">
+                <li>
+                  <a
+                    href="https://www.youtube.com/@ByteGrad"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >ByteGrad</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/@VercelHQ"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >VercelHQ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/channel/UCXgGY0wkgOzynnHvSEVmE3A"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Hitesh Choudhary</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications Section -->
+      <section id="certifications" class="mb-12">
+        <div>
+          <h2 class="text-3xl font-bold text-center my-6">Certifications</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Springboard -->
+            <div
+              class="bg-white rounded-lg shadow-md p-4 border border-gray-100"
+            >
               <div class="flex items-center justify-between mb-3 border-b pb-2">
-                <h3 class="text-lg font-semibold text-gray-800">Springboard Software Engineering</h3>
+                <h3 class="text-lg font-semibold text-gray-800">
+                  Springboard Software Engineering
+                </h3>
                 <i class="bx bx-code-alt text-2xl text-blue-500"></i>
               </div>
-              <div class="space-y-3">
-                <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
-                  <li>700+ hours of hands-on course material, with 1:1 industry expert mentor oversight, and completion
-                    of 4 in-depth portfolio projects</li>
-                  <li>Mastered MERN stack, TypeScript, Next.js, REST APIs, GraphQL, and databases</li>
-                  <li>Built full-stack React/Next.js apps with PostgreSQL, Prisma, and JWT authentication</li>
-                  <li>Implemented responsive UIs with Tailwind CSS, Material UI, and Google Maps integration</li>
-                </ul>
-                <div class="mt-3">
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">MERN Stack</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">TypeScript</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Next.js</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">GraphQL</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">PostgreSQL</span>
-                  </div>
-                </div>
-                <div class="mt-3">
-                  <a href="./assets/springboard.pdf" target="_blank"
-                    class="inline-flex items-center px-3 py-1.5 text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-700 transition text-sm">
-                    View Certificate
-                  </a>
-                </div>
+              <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                <li>700+ hours, 1:1 mentor, 4 portfolio projects</li>
+                <li>MERN, TypeScript, Next.js, REST, GraphQL, DBs</li>
+                <li>Built full-stack apps with PostgreSQL, Prisma, JWT</li>
+                <li>Responsive UIs: Tailwind, MUI, Google Maps</li>
+              </ul>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >MERN</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >TypeScript</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >Next.js</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >GraphQL</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >PostgreSQL</span
+                >
+              </div>
+              <div class="mt-3">
+                <a
+                  href="./assets/springboard.pdf"
+                  target="_blank"
+                  class="inline-flex items-center px-3 py-1.5 text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-700 transition text-sm"
+                  >View Certificate</a
+                >
               </div>
             </div>
-
-            <!-- CodePath Cyber Security Tech Fellow -->
+            <!-- CodePath Cyber Security -->
             <div
-              class="bg-white rounded-lg shadow-md p-4 transform hover:scale-102 transition duration-300 border border-gray-100">
+              class="bg-white rounded-lg shadow-md p-4 border border-gray-100"
+            >
               <div class="flex items-center justify-between mb-3 border-b pb-2">
-                <h3 class="text-lg font-semibold text-gray-800">CodePath Cyber Security Course</h3>
+                <h3 class="text-lg font-semibold text-gray-800">
+                  CodePath Cyber Security
+                </h3>
                 <i class="bx bx-shield text-2xl text-blue-500"></i>
               </div>
-              <div class="space-y-3">
-                <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
-                  <li>Completed 14-week cybersecurity course with hands-on training in web app security</li>
-                  <li>Identified and exploited vulnerabilities (SQL injection, XSS, CSRF, session hijacking)</li>
-                  <li>Gained experience with industry tools (Metasploit, Wireshark, Kali Linux, Burp Suite)</li>
-                  <li>Developed technical documentation and security reports for real-world exploits</li>
-                </ul>
-                <div class="mt-3">
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Kali Linux</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">CSRF</span>
-                    <span
-                      class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Cryptography</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">NetSec</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">CTF</span>
-                  </div>
-                </div>
-                <div class="mt-3">
-                  <a href="./assets/cybersecurity.pdf" target="_blank"
-                    class="inline-flex items-center px-3 py-1.5 text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-700 transition text-sm">
-                    View Certificate
-                  </a>
-                </div>
+              <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                <li>14-week hands-on web app security</li>
+                <li>Vulnerabilities: SQLi, XSS, CSRF, session hijack</li>
+                <li>Tools: Metasploit, Wireshark, Kali, Burp Suite</li>
+                <li>Wrote technical docs and security reports</li>
+              </ul>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >Kali Linux</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >CSRF</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >Cryptography</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >NetSec</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >CTF</span
+                >
+              </div>
+              <div class="mt-3">
+                <a
+                  href="./assets/cybersecurity.pdf"
+                  target="_blank"
+                  class="inline-flex items-center px-3 py-1.5 text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-700 transition text-sm"
+                  >View Certificate</a
+                >
               </div>
             </div>
-
-            <!-- Coursera Specialization -->
+            <!-- Coursera Python -->
             <div
-              class="bg-white rounded-lg shadow-md p-4 transform hover:scale-102 transition duration-300 border border-gray-100">
+              class="bg-white rounded-lg shadow-md p-4 border border-gray-100"
+            >
               <div class="flex items-center justify-between mb-3 border-b pb-2">
-                <h3 class="text-lg font-semibold text-gray-800">Python for Everybody - University of Michigan</h3>
+                <h3 class="text-lg font-semibold text-gray-800">
+                  Python for Everybody - UMich
+                </h3>
                 <i class="bx bx-code text-2xl text-blue-500"></i>
               </div>
-              <div class="space-y-3">
-                <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
-                  <li>Completed comprehensive 5-course specialization covering Python programming fundamentals</li>
-                  <li>Mastered Python data structures, web data access, and database integration</li>
-                  <li>Developed skills in data retrieval, processing, and visualization through hands-on projects</li>
-                  <li>Built practical applications including web scraping, API integration, and data analysis tools</li>
-                </ul>
-                <div class="mt-3">
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Python</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Data
-                      Structures</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Web APIs</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Databases</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Data
-                      Visualization</span>
-                  </div>
-                </div>
-                <div class="mt-3">
-                  <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/NEVGFASUB5EK"
-                    target="_blank" rel="noopener"
-                    class="inline-flex items-center px-3 py-1.5 text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-700 transition text-sm">
-                    View Certificate
-                  </a>
-                </div>
+              <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                <li>5-course Python specialization</li>
+                <li>Data structures, web data, DB integration</li>
+                <li>Data retrieval, processing, visualization</li>
+                <li>Projects: scraping, API, data tools</li>
+              </ul>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >Python</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >Data Structures</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >Web APIs</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >Databases</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >Visualization</span
+                >
+              </div>
+              <div class="mt-3">
+                <a
+                  href="https://www.coursera.org/account/accomplishments/specialization/certificate/NEVGFASUB5EK"
+                  target="_blank"
+                  rel="noopener"
+                  class="inline-flex items-center px-3 py-1.5 text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-700 transition text-sm"
+                  >View Certificate</a
+                >
               </div>
             </div>
-
             <!-- AWS Certification -->
             <div
-              class="bg-white rounded-lg shadow-md p-4 transform hover:scale-102 transition duration-300 border border-gray-100">
+              class="bg-white rounded-lg shadow-md p-4 border border-gray-100"
+            >
               <div class="flex items-center justify-between mb-3 border-b pb-2">
-                <h3 class="text-lg font-semibold text-gray-800">AWS Academy Cloud Foundations</h3>
+                <h3 class="text-lg font-semibold text-gray-800">
+                  AWS Academy Cloud Foundations
+                </h3>
                 <i class="bx bx-certification text-2xl text-blue-500"></i>
               </div>
-              <div class="space-y-3">
-                <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
-                  <li>Gained foundational knowledge of AWS services including EC2, S3, Lambda, RDS, and IAM</li>
-                  <li>Understood key cloud concepts: global infrastructure, pricing models, scalability, and security
-                    best practices</li>
-                  <li>Completed hands-on exercises deploying web apps using EC2, configuring S3 buckets, setting IAM
-                    roles, and triggering Lambda functions</li>
-                  <li>Practiced real-world use cases involving networking (VPC), monitoring (CloudWatch), and
-                    auto-scaling configurations</li>
-                </ul>
-                <div class="mt-3">
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">AWS EC2</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">S3</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Lambda</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">RDS</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">IAM</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">VPC</span>
-                    <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">CloudWatch</span>
-                  </div>
-                </div>
-                <div class="mt-3">
-                  <a href="./assets/aws.png" target="_blank"
-                    class="inline-flex items-center px-3 py-1.5 text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-700 transition text-sm">
-                    View Certificate
-                  </a>
-                </div>
+              <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                <li>Core AWS: EC2, S3, Lambda, RDS, IAM</li>
+                <li>Cloud concepts: infra, pricing, scaling, security</li>
+                <li>Hands-on: deploy, configure, IAM, Lambda</li>
+                <li>Use cases: VPC, CloudWatch, auto-scaling</li>
+              </ul>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >EC2</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >S3</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >Lambda</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >RDS</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >IAM</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >VPC</span
+                >
+                <span
+                  class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
+                  >CloudWatch</span
+                >
+              </div>
+              <div class="mt-3">
+                <a
+                  href="./assets/aws.png"
+                  target="_blank"
+                  class="inline-flex items-center px-3 py-1.5 text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-700 transition text-sm"
+                  >View Certificate</a
+                >
               </div>
             </div>
           </div>
         </div>
-      </div>
-      </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-
-
-
-    <!--===== FOOTER =====-->
     <footer class="bg-gray-800 text-white py-8">
-      <div class="container mx-auto px-6 flex flex-col items-center">
+      <div class="max-w-4xl mx-auto flex flex-col items-center">
         <p>&copy; 2025 Topgyal Gurung</p>
       </div>
     </footer>
 
-
-    <!-- Load main script after DOM elements are ready -->
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
