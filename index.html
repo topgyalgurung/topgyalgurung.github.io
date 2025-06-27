@@ -365,14 +365,9 @@
               class="project-tab active px-6 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition"
               data-category="react"
             >
-              React
+              React/Next.js
             </button>
-            <button
-              class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
-              data-category="next"
-            >
-              Next.js
-            </button>
+
             <button
               class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
               data-category="node-express"
@@ -383,14 +378,9 @@
               class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
               data-category="postgres"
             >
-              PostgreSQL
+              DB: Postgres, MongoDB
             </button>
-            <button
-              class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
-              data-category="mongodb"
-            >
-              MongoDB
-            </button>
+
             <button
               class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
               data-category="others"
@@ -563,48 +553,7 @@
               </div>
             </div>
           </div>
-          <!-- Next.js Projects -->
-          <div
-            class="project-content hidden bg-white rounded-lg shadow-md p-6"
-            data-category="next"
-          >
-            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
-              Next.js Projects
-            </h3>
-            <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <button
-                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseNextJs')"
-              >
-                Next.js Full Stack Web App
-                <span id="iconNextJs">▼</span>
-              </button>
-              <div id="collapseNextJs" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">Himalayan Connect NYC</p>
-                  <h4 class="text-gray-700 mb-4">
-                    Full Stack Web App: Next.js, React, Prisma, PostgreSQL
-                  </h4>
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://himalayan-connect-nyc.vercel.app/"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                      >Live</a
-                    >
-                    <a
-                      href="https://github.com/topgyalgurung/nextjs-fullstack-app"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <!-- Node/Express Projects -->
           <div
             class="project-content hidden bg-white rounded-lg shadow-md p-6"
@@ -670,7 +619,7 @@
             </div>
 
             <!-- Node Shopping List -->
-            <!-- INSERT_YOUR_CODE -->
+
             <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
               <button
                 class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
@@ -738,30 +687,19 @@
               </div>
             </div>
           </div>
-          <!-- PostgreSQL Projects -->
+          <!-- DB Projects -->
           <div
             class="project-content hidden bg-white rounded-lg shadow-md p-6"
             data-category="postgres"
           >
             <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
-              PostgreSQL Projects
+              DB Projects
             </h3>
             <p class="text-center text-gray-600">
-              PostgreSQL projects will be displayed here.
+              DB projects will be displayed here.
             </p>
           </div>
-          <!-- MongoDB Projects -->
-          <div
-            class="project-content hidden bg-white rounded-lg shadow-md p-6"
-            data-category="mongodb"
-          >
-            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
-              MongoDB Projects
-            </h3>
-            <p class="text-center text-gray-600">
-              MongoDB projects will be displayed here.
-            </p>
-          </div>
+
           <!-- Others -->
           <div
             class="project-content hidden bg-white rounded-lg shadow-md p-6"
@@ -773,6 +711,38 @@
             <p class="text-center text-gray-600">
               Other projects will be displayed here.
             </p>
+
+            <!-- Testing Node Express MongoDB API Routes with Mocha Chai -->
+            <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
+              <button
+                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                onclick="toggleAccordion('collapseTestAPI')"
+              >
+                Testing Node Express MongoDB API
+                <span id="iconTestAPI">▼</span>
+              </button>
+              <div id="collapseTestAPI" class="hidden px-4 py-3 bg-white">
+                <div class="text-center">
+                  <p class="font-semibold mb-1">
+                    Comprehensive API Testing Suite - Mocha Chai Integration
+                  </p>
+                  <h4 class="text-gray-700 mb-4">
+                    Build and test Node.js Express MongoDB API routes using
+                    Mocha and Chai testing framework.
+                  </h4>
+
+                  <div class="flex gap-4 justify-center">
+                    <a
+                      href="https://github.com/topgyalgurung/test-api"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                      >GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
