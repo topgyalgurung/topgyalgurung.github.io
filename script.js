@@ -159,10 +159,10 @@ function initializeProjectTabs() {
 // Toggle accordion function
 function toggleAccordion(id) {
   const content = document.getElementById(id);
-  const icon = document.getElementById("icon" + id.charAt(id.length - 1));
+  const icon = document.getElementById("icon" + id.replace("collapse", ""));
 
-  // Close all other accordions first
-  const allAccordionContents = document.querySelectorAll('[id^="accordion"]');
+  // Close all accordions first
+  const allAccordionContents = document.querySelectorAll('[id^="collapse"]');
   const allAccordionIcons = document.querySelectorAll('[id^="icon"]');
 
   allAccordionContents.forEach((accordionContent) => {
@@ -172,17 +172,20 @@ function toggleAccordion(id) {
   });
 
   allAccordionIcons.forEach((accordionIcon) => {
-    if (accordionIcon.id !== "icon" + id.charAt(id.length - 1)) {
+    if (accordionIcon.id !== "icon" + id.replace("collapse", "")) {
+      accordionIcon.textContent = "▼";
       accordionIcon.style.transform = "rotate(0deg)";
     }
   });
 
-  // Toggle the visibility of the clicked accordion content
-  const isHidden = content.classList.contains("hidden");
+  // Toggle the clicked accordion
   content.classList.toggle("hidden");
+  const isHidden = content.classList.contains("hidden");
 
-  // Rotate the icon based on accordion state
-  icon.style.transform = isHidden ? "rotate(180deg)" : "rotate(0deg)";
+  if (icon) {
+    icon.textContent = isHidden ? "▼" : "▼";
+    icon.style.transform = isHidden ? "rotate(0deg)" : "rotate(180deg)";
+  }
 }
 
 // Make toggleAccordion available globally
