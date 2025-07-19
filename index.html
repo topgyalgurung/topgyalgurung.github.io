@@ -409,10 +409,17 @@
           </h2>
           <div class="flex flex-wrap justify-center gap-4 mb-8">
             <button
+            class="project-tab active px-6 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition"
+            data-category="nextjs-mern"
+          >
+             Next.js / MERN Stack
+          </button>
+
+            <button
               class="project-tab active px-6 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition"
               data-category="react"
             >
-              React/Next.js
+              React
             </button>
 
             <button
@@ -435,11 +442,14 @@
               Others
             </button>
           </div>
-          <!-- React Projects -->
+          <!-- Next.js / MERN Stack Projects -->
           <div
             class="project-content bg-white rounded-lg shadow-md p-6"
-            data-category="react"
+            data-category="nextjs-mern"
           >
+            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
+              Next.js / MERN Stack Projects
+            </h3> 
             <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
               <button
                 class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
@@ -476,6 +486,7 @@
               </div>
             </div>
 
+
             <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
               <button
                 class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
@@ -511,6 +522,44 @@
                 </div>
               </div>
             </div>
+            <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
+              <button
+                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                onclick="toggleAccordion('collapseYodlr')"
+              >
+                Yodlr Take Home MERN Project
+                <span id="iconYodlr">▼</span>
+              </button>
+              <div id="collapseYodlr" class="hidden px-4 py-3 bg-white">
+                <div class="text-center">
+                  <p class="font-semibold mb-1">Yodlr Take Home</p>
+                  <h4 class="text-gray-700 mb-4">
+                    Full Stack MERN App: React, Node.js, Express, MongoDB<br>
+                    User registration, admin dashboard, REST API, and more.
+                  </h4>
+                </div>
+                <div class="mb-4">
+                  <div class="flex gap-4 justify-center">
+                    <a
+                      href="https://github.com/topgyalgurung/yodlr-take-home"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                      >GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- React Projects -->
+          <div
+            class="project-content bg-white rounded-lg shadow-md p-6"
+            data-category="react"
+          >
+           
 
             <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
               <button
