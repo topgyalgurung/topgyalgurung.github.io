@@ -103,14 +103,14 @@ function initializeProjectTabs() {
 
   // Initialize - show React projects by default and set first tab as active
   projectContents.forEach((content) => {
-    if (content.getAttribute("data-category") === "react") {
+    if (content.getAttribute("data-category") === "nextjs") {
       content.classList.remove("hidden");
     } else {
       content.classList.add("hidden");
     }
   });
 
-  // Set first tab (React) as active initially
+  // Set first tab as active initially
   projectTabs.forEach((tab, index) => {
     if (index === 0) {
       tab.classList.add("active", "bg-blue-500", "text-white");
