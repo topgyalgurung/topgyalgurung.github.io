@@ -193,6 +193,13 @@
         </div>
       </section>
 
+
+        <div class="myDIV">Hover over me.</div>
+<div class="hide">I am shown when someone hovers over the div above.</div>
+        
+
+
+
       <!-- About Section -->
       <section id="about" class="mb-16">
         <div>
@@ -301,16 +308,13 @@
             <h2 class="text-3xl font-bold text-gray-800 mb-2">
               Featured Project
             </h2>
-            <p class="text-gray-600">Main full-stack capstone project</p>
+
           </div>
           <div
             class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl shadow-xl p-8 hover:scale-105 transition-all duration-300"
           >
             <div class="text-center">
-              <span
-                class="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full mb-2"
-                >🏆 Capstone Project</span
-              >
+              
               <h3 class="text-2xl font-bold text-gray-800 mb-2">
                 Himalayan Connect NYC
               </h3>
@@ -318,6 +322,7 @@
                 Full-stack web app with Next.js, React, Prisma, PostgreSQL.
                 Features authentication, real-time data, and responsive design.
               </p>
+              
               <div class="flex flex-wrap justify-center gap-2 mb-6">
                 <span
                   class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
@@ -329,15 +334,19 @@
                 >
                 <span
                   class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-                  >Prisma</span
+                  >Prisma ORM, Postgres</span
                 >
                 <span
                   class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-                  >PostgreSQL</span
+                  >Tailwind CSS, Material UI</span
                 >
                 <span
                   class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-                  >Tailwind CSS</span
+                  >Google Maps API</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                  >Cloudinary</span
                 >
                 <span
                   class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
@@ -412,7 +421,7 @@
             class="project-tab active px-6 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition"
             data-category="nextjs"
           >
-             Next.js / MERN Stack
+             Full Stack
           </button>
 
             <button
@@ -425,14 +434,14 @@
             <button
               class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
               data-category="node-express"
-            >
-              Node/Express
+            > 
+              Node.js / Express
             </button>
             <button
               class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
               data-category="postgres"
             >
-              DB: Postgres, MongoDB
+              Database: Postgres, MongoDB
             </button>
 
             <button
@@ -1057,40 +1066,7 @@
           <h2 class="text-3xl font-bold text-center mb-8">
             Professional Experience
           </h2>
-          
-          <!-- Experience Item 1 -->
-          <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-            <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-              <div>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">
-                 Freelance Full Stack Developer
-                </h3>
-                <p class="text-blue-600 font-semibold mb-1">Himalayan Connect NYC</p>
-                <p class="text-gray-600 text-sm">June 2025 - Present</p>
-              </div>
-              <div class="mt-2 md:mt-0">
-                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
-                   Remote
-                </span>
-              </div>
-            </div>
-            <ul class="text-gray-700 space-y-2">
-              <li class="flex items-start">
-                <span class="text-blue-500 mr-2">•</span>
-                Participated in full lifecycle development, from ideation to deployment, continuously improving performance and reliability
-              </li>
-
-              <li class="flex items-start">
-                <span class="text-blue-500 mr-2">•</span>
-                Designed and deployed a full-stack platform for the NYC-based Himalayan community to access resources
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-500 mr-2">•</span>
-                Developed secure user/admin flows with JWT auth, dynamic search/filtering, map integration via Google Maps
-API, and image handling through Cloudinary
-              </li>      
-            </ul>
-          </div>
+        
 
           <!-- Experience Item 2 -->
           <div class="bg-white rounded-lg shadow-md p-6 mb-6">
@@ -1205,9 +1181,19 @@ comprehensive testing with Mocha and Chai
                 rel="noopener"
                 class="text-blue-600 hover:text-blue-800 underline text-xs"
               >
-                View related BigQuery SQL code on GitHub Gist ↗
+                View related BigQuery SQL code ↗
               </a>
             </div>
+          <div class="mt-2">
+            <a
+              href="https://docs.google.com/presentation/d/1Qw8Qw8Qw8Qw8Qw8Qw8Qw8Qw8Qw8Qw8Qw8Qw8Qw8Qw8/edit?usp=sharing"
+              target="_blank"
+              rel="noopener"
+              class="text-green-600 hover:text-green-800 underline text-xs"
+            >
+              Internship Slide Deck ↗
+            </a>
+          </div>
           </div>
 
           <!-- Experience Item 4.5 -->
@@ -1254,7 +1240,7 @@ comprehensive testing with Mocha and Chai
                 rel="noopener"
                 class="text-blue-600 hover:text-blue-800 font-medium"
               >
-                GitHub Repository →
+                GitHub Repo →
               </a>
             </div>
             
@@ -1279,11 +1265,11 @@ comprehensive testing with Mocha and Chai
             <ul class="text-gray-700 space-y-2">
               <li class="flex items-start">
                 <span class="text-blue-500 mr-2">•</span>
-                Presented machine translation research (e.g., CODE-NN) with professor and research fellow to assess feasibility
+                Presented machine translation research with professor and research fellow to assess feasibility
               </li>
               <li class="flex items-start">
                 <span class="text-blue-500 mr-2">•</span>
-                Reproduced CODE-NN in PyTorch/TensorFlow on cloud GPUs via SSH, leveraging CUDA for training
+                Reproduced machine translation model(code-nn) in PyTorch/TensorFlow on cloud GPUs via SSH, leveraging CUDA for training
               </li>
               <li class="flex items-start">
                 <span class="text-blue-500 mr-2">•</span>
@@ -1300,142 +1286,28 @@ comprehensive testing with Mocha and Chai
           <h2 class="text-3xl font-bold text-center mb-8">
             Tools & Technologies I Use
           </h2>
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <!-- Notion -->
-            <div
-              class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div class="text-4xl mb-2">📝</div>
-              <h4 class="font-semibold text-gray-800 mb-1">Notion</h4>
-              <p class="text-sm text-gray-600">Notes & Documentation</p>
-            </div>
-
-            <!-- VS Code -->
-            <div
-              class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div class="text-4xl mb-2">💻</div>
-              <h4 class="font-semibold text-gray-800 mb-1">VS Code</h4>
-              <p class="text-sm text-gray-600">Primary Code Editor</p>
-            </div>
-
-            <!-- Cursor -->
-            <div
-              class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div class="text-4xl mb-2">🤖</div>
-              <h4 class="font-semibold text-gray-800 mb-1">Cursor</h4>
-              <p class="text-sm text-gray-600">AI-Powered Editor</p>
-            </div>
-
-            <!-- Postman -->
-            <div
-              class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div class="text-4xl mb-2">📮</div>
-              <h4 class="font-semibold text-gray-800 mb-1">Postman</h4>
-              <p class="text-sm text-gray-600">API Testing</p>
-            </div>
-
-            <!-- Insomnia -->
-            <div
-              class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div class="text-4xl mb-2">🌙</div>
-              <h4 class="font-semibold text-gray-800 mb-1">Insomnia</h4>
-              <p class="text-sm text-gray-600">API Development</p>
-            </div>
-
-            <!-- iTerm -->
-            <div
-              class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div class="text-4xl mb-2">🖥️</div>
-              <h4 class="font-semibold text-gray-800 mb-1">iTerm2</h4>
-              <p class="text-sm text-gray-600">Terminal</p>
-            </div>
-
-            <!-- MongoDB Compass -->
-            <div
-              class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div class="text-4xl mb-2">🍃</div>
-              <h4 class="font-semibold text-gray-800 mb-1">MongoDB Compass</h4>
-              <p class="text-sm text-gray-600">MongoDB GUI</p>
-            </div>
-
-            <!-- Postico -->
-            <div
-              class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div class="text-4xl mb-2">🐘</div>
-              <h4 class="font-semibold text-gray-800 mb-1">Postico</h4>
-              <p class="text-sm text-gray-600">PostgreSQL Client</p>
-            </div>
-
-            <!-- Figma -->
-            <div
-              class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div class="text-4xl mb-2">🎨</div>
-              <h4 class="font-semibold text-gray-800 mb-1">Figma</h4>
-              <p class="text-sm text-gray-600">UI/UX Design</p>
-            </div>
-
-            <!-- Docker -->
-            <div
-              class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div class="text-4xl mb-2">🐳</div>
-              <h4 class="font-semibold text-gray-800 mb-1">Docker</h4>
-              <p class="text-sm text-gray-600">Containerization</p>
-            </div>
-
-            <!-- Take a Break -->
-            <div
-              class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div class="text-4xl mb-2">⏰</div>
-              <h4 class="font-semibold text-gray-800 mb-1">
-                Take a Break - Mac App
-              </h4>
-              <p class="text-sm text-gray-600">Avoid eye strain, stay focus</p>
-            </div>
-
-            <!-- Quick Database Diagrams -->
-            <div
-              class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div class="text-4xl mb-2">🗄️</div>
-              <h4 class="font-semibold text-gray-800 mb-1">
-                <a href="https://quickdatabasediagrams.com" target="_blank" class="hover:text-blue-600">Quick Database Diagrams</a>
-              </h4>
-              <p class="text-sm text-gray-600">Design Data Model</p>
-            </div>
-
-            <!-- Excalidraw -->
-            <div
-              class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div class="text-4xl mb-2">✏️</div>
-              <h4 class="font-semibold text-gray-800 mb-1">
-                <a href="https://excalidraw.com" target="_blank" class="hover:text-blue-600">Excalidraw</a>
-              </h4>
-              <p class="text-sm text-gray-600">Whiteboard & Tech Diagram Draw</p>
-            </div>
-
-            <!-- Eraser -->
-            <div
-              class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div class="text-4xl mb-2">🧽</div>
-              <h4 class="font-semibold text-gray-800 mb-1">
-                <a href="https://app.eraser.io" target="_blank" rel="noopener" class="hover:text-blue-600">App.Eraser.io</a>
-              </h4>
-              <p class="text-sm text-gray-600">Technical Design and Documentation</p>
-            </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto text-lg text-gray-800">
+            <ul class="space-y-2 text-center">
+              <li><a href="https://www.notion.so/" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">Notion</a></li>
+              <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">VS Code</a></li>
+              <li><a href="https://www.cursor.so/" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">Cursor</a></li>
+              <li><a href="https://www.postman.com/" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">Postman</a></li>
+              <li><a href="https://insomnia.rest/" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">Insomnia</a></li>
+            </ul>
+            <ul class="space-y-2 text-center">
+              <li><a href="https://iterm2.com/" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">iTerm2</a></li>
+              <li><a href="https://www.mongodb.com/products/compass" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">MongoDB Compass</a></li>
+              <li><a href="https://eggerapps.com/postico/" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">Postico</a></li>
+              <li><a href="https://www.figma.com/" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">Figma</a></li>
+              <li><a href="https://www.docker.com/" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">Docker</a></li>
+            </ul>
+            <ul class="space-y-2 text-center">
+              <li><a href="https://apps.apple.com/us/app/take-a-break-please/id1037774049" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">Take a Break - Mac App</a></li>
+              <li><a href="https://quickdatabasediagrams.com" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">Quick Database Diagrams</a></li>
+              <li><a href="https://excalidraw.com" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">Excalidraw</a></li>
+              <li><a href="https://app.eraser.io" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">App.Eraser.io</a></li>
+            </ul>
           </div>
-          
         </div>
       </section>
 

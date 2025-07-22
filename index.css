@@ -59,5 +59,13 @@ section {
 
 .show {
   opacity: 1;
-  
+}
+
+.hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
 }
