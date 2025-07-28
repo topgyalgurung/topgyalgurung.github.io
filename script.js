@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-const headingText = "Hi,\nI'm Topgyal";
+const headingText = "Hi,\nI'm Topgyal 👋";
 const subheadingText = "Software Engineer with Bachelor's in Computer Science";
 let headingIndex = 0;
 let subheadingIndex = 0;
