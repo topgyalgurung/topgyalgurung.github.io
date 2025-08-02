@@ -46,6 +46,7 @@ function typeSubheading() {
 window.onload = typeHeading;
 
 // Initialize resource category tabs (for tech learning channels)
+
 document.addEventListener("DOMContentLoaded", function () {
   initializeResourceTabs();
   initializeProjectTabs();
