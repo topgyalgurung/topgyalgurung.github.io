@@ -499,6 +499,7 @@
               Others
             </button>
           </div>
+
           <!-- Next.js / MERN  Full Stack Projects -->
           <div
             class="project-content bg-white rounded-lg shadow-md p-6"
@@ -544,7 +545,54 @@
               </div>
             </div>
 
-            <!-- INSERT_YOUR_CODE -->
+            <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
+              <button
+                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                onclick="toggleAccordion('collapseAIApp')"
+              >
+                Next.js AI Text Completion App
+                <span id="iconAIApp">▼</span>
+              </button>
+              <div id="collapseAIApp" class="hidden px-4 py-3 bg-white">
+                <div class="text-center">
+                  <p class="font-semibold mb-1">AI Text Completion (OpenAI, Next.js, Vercel AI SDK)</p>
+                  <h4 class="text-gray-700 mb-4">
+                    Building a real-time AI text completion feature by integrating OpenAI’s API with Next.js and Vercel AI SDK, implementing streaming responses and dynamic user input handling for an interactive experience.
+                  </h4>
+                </div>
+                <div class="mb-4 flex justify-center">
+                  <div class="w-full max-w-xl aspect-video">
+                    <iframe
+                      src="https://www.loom.com/embed/2e7b8e1c1b2d4e1b8e7b8e1c1b2d4e1b"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                      class="w-full h-full rounded-lg shadow"
+                      title="AI Text Completion Demo"
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="flex gap-4 justify-center">
+                    <a
+                      href="https://nextjs-ai-app.vercel.app/"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                      >Live</a
+                    >
+                    <a
+                      href="https://github.com/topgyalgurung/nextjs-ai-app"
+                      target="_blank"
+                      rel="noopener"
+                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                      >GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- MySpace Clone Project -->
             <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
               <button
@@ -561,7 +609,8 @@
                     A modern MySpace clone built with Next.js, Neon (serverless Postgres), and Prisma ORM. Features user authentication, profile customization and follower system
                   </h4>
                 </div>
-                <!-- INSERT_YOUR_CODE -->
+   
+
                 <div class="mb-4 flex justify-center">
                   <div class="w-full max-w-xl aspect-video">
                     <iframe
