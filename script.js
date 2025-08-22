@@ -157,35 +157,47 @@ function initializeProjectTabs() {
   });
 }
 
-// Toggle accordion function
-function toggleAccordion(id) {
+// Reusable accordion function
+function toggleAccordion(id, groupName = "") {
   const content = document.getElementById(id);
-  const icon = document.getElementById("icon" + id.replace("collapse", ""));
+  const icon = document.getElementById(`icon-${id}`);
 
-  // Close all accordions first
-  const allAccordionContents = document.querySelectorAll('[id^="collapse"]');
-  const allAccordionIcons = document.querySelectorAll('[id^="icon"]');
+  if (!content) return;
 
-  allAccordionContents.forEach((accordionContent) => {
-    if (accordionContent.id !== id) {
-      accordionContent.classList.add("hidden");
-    }
-  });
+  const isOpen = !content.classList.contains("hidden");
 
-  allAccordionIcons.forEach((accordionIcon) => {
-    if (accordionIcon.id !== "icon" + id.replace("collapse", "")) {
-      accordionIcon.textContent = "▼";
-      accordionIcon.style.transform = "rotate(0deg)";
-    }
-  });
+  // Close all other accordions in the same group or section
+  const section =
+    content.closest("section") || content.closest(".project-content");
+  if (section) {
+    // Find all accordion contents in the same section
+    const allContents = section.querySelectorAll(
+      "[id^='collapse'], [id^='cert']"
+    );
+    const allIcons = section.querySelectorAll("[id^='icon-']");
 
-  // Toggle the clicked accordion
-  content.classList.toggle("hidden");
-  const isHidden = content.classList.contains("hidden");
+    // Close all except the current one
+    allContents.forEach((item) => {
+      if (item.id !== id) {
+        item.classList.add("hidden");
+      }
+    });
 
-  if (icon) {
-    icon.textContent = isHidden ? "▼" : "▼";
-    icon.style.transform = isHidden ? "rotate(0deg)" : "rotate(180deg)";
+    // Reset all icons except the current one
+    allIcons.forEach((iconElem) => {
+      if (iconElem.id !== `icon-${id}`) {
+        iconElem.textContent = "▼";
+      }
+    });
+  }
+
+  // Toggle current accordion
+  if (isOpen) {
+    content.classList.add("hidden");
+    if (icon) icon.textContent = "▼";
+  } else {
+    content.classList.remove("hidden");
+    if (icon) icon.textContent = "▲";
   }
 }
 
