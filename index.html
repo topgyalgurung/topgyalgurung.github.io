@@ -136,75 +136,61 @@
 
     <main class="max-w-4xl mx-auto px-4 py-8">
       <!-- Home Section -->
-      <section id="home" class="mb-16">
-        <div
-          class="flex flex-col md:flex-row items-center justify-between gap-8"
-        >
+      <section id="home" class="mb-20">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+          <!-- Left: Heading and Subheading -->
           <div class="w-full md:w-1/2 text-center md:text-left">
-            <h1
-              class="text-4xl md:text-5xl mb-4 font-serif tracking-wide text-black"
-            >
+            <h1 class="text-5xl md:text-6xl font-extrabold font-serif tracking-tight text-gray-900 mb-4 drop-shadow-lg">
               <span id="typed-heading"></span>
             </h1>
-            <h2
-              class="text-xl md:text-2xl text-gray-700 mb-6 font-light italic"
-            >
+            <h2 class="text-2xl md:text-3xl text-gray-600 mb-8 font-light italic">
               <span id="typed-subheading"></span>
-  
             </h2>
-         
-          
           </div>
+          <!-- Right: Social Links Card -->
           <div class="w-full md:w-1/2 flex flex-col items-center">
-            <div class="relative w-48 h-48 md:w-64 md:h-64 mb-6">
-              <img
-                src="assets/profile.jpg"
-                alt="Profile"
-                class="w-full h-full object-cover rounded-full shadow-xl transition-transform duration-500 hover:scale-105"
-                loading="lazy"
-              />
-            </div>
-            <div class="flex flex-col items-center">
-              <h5
-                class="text-lg font-medium bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse mb-3"
-              >
+            <div class="bg-gradient-to-br from-white via-blue-50 to-purple-100 border border-blue-200 rounded-2xl shadow-xl px-8 py-8 flex flex-col items-center w-full max-w-xs">
+              <h5 class="text-lg font-semibold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent animate-pulse mb-4 tracking-wide uppercase">
                 Find me online
               </h5>
-              <div class="flex space-x-6">
+              <div class="flex space-x-8 mb-2">
                 <a
                   href="https://www.linkedin.com/in/topgyalgurung"
-                  class="text-3xl hover:scale-110 transition-transform"
+                  class="text-4xl hover:scale-125 transition-transform duration-200"
                   style="
                     background: linear-gradient(45deg, #0077b5, #00a0dc);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                   "
+                  aria-label="LinkedIn"
                   ><i class="bx bxl-linkedin"></i
                 ></a>
                 <a
                   href="https://github.com/topgyalgurung"
-                  class="text-3xl hover:scale-110 transition-transform"
+                  class="text-4xl hover:scale-125 transition-transform duration-200"
                   style="
                     background: linear-gradient(45deg, #333, #4a4a4a);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                   "
+                  aria-label="GitHub"
                   ><i class="bx bxl-github"></i
                 ></a>
                 <a
                   href="https://topgyalgurung.medium.com/"
-                  class="text-3xl hover:scale-110 transition-transform"
+                  class="text-4xl hover:scale-125 transition-transform duration-200"
                   style="
                     background: linear-gradient(45deg, #333, #4a4a4a);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                   "
+                  aria-label="Medium"
                   ><i class="bx bxl-medium"></i
                 ></a>
               </div>
+              <div class="mt-3 text-xs text-gray-500">Let’s connect!</div>
             </div>
           </div>
-        </div>
       </section>
         
 
@@ -1369,316 +1355,6 @@
       </section>
 
 
-      <!-- Resources Section -->
-      <section id="resources" class="mb-16">
-        <div>
-          <h2 class="text-3xl font-bold text-center mb-8">
-           Learning Resources - love sharing!
-          </h2>
-          <div class="flex flex-wrap justify-center gap-4 mb-8">
-            <button
-              class="category-tab active px-6 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition"
-              data-category="general"
-            >
-              General
-            </button>
-            <button
-              class="category-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
-              data-category="javascript"
-            >
-              JavaScript
-            </button>
-            <button
-              class="category-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
-              data-category="reactjs"
-            >
-              React/Next.js
-            </button>
-            <button
-              class="category-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
-              data-category="systemdesign"
-            >
-              System Design
-            </button>
-          </div>
-          <div>
-            <div
-              class="category-content bg-white rounded-lg shadow-md p-6"
-              data-category="general"
-            >
-              <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
-                General Resources
-              </h3>
-              <ul
-                class="space-y-2 text-left max-w-xl mx-auto list-disc list-inside"
-              >
-                <li>
-                  <a
-                    href="https://www.youtube.com/@Fireship"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >Fireship</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.freecodecamp.org"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >freeCodeCamp</a
-                  >
-                </li>
-                
-                <li>
-                  <a
-                    href="https://profy.dev/project/github-minesweeper"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >GitHub Minesweeper</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://neetcode.io/"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >Neetcode</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://youtu.be/phWxA89Dy94?si=-INmnaJy1Ext7HGk"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >Flexbox in 8 mins</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://youtu.be/EiNiSFIPIQE?si=zqirk8FjDrfX0DOM"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >CSS Grid in 13 mins</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://youtu.be/K24lUqcT0Ms?si=WwXhp_v4bGbZ5TOm"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >Responsive Design</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://youtu.be/r2zuL9MW6wc?si=ZXT1bsPoFBvxOKm3"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >Kubernetes in 15 min</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.youtube.com/@TheNetNinja"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >The Net Ninja</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://academind.com/tutorials/graphql-with-node-react-full-app"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >GraphQL with Node.js, React, and MongoDB</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <!-- JavaScript Resources -->
-            <div
-              class="category-content hidden bg-white rounded-lg shadow-md p-6"
-              data-category="javascript"
-            >
-              <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
-                JavaScript
-              </h3>
-              <ul
-                class="space-y-2 text-left max-w-xl mx-auto list-disc list-inside"
-              >
-                <li>
-                  <a
-                    href="https://www.youtube.com/@academind"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >Academind</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.youtube.com/@javascriptmastery"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >JavaScript Mastery</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.youtube.com/@programmingwithmosh"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >Programming with Mosh</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.youtube.com/@TheCodingTrain"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >The Coding Train</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <!-- React.js Resources -->
-            <div
-              class="category-content hidden bg-white rounded-lg shadow-md p-6"
-              data-category="reactjs"
-            >
-              <h3 class="text-xl text-center font-semibold mb-4 text-gray-800">
-                React/Next.js
-              </h3>
-              <ul
-                class="space-y-2 text-left max-w-xl mx-auto list-disc list-inside"
-              >
-                <li>
-                  <a
-                    href="https://www.youtube.com/@jherr"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >Jack Herrington</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.youtube.com/@cosdensolutions"
-                    target="_blank"
-                    rel="noopener"
-                    class="text-blue-500 hover:text-blue-700"
-                    >Cosden Solutions</a
-                  >
-                </li>
-              </ul>
-              <ul
-              class="space-y-2 text-left max-w-xl mx-auto list-disc list-inside"
-            >
-              <li>
-                <a
-                  href="https://www.youtube.com/@ByteGrad"
-                  target="_blank"
-                  rel="noopener"
-                  class="text-blue-500 hover:text-blue-700"
-                  >ByteGrad</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/@VercelHQ"
-                  target="_blank"
-                  rel="noopener"
-                  class="text-blue-500 hover:text-blue-700"
-                  >VercelHQ</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/channel/UCXgGY0wkgOzynnHvSEVmE3A"
-                  target="_blank"
-                  rel="noopener"
-                  class="text-blue-500 hover:text-blue-700"
-                  >Hitesh Choudhary</a
-                >
-              </li>
-            </ul>
-            </div>
-            <!-- Next.js Resources -->
-            <div
-              class="category-content hidden bg-white rounded-lg shadow-md p-6"
-              data-category="systemdesign"
-            >
-              <h3 class="text-xl text-center font-semibold mb-4 text-gray-800">
-                System Design
-              </h3>
-              <ul
-                class="space-y-2 text-left max-w-xl mx-auto list-disc list-inside"
-              >
-              <li>
-                <a
-                  href="https://www.youtube.com/@ByteByteGo"
-                  target="_blank"
-                  rel="noopener"
-                  class="text-blue-500 hover:text-blue-700"
-                  >ByteByteGo</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/ByteByteGoHq/system-design-101"
-                  target="_blank"
-                  rel="noopener"
-                  class="text-blue-500 hover:text-blue-700"
-                  >ByteByteGo System Design 101 (GitHub)</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/"
-                  target="_blank"
-                  rel="noopener"
-                  class="text-blue-500 hover:text-blue-700"
-                  >Designing Data-Intensive Applications (O'Reilly)</a
-                >
-              </li>
-               
-              <li>
-                <a
-                  href="https://roadmap.sh/system-design"
-                  target="_blank"
-                  rel="noopener"
-                  class="text-blue-500 hover:text-blue-700"
-                  >System Design Roadmap (roadmap.sh)</a
-                >
-              </li>
-              <!-- INSERT_YOUR_CODE -->
-              <li>
-                <a
-                  href="https://github.com/ashishps1/awesome-system-design-resources?tab=readme-ov-file"
-                  target="_blank"
-                  rel="noopener"
-                  class="text-blue-500 hover:text-blue-700"
-                  >Awesome System Design Resources (GitHub)</a
-                >
-              </li>
-              </ul> 
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- Certifications Section (Accordion Style) -->
       <section id="certifications" class="mb-4">
