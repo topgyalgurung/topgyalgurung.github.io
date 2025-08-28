@@ -203,17 +203,17 @@
             About Me
           </h2>
           <p class="text-gray-700 leading-relaxed text-base md:text-lg">
-            <!-- <span class="block mb-3">
-              <strong>Alumni</strong>: Hunter College (CS), CodePath (CyberSecurity), TTP Residency @Hunter College (Full Stack - PERN), Springboard (Full Stack - MERN/Next.js)
-            </span> -->
             <span class="block mb-3">
-              Full-stack experience and a foundation in cybersecurity from CodePath. Contributed to early-stage startups, solving critical frontend and backend issues ahead of key milestones. Recently built a full-stack community platform for Himalayan immigrants in NYC using Next.js, React, Prisma, and PostgreSQL.
+              <strong>Alumni</strong>: Hunter College (CS), CodePath (CyberSecurity), TTP Residency @Hunter College (Full Stack - PERN), Springboard (Full Stack - MERN/Next.js)
+            </span>
+            <span class="block mb-3">
+              Full-stack Web Engineer with Bachelor's in Computer Science. Contributed to early-stage startups, solving critical frontend deck.gl map issues resolving backend SQL polygon GIS data in BigQuery issues ahead of pre-acquisition. Recently built a full-stack community platform for Himalayan immigrants in NYC using Next.js, React, Prisma, and PostgreSQL.
             </span>
             <span class="block mb-3">
               Passionate about system design. Currently exploring AI agents, LLM integration, and tools like Ollama, LangChain, Vercel AI SDK and OpenAI APIs.
             </span>
             <span class="block mb-3">
-              <strong>Tech Highlights:</strong> TypeScript,JavaScript,Python, React, Next.js, Express, Spring Boot, PostgreSQL, MongoDB, Docker, GitHub Actions, GenAI, AI SDK
+              <strong>Tech Highlights:</strong> TypeScript, JavaScript, Python, Java, React/Next.js, Node.js, Spring Boot, PostgreSQL, MongoDB NoSQL, Docker, CI/CD, GenAI, AI SDK
             </span>
           </p>
 
@@ -356,36 +356,24 @@
           <div class="flex flex-wrap justify-center gap-4 mb-8">
             <button
             class="project-tab active px-6 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition"
-            data-category="nextjs"
+            data-category="fullstack"
           >
              Full Stack
           </button>
 
             <button
               class="project-tab px-6 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition"
-              data-category="react"
+              data-category="frontend"
             >
-              React
+              Frontend
             </button>
 
             <button
               class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
-              data-category="node-express"
+              data-category="backend"
             > 
-              Node.js / Express
+              Backend
             </button>
-            <button
-              class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
-              data-category="postgres"
-            >
-              DB: Postgres, MongoDB
-            </button>
-            <!-- <button
-              class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
-              data-category="python"
-            >
-              Python
-            </button> -->
 
             <button
               class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
@@ -398,7 +386,7 @@
           <!-- Next.js / MERN  Full Stack Projects -->
           <div
             class="project-content bg-white rounded-lg shadow-md p-6"
-            data-category="nextjs"
+            data-category="fullstack"
           >
             <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
               Next.js / MERN 
@@ -600,10 +588,10 @@
             </div>
           </div>
           
-          <!-- React Projects -->
+          <!-- Frontend Projects -->
           <div
             class="project-content bg-white rounded-lg shadow-md p-6"
-            data-category="react"
+            data-category="frontend"
           >
           
             <!-- Space Travel React App -->
@@ -738,10 +726,10 @@
           <!-- Node/Express Projects -->
           <div
             class="project-content hidden bg-white rounded-lg shadow-md p-6"
-            data-category="node-express"
+            data-category="backend"
           >
             <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
-              Node.js & Express Projects
+              Backend Projects
             </h3>
 
             <!-- Dog Adoption Platform API -->
@@ -920,18 +908,8 @@
                 </div>
               </div>
             </div>
-          </div>
-          <!-- DB Projects -->
-          <div
-            class="project-content hidden bg-white rounded-lg shadow-md p-6"
-            data-category="postgres"
-          >
-            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
-              DB Projects
-            </h3>
-
-            <!-- Dog Adoption Platform API -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
+             <!-- Dog Adoption Platform API -->
+             <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
               <button
                 class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
                 onclick="toggleAccordion('collapseMongoDB')"
@@ -1012,7 +990,38 @@
                 </div>
               </div>
             </div>
-            <!--  -->
+              <!-- GraphQL React Event Booking API -->
+              <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
+                <button
+                  class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
+                  onclick="toggleAccordion('collapseGraphQL')"
+                >
+                  GraphQL React Event Booking API
+                  <span id="iconGraphQL">▼</span>
+                </button>
+                <div id="collapseGraphQL" class="hidden px-4 py-3 bg-white">
+                  <div class="text-center">
+                    <p class="font-semibold mb-1">
+                      GraphQL Event Booking System with React Frontend
+                    </p>
+                    <h4 class="text-gray-700 mb-4">
+                      Full-stack application using GraphQL, Node.js, Express, and
+                      React for event booking and management.
+                    </h4>
+  
+                    <div class="flex gap-4 justify-center">
+                      <a
+                        href="https://github.com/topgyalgurung/yt-graphql-react-event-booking-api"
+                        target="_blank"
+                        rel="noopener"
+                        class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                        >GitHub</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Others -->
@@ -1026,70 +1035,6 @@
             <p class="text-center text-gray-600">
               Other projects will be displayed here.
             </p>
-
-            <!-- GraphQL React Event Booking API -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
-              <button
-                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseGraphQL')"
-              >
-                GraphQL React Event Booking API
-                <span id="iconGraphQL">▼</span>
-              </button>
-              <div id="collapseGraphQL" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">
-                    GraphQL Event Booking System with React Frontend
-                  </p>
-                  <h4 class="text-gray-700 mb-4">
-                    Full-stack application using GraphQL, Node.js, Express, and
-                    React for event booking and management.
-                  </h4>
-
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://github.com/topgyalgurung/yt-graphql-react-event-booking-api"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Testing Node Express MongoDB API Routes with Mocha Chai -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
-              <button
-                class="w-full text-left bg-gray-100 px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseTestAPI')"
-              >
-                Testing Node Express MongoDB API
-                <span id="iconTestAPI">▼</span>
-              </button>
-              <div id="collapseTestAPI" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">
-                    Comprehensive API Testing Suite - Mocha Chai Integration
-                  </p>
-                  <h4 class="text-gray-700 mb-4">
-                    Build and test Node.js Express MongoDB API routes using
-                    Mocha and Chai testing framework.
-                  </h4>
-
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://github.com/topgyalgurung/test-api"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
           
             
           <div class="mt-10 flex justify-center">
