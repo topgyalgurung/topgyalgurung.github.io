@@ -204,10 +204,19 @@
           </h2>
           <p class="text-gray-700 leading-relaxed text-base md:text-lg">
             <span class="block mb-3">
-              <strong>Alumni</strong>: Hunter College (CS), CodePath (CyberSecurity), TTP Residency @Hunter College (Full Stack - PERN), Springboard (Full Stack - MERN/Next.js)
+              <strong>Alumni:</strong>
+              <ul class="list-disc list-inside ml-4">
+                <li>Hunter College (CS)</li>
+                <li>CodePath (CyberSecurity)</li>
+                <li>TTP Residency @Hunter College (Full Stack - PERN)</li>
+                <li>Springboard (Full Stack - MERN/Next.js)</li>
+              </ul>
             </span>
             <span class="block mb-3">
-              Full-stack Web Engineer with Bachelor's in Computer Science. Contributed to early-stage startups, solving critical frontend deck.gl map issues resolving backend SQL polygon GIS data in BigQuery issues ahead of pre-acquisition. Recently built a full-stack community platform for Himalayan immigrants in NYC using Next.js, React, Prisma, and PostgreSQL.
+              <strong class="text-lg text-black-700">About Me: </strong>
+            </span>
+            <span class="block mb-3">
+              Full-stack Software Engineer with Bachelor's in Computer Science. Contributed to early-stage startups, solving critical frontend deck.gl map issues resolving backend SQL polygon GIS data in BigQuery issues ahead of pre-acquisition. Recently built a full-stack community platform for Himalayan immigrants in NYC using Next.js, React, Prisma, and PostgreSQL.
             </span>
             <span class="block mb-3">
               Passionate about system design. Currently exploring AI agents, LLM integration, and tools like Ollama, LangChain, Vercel AI SDK and OpenAI APIs.
@@ -218,20 +227,22 @@
           </p>
 
           <div class="flex justify-center my-4">
-            <div class="w-full max-w-3xl h-96 border rounded shadow overflow-hidden">
-              <iframe
-                src="./assets/Resume.pdf"
-                title="Resume"
-                class="w-full h-full"
-                style="border: none;"
-              ></iframe>
+            <div class="w-full max-w-3xl h-96 sm:h-96 border rounded shadow overflow-hidden bg-white">
+              <div class="w-full h-full overflow-auto" style="height: 24rem;">
+                <iframe
+                  src="./assets/Resume.pdf"
+                  title="Resume"
+                  class="w-full min-h-[38rem] h-auto sm:min-h-[38rem] min-h-[24rem]"
+                  style="border: none;"
+                ></iframe>
+              </div>
             </div>
           </div>
           <div class="flex justify-center mt-2">
             <a
               href="./assets/Resume.pdf"
               target="_blank"
-              class="px-5 py-2 text-white bg-blue-600 rounded hover:bg-blue-700 transition"
+              class="px-5 py-2 text-white bg-blue-600 rounded hover:bg-blue-700 transition w-full max-w-xs text-center sm:w-auto"
             >
               Download Resume
             </a>
