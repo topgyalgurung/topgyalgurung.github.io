@@ -227,3 +227,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Make toggleAccordion available globally
 window.toggleAccordion = toggleAccordion;
+
+// Visit Counter Logic
+function updateVisitCounter() {
+  // Get current date in YYYY-MM-DD format
+  const today = new Date().toISOString().split("T")[0];
+
+  // Get stored visit data
+  let visitData = JSON.parse(localStorage.getItem("visitData")) || {
+    totalVisits: 0,
+    lastVisitDate: null,
+    dailyVisits: 0,
+  };
+
+  // Check if it's a new day
+  if (visitData.lastVisitDate !== today) {
+    visitData.dailyVisits = 1;
+    visitData.lastVisitDate = today;
+  } else {
+    visitData.dailyVisits++;
+  }
+
+  // Increment total visits
+  visitData.totalVisits++;
+
+  // Save updated data
+  localStorage.setItem("visitData", JSON.stringify(visitData));
+
+  // Update display
+  document.getElementById("dailyVisits").textContent = visitData.dailyVisits;
+  document.getElementById("totalVisits").textContent = visitData.totalVisits;
+}
+
+// Call updateVisitCounter when page loads
+document.addEventListener("DOMContentLoaded", updateVisitCounter);
