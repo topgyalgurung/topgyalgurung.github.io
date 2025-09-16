@@ -160,17 +160,37 @@
               <li>Springboard (Full Stack - MERN/Next.js)</li>
             </ul>
           </div>
-          <div>
-            <strong class="text-lg text-black-700">About Me:</strong>
+          <!-- Modal Trigger Button -->
+          <div class="flex justify-center my-6">
+            <button
+              id="aboutMeModalBtn"
+              class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full shadow-lg hover:from-blue-700 hover:to-blue-600 transition-all duration-200 font-semibold text-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+            >
+              Who I Am ? What I Do ? Value Add
+            </button>
           </div>
-          <div>
-            Full-stack Software Engineer with Bachelor's in Computer Science. Contributed to early-stage startups,
-            solving critical frontend deck.gl map issues and resolving backend SQL polygon GIS data in BigQuery ahead of
-            pre-acquisition. Recently built a full-stack community platform for Himalayan immigrants in NYC using
-            Next.js, React, Prisma, and PostgreSQL.
+
+          <!-- Modal Overlay & Content -->
+          <div id="aboutMeModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 hidden">
+            <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative">
+              <button id="closeAboutMeModal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold">&times;</button>
+              <h3 class="text-xl font-bold mb-2 text-gray-900">Who I Am</h3>
+              <p class="mb-4 text-gray-700">
+                Full-stack Software Engineer with a Bachelor's in Computer Science. I thrive on building robust, scalable solutions and have contributed to early-stage startups, solving critical frontend deck.gl map issues and resolving backend SQL polygon GIS data in BigQuery ahead of pre-acquisition.
+              </p>
+              <h3 class="text-xl font-bold mb-2 text-gray-900">What I Do</h3>
+              <p class="mb-4 text-gray-700">
+                I design and develop full-stack applications, recently building a community platform for Himalayan immigrants in NYC using Next.js, React, Prisma, and PostgreSQL.
+              </p>
+              <h3 class="text-xl font-bold mb-2 text-gray-900">Value Add</h3>
+              <p class="text-gray-700">
+                I bring a blend of technical depth, startup agility, and a passion for impactful solutions. My experience spans frontend and backend, with a focus on delivering value through thoughtful system design, rapid problem-solving, and a commitment to user-centric products.
+              </p>
+            </div>
           </div>
+
           <div>
-            Passionate about system design. Currently exploring AI agents, LLM integration, and tools like Ollama,
+           Currently exploring AI agents, LLM integration, and tools like Ollama,
             LangChain, Vercel AI SDK, and OpenAI APIs.
           </div>
           <div>

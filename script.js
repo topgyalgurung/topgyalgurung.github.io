@@ -201,5 +201,29 @@ function toggleAccordion(id, groupName = "") {
   }
 }
 
+// Modal functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const modalBtn = document.getElementById("aboutMeModalBtn");
+  const modal = document.getElementById("aboutMeModal");
+  const closeBtn = document.getElementById("closeAboutMeModal");
+
+  if (modalBtn && modal && closeBtn) {
+    modalBtn.addEventListener("click", function () {
+      modal.classList.remove("hidden");
+    });
+
+    closeBtn.addEventListener("click", function () {
+      modal.classList.add("hidden");
+    });
+
+    // Close modal when clicking outside the modal content
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+      }
+    });
+  }
+});
+
 // Make toggleAccordion available globally
 window.toggleAccordion = toggleAccordion;
