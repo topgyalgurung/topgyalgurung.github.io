@@ -102,9 +102,9 @@ function initializeProjectTabs() {
 
   if (projectTabs.length === 0 || projectContents.length === 0) return;
 
-  // Initialize - show React projects by default and set first tab as active
+  // Initialize - show fullstack projects by default and set first tab as active
   projectContents.forEach((content) => {
-    if (content.getAttribute("data-category") === "nextjs") {
+    if (content.getAttribute("data-category") === "fullstack") {
       content.classList.remove("hidden");
     } else {
       content.classList.add("hidden");
