@@ -1,160 +1,184 @@
-// hamburger menu
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobile-menu");
+// Constants
+const TYPING_DELAY = {
+  HEADING: 50,
+  SUBHEADING: 30,
+};
 
-  if (hamburger && mobileMenu) {
-    hamburger.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
+// Utility functions
+const getElement = (id) => document.getElementById(id);
+const getElements = (selector) => document.querySelectorAll(selector);
 
-    // Add click event listeners to all mobile menu links
-    const mobileMenuLinks = mobileMenu.querySelectorAll("a");
-    mobileMenuLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-      });
-    });
+// Mobile menu functionality
+function initializeMobileMenu() {
+  const hamburger = getElement("hamburger");
+  const mobileMenu = getElement("mobile-menu");
+
+  if (!hamburger || !mobileMenu) {
+    console.warn("Mobile menu elements not found");
+    return;
   }
-});
 
-const headingText = "Hi,\nI'm Topgyal 👋";
-const subheadingText = "Software Engineer with Bachelor's in Computer Science";
-let headingIndex = 0;
-let subheadingIndex = 0;
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
 
-function typeHeading() {
-  if (headingIndex < headingText.length) {
-    document.getElementById("typed-heading").innerHTML +=
-      headingText.charAt(headingIndex);
-    headingIndex++;
-    setTimeout(typeHeading, 50);
-  } else {
-    typeSubheading();
+  // Add click event listeners to all mobile menu links
+  const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  });
+}
+
+// Typing animation configuration
+const TYPING_CONFIG = {
+  heading: {
+    text: "Hi,\nI'm Topgyal 👋",
+    elementId: "typed-heading",
+    delay: TYPING_DELAY.HEADING,
+  },
+  subheading: {
+    text: "Software Engineer with Bachelor's in Computer Science",
+    elementId: "typed-subheading",
+    delay: TYPING_DELAY.SUBHEADING,
+  },
+};
+
+class TypingAnimation {
+  constructor(config) {
+    this.config = config;
+    this.currentIndex = 0;
+  }
+
+  start() {
+    const element = getElement(this.config.elementId);
+    if (!element) {
+      console.warn(`Element with id '${this.config.elementId}' not found`);
+      return Promise.reject(
+        new Error(`Element not found: ${this.config.elementId}`)
+      );
+    }
+
+    return new Promise((resolve) => {
+      const type = () => {
+        if (this.currentIndex < this.config.text.length) {
+          element.innerHTML += this.config.text.charAt(this.currentIndex);
+          this.currentIndex++;
+          setTimeout(type, this.config.delay);
+        } else {
+          resolve();
+        }
+      };
+      type();
+    });
   }
 }
 
-function typeSubheading() {
-  if (subheadingIndex < subheadingText.length) {
-    document.getElementById("typed-subheading").innerHTML +=
-      subheadingText.charAt(subheadingIndex);
-    subheadingIndex++;
-    setTimeout(typeSubheading, 30);
+// Initialize typing animations
+async function initializeTypingAnimations() {
+  try {
+    const headingAnimation = new TypingAnimation(TYPING_CONFIG.heading);
+    await headingAnimation.start();
+
+    const subheadingAnimation = new TypingAnimation(TYPING_CONFIG.subheading);
+    await subheadingAnimation.start();
+  } catch (error) {
+    console.error("Error in typing animation:", error);
   }
 }
-
-window.onload = typeHeading;
 
 // Initialize resource category tabs (for tech learning channels)
 
-document.addEventListener("DOMContentLoaded", function () {
-  initializeResourceTabs();
-  initializeProjectTabs();
-});
+// Tab system configuration
+const TAB_STYLES = {
+  active: ["active", "bg-blue-500", "text-white"],
+  inactive: ["bg-gray-200", "text-gray-700"],
+};
 
-function initializeResourceTabs() {
-  const tabs = document.querySelectorAll(".category-tab");
-  const contents = document.querySelectorAll(".category-content");
+class TabSystem {
+  constructor(config) {
+    this.config = {
+      tabSelector: config.tabSelector,
+      contentSelector: config.contentSelector,
+      defaultCategory: config.defaultCategory || "general",
+      containerSelector: config.containerSelector || "",
+      ...config,
+    };
 
-  if (tabs.length === 0 || contents.length === 0) return;
+    this.tabs = getElements(this.config.tabSelector);
+    this.contents = getElements(this.config.contentSelector);
+  }
 
-  // Initialize - hide all content except general
-  contents.forEach((content) => {
-    if (content.getAttribute("data-category") === "general") {
-      content.classList.remove("hidden");
-    } else {
-      content.classList.add("hidden");
+  initialize() {
+    if (this.tabs.length === 0 || this.contents.length === 0) {
+      console.warn("Tab elements not found");
+      return;
     }
-  });
 
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      // Remove active class from all tabs
-      tabs.forEach((t) =>
-        t.classList.remove("active", "bg-blue-500", "text-white")
-      );
-      tabs.forEach((t) => t.classList.add("bg-gray-200", "text-gray-700"));
-
-      // Add active class to clicked tab
-      tab.classList.add("active", "bg-blue-500", "text-white");
-      tab.classList.remove("bg-gray-200", "text-gray-700");
-
-      // Hide all content
-      contents.forEach((content) => content.classList.add("hidden"));
-
-      // Show selected content
-      const category = tab.getAttribute("data-category");
-      const targetContent = document.querySelector(
-        `.category-content[data-category="${category}"]`
-      );
-      if (targetContent) {
-        targetContent.classList.remove("hidden");
-      }
+    // Initialize content visibility
+    this.contents.forEach((content) => {
+      const isDefault =
+        content.getAttribute("data-category") === this.config.defaultCategory;
+      content.classList.toggle("hidden", !isDefault);
     });
-  });
-}
 
-function initializeProjectTabs() {
-  const projectTabs = document.querySelectorAll(".project-tab");
-  const projectContents = document.querySelectorAll(
-    "#projects .project-content"
-  );
+    // Initialize tab styles
+    this.tabs.forEach((tab, index) => {
+      const isDefault =
+        index === 0 ||
+        tab.getAttribute("data-category") === this.config.defaultCategory;
+      this.setTabStyle(tab, isDefault);
+    });
 
-  if (projectTabs.length === 0 || projectContents.length === 0) return;
+    // Add click handlers
+    this.tabs.forEach((tab) => this.setupTabClickHandler(tab));
+  }
 
-  // Initialize - show fullstack projects by default and set first tab as active
-  projectContents.forEach((content) => {
-    if (content.getAttribute("data-category") === "fullstack") {
-      content.classList.remove("hidden");
-    } else {
-      content.classList.add("hidden");
-    }
-  });
+  setTabStyle(tab, isActive) {
+    const [addStyles, removeStyles] = isActive
+      ? [TAB_STYLES.active, TAB_STYLES.inactive]
+      : [TAB_STYLES.inactive, TAB_STYLES.active];
 
-  // Set first tab as active initially
-  projectTabs.forEach((tab, index) => {
-    if (index === 0) {
-      tab.classList.add("active", "bg-blue-500", "text-white");
-      tab.classList.remove("bg-gray-200", "text-gray-700");
-    } else {
-      tab.classList.remove("active", "bg-blue-500", "text-white");
-      tab.classList.add("bg-gray-200", "text-gray-700");
-    }
-  });
+    tab.classList.remove(...removeStyles);
+    tab.classList.add(...addStyles);
+  }
 
-  projectTabs.forEach((tab) => {
+  setupTabClickHandler(tab) {
     tab.addEventListener("click", (e) => {
       e.preventDefault();
-
       const category = tab.getAttribute("data-category");
-      console.log("Project tab clicked:", category); // Debug log
 
-      // Remove active class from all project tabs
-      projectTabs.forEach((t) => {
-        t.classList.remove("active", "bg-blue-500", "text-white");
-        t.classList.add("bg-gray-200", "text-gray-700");
+      // Update tab styles
+      this.tabs.forEach((t) => this.setTabStyle(t, t === tab));
+
+      // Update content visibility
+      this.contents.forEach((content) => {
+        content.classList.toggle(
+          "hidden",
+          content.getAttribute("data-category") !== category
+        );
       });
-
-      // Add active class to clicked tab
-      tab.classList.add("active", "bg-blue-500", "text-white");
-      tab.classList.remove("bg-gray-200", "text-gray-700");
-
-      // Hide all project content
-      projectContents.forEach((content) => {
-        content.classList.add("hidden");
-      });
-
-      // Show selected project content
-      const targetContent = document.querySelector(
-        `#projects .project-content[data-category="${category}"]`
-      );
-      console.log("Target content found:", targetContent); // Debug log
-
-      if (targetContent) {
-        targetContent.classList.remove("hidden");
-      }
     });
+  }
+}
+
+// Initialize all tab systems
+function initializeTabSystems() {
+  const resourceTabs = new TabSystem({
+    tabSelector: ".category-tab",
+    contentSelector: ".category-content",
+    defaultCategory: "general",
   });
+  resourceTabs.initialize();
+
+  const projectTabs = new TabSystem({
+    tabSelector: ".project-tab",
+    contentSelector: "#projects .project-content",
+    defaultCategory: "fullstack",
+    containerSelector: "#projects",
+  });
+  projectTabs.initialize();
 }
 
 // Reusable accordion function
@@ -228,36 +252,88 @@ document.addEventListener("DOMContentLoaded", function () {
 // Make toggleAccordion available globally
 window.toggleAccordion = toggleAccordion;
 
-// Visit Counter Logic
-function updateVisitCounter() {
-  // Get current date in YYYY-MM-DD format
-  const today = new Date().toISOString().split("T")[0];
-
-  // Get stored visit data
-  let visitData = JSON.parse(localStorage.getItem("visitData")) || {
-    totalVisits: 0,
-    lastVisitDate: null,
-    dailyVisits: 0,
-  };
-
-  // Check if it's a new day
-  if (visitData.lastVisitDate !== today) {
-    visitData.dailyVisits = 1;
-    visitData.lastVisitDate = today;
-  } else {
-    visitData.dailyVisits++;
+// Visit counter functionality
+class VisitCounter {
+  constructor() {
+    this.storageKey = "visitData";
+    this.today = new Date().toISOString().split("T")[0];
   }
 
-  // Increment total visits
-  visitData.totalVisits++;
+  initialize() {
+    try {
+      const visitData = this.getVisitData();
+      this.updateVisitCounts(visitData);
+      this.saveVisitData(visitData);
+      this.updateDisplay(visitData);
+    } catch (error) {
+      console.error("Error initializing visit counter:", error);
+    }
+  }
 
-  // Save updated data
-  localStorage.setItem("visitData", JSON.stringify(visitData));
+  getVisitData() {
+    try {
+      return (
+        JSON.parse(localStorage.getItem(this.storageKey)) || {
+          totalVisits: 0,
+          lastVisitDate: null,
+          dailyVisits: 0,
+        }
+      );
+    } catch (error) {
+      console.error("Error reading visit data:", error);
+      return {
+        totalVisits: 0,
+        lastVisitDate: null,
+        dailyVisits: 0,
+      };
+    }
+  }
 
-  // Update display
-  document.getElementById("dailyVisits").textContent = visitData.dailyVisits;
-  document.getElementById("totalVisits").textContent = visitData.totalVisits;
+  updateVisitCounts(data) {
+    if (data.lastVisitDate !== this.today) {
+      data.dailyVisits = 1;
+      data.lastVisitDate = this.today;
+    } else {
+      data.dailyVisits++;
+    }
+    data.totalVisits++;
+  }
+
+  saveVisitData(data) {
+    try {
+      localStorage.setItem(this.storageKey, JSON.stringify(data));
+    } catch (error) {
+      console.error("Error saving visit data:", error);
+    }
+  }
+
+  updateDisplay(data) {
+    const elements = {
+      daily: getElement("dailyVisits"),
+      total: getElement("totalVisits"),
+    };
+
+    if (elements.daily) elements.daily.textContent = data.dailyVisits;
+    if (elements.total) elements.total.textContent = data.totalVisits;
+  }
 }
 
-// Call updateVisitCounter when page loads
-document.addEventListener("DOMContentLoaded", updateVisitCounter);
+// Initialize all functionality when DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+  try {
+    // Initialize mobile menu
+    initializeMobileMenu();
+
+    // Initialize tab systems
+    initializeTabSystems();
+
+    // Initialize typing animations
+    initializeTypingAnimations();
+
+    // Initialize visit counter
+    const visitCounter = new VisitCounter();
+    visitCounter.initialize();
+  } catch (error) {
+    console.error("Error during initialization:", error);
+  }
+});
