@@ -316,11 +316,9 @@
         </div>
       </section>
 
-      <!-- Featured Project -->
+      <!-- Featured Project (Horizontal, Clean, One Line) -->
       <section class="mb-16">
-        <div
-          class="border border-gray-200 rounded-xl shadow-xl p-8 hover:scale-105 transition-all duration-300 bg-white"
-        >
+        <div class="border border-gray-200 rounded-xl shadow-xl p-8 bg-white">
           <div class="text-center mb-8">
             <h2 class="text-3xl font-bold text-gray-800 mb-2">
               Community & Service
@@ -330,140 +328,120 @@
               through technology and direct engagement.
             </p>
           </div>
-          <div class="space-y-8">
+          <!-- Horizontal Featured Projects -->
+          <div
+            class="flex flex-col md:flex-row gap-6 justify-center items-stretch"
+          >
             <!-- Himalayan Connect NYC -->
-            <div class="border border-gray-200 bg-white rounded-lg p-6 mb-0">
-              <div class="text-center">
-                <h3 class="text-2xl font-bold text-gray-800 mb-2">
-                  Himalayan Connect NYC
-                </h3>
-                <h5 class="mb-2">
-                  Full-stack community platform for Himalayan immigrants in NYC
-                </h5>
-              </div>
-              <ul
-                class="list-disc list-inside text-lg text-gray-700 mb-4 max-w-2xl mx-auto text-left"
-              >
-                <li>
-                  Features: authentication, filtering, search, maps, image
-                  upload, and dashboards.
-                </li>
-                <li>
-                  Continuously improving the platform, with a long-term vision
-                  of evolving it into a localized Craigslist-style resource hub.
-                </li>
-              </ul>
-              <div class="flex flex-wrap justify-center gap-2 mb-4">
-                <span
-                  class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-                  >Next.js/React</span
-                >
-                <span
-                  class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-                  >Prisma ORM (Postgres)</span
-                >
-                <span
-                  class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-                  >Tailwind CSS, MUI</span
-                >
-                <span
-                  class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-                  >API: Google Maps, Cloudinary</span
-                >
-              </div>
-              <div
-                class="border border-gray-200 rounded-lg overflow-hidden mb-4"
-              >
-                <button
-                  class="w-full px-4 py-3 font-semibold flex justify-center items-center text-center"
-                  onclick="toggleAccordion('collapseDemo')"
-                >
-                  <span class="mx-auto flex items-center justify-center">
-                    Short Demo Video
-                    <span id="iconDemo" class="ml-2">▼</span>
-                  </span>
-                </button>
-                <div id="collapseDemo" class="hidden px-4 py-3 bg-white">
-                  <div class="flex justify-center">
-                    <div class="video-container">
-                      <iframe
-                        src="https://www.loom.com/embed/54b2648dda674650bc84ff399765f064?sid=3746f3f9-187a-4281-84c5-33df1aba336d"
-                        allowfullscreen
-                        title="Project Demo Video"
-                      ></iframe>
-                    </div>
+            <div
+              class="flex-1 min-w-0 flex flex-col border border-gray-200 bg-white rounded-lg p-6 items-center justify-between"
+            >
+              <div class="flex flex-col flex-1 min-w-0 w-full">
+                <div class="text-center mb-2">
+                  <h3 class="text-2xl font-bold text-gray-800 mb-1">
+                    Himalayan Connect NYC
+                  </h3>
+                  <div class="text-gray-600 text-sm mb-2">
+                    Full-stack community platform for Himalayan immigrants in
+                    NYC
                   </div>
                 </div>
-              </div>
-              <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="https://himalayan-connect-nyc.vercel.app/"
-                  target="_blank"
-                  rel="noopener"
-                  class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 hover:scale-105"
-                >
-                  <i class="bx bx-link-external mr-2"></i>Live Demo
-                </a>
-                <a
-                  href="https://github.com/topgyalgurung/nextjs-fullstack-app"
-                  target="_blank"
-                  rel="noopener"
-                  class="inline-flex items-center px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-gray-900 transition-colors duration-300 hover:scale-105"
-                >
-                  <i class="bx bxl-github mr-2"></i>Source Code
-                </a>
+
+                <div class="w-full flex justify-center mb-3">
+                  <button
+                    class="flex items-center text-blue-600 hover:underline font-semibold text-sm"
+                    onclick="toggleAccordion('collapseDemo')"
+                  >
+                    <span>Short Demo Video</span>
+                    <span id="iconDemo" class="ml-1">▼</span>
+                  </button>
+                </div>
+                <div id="collapseDemo" class="hidden w-full mb-2">
+                  <div class="video-container">
+                    <iframe
+                      src="https://www.loom.com/embed/54b2648dda674650bc84ff399765f064?sid=3746f3f9-187a-4281-84c5-33df1aba336d"
+                      allowfullscreen
+                      title="Project Demo Video"
+                      class="rounded border"
+                      style="width: 100%; min-height: 180px"
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="flex gap-2 justify-center mt-auto pt-2">
+                  <a
+                    href="https://himalayan-connect-nyc.vercel.app/"
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition hover:scale-105 text-sm"
+                  >
+                    <i class="bx bx-link-external mr-2"></i>Live Demo
+                  </a>
+                  <a
+                    href="https://github.com/topgyalgurung/nextjs-fullstack-app"
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center px-4 py-2 bg-gray-800 text-white font-semibold rounded hover:bg-gray-900 transition hover:scale-105 text-sm"
+                  >
+                    <i class="bx bxl-github mr-2"></i>Source
+                  </a>
+                </div>
               </div>
             </div>
-            <hr class="my-4 border-gray-200" />
-            <!-- Social Worker & Meditation Teacher Website -->
-            <div class="border border-gray-200 bg-white rounded-lg p-6 mb-0">
-              <h3 class="text-xl font-semibold mb-4 text-gray-800 text-center">
-                Social Worker & Meditation Teacher Website
-              </h3>
-              <p class="mb-4 text-gray-700">
-                Built using Weebly within a couple of hours as a free service
-                for Lama Wongdue Sangbo, a dedicated social worker and
-                meditation teacher from my homeland.
-              </p>
-              <div class="flex justify-center">
-                <a
-                  href="https://lamawongduesangbo.weebly.com/"
-                  target="_blank"
-                  rel="noopener"
-                  class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 hover:scale-105"
-                >
-                  <i class="bx bx-link-external mr-2"></i>View Lama's Website
-                </a>
+            <!-- Social Worker & Meditation Teacher -->
+            <div
+              class="flex-1 min-w-0 flex flex-col border border-gray-200 bg-white rounded-lg p-6 items-center justify-between"
+            >
+              <div class="flex flex-col flex-1 w-full min-w-0">
+                <div class="text-center mb-2">
+                  <h3 class="text-lg font-semibold text-gray-800">
+                    Social Worker & Meditation Teacher
+                  </h3>
+                  <div class="text-gray-600 text-sm mb-2">
+                    Simple CMS website for Lama Wongdue Sangbo
+                  </div>
+                </div>
+                <p class="text-sm text-gray-700 mb-4">
+                  Built as a free service for Lama Wongdue, a dedicated social
+                  worker and meditation teacher from my homeland.
+                </p>
+                <div class="flex justify-center mt-auto">
+                  <a
+                    href="https://lamawongduesangbo.weebly.com/"
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition text-sm hover:scale-105"
+                  >
+                    <i class="bx bx-link-external mr-2"></i>Visit Website
+                  </a>
+                </div>
               </div>
             </div>
-            <hr class="my-4 border-gray-200" />
             <!-- Leadership & Community Engagement -->
-            <div class="border border-gray-200 bg-white rounded-lg p-6">
-              <h3 class="text-xl font-semibold mb-4 text-gray-800 text-center">
-                Leadership & Community Engagement
-              </h3>
-              <p class="mb-4 text-gray-700">
-                Coordinated a college internship information session for middle
-                and high school students in my community, helping them learn
-                about opportunities and pathways to higher education. This
-                initiative aimed to empower youth with valuable resources and
-                guidance for their future careers.
-              </p>
-              <div class="flex justify-center mb-4">
-                <a
-                  href="https://www.canva.com/design/DAE9tm8-gls/w-DwHuXugYZoH10v0Ke_kg/edit?utm_content=DAE9tm8-gls&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-                  target="_blank"
-                  rel="noopener"
-                  class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 hover:scale-105"
-                >
-                  <i class="bx bx-link-external mr-2"></i>View Event Flyer
-                </a>
+            <div
+              class="flex-1 min-w-0 flex flex-col border border-gray-200 bg-white rounded-lg p-6 items-center justify-between"
+            >
+              <div class="flex flex-col flex-1 w-full min-w-0">
+                <div class="text-center mb-2">
+                  <h3 class="text-lg font-semibold text-gray-800">
+                    Leadership & Community Engagement
+                  </h3>
+                </div>
+                <p class="text-sm text-gray-700 mb-2">
+                  Coordinated a college internship info session for middle &
+                  high school students in my community, empowering youth with
+                  guidance and resources for future careers.
+                </p>
+                <div class="flex justify-center mb-2">
+                  <a
+                    href="https://www.canva.com/design/DAE9tm8-gls/w-DwHuXugYZoH10v0Ke_kg/edit?utm_content=DAE9tm8-gls&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition text-sm hover:scale-105"
+                  >
+                    <i class="bx bx-link-external mr-2"></i>Event Flyer
+                  </a>
+                </div>
               </div>
-              <p class="text-gray-600">
-                I plan to organize more sessions and similar initiatives in the
-                future to continue supporting and uplifting students in my
-                community.
-              </p>
             </div>
           </div>
         </div>
