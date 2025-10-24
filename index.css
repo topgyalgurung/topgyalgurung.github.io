@@ -36,19 +36,128 @@
   0% {
     left: 0%;
   }
-  50% {
+  25% {
     left: 50%;
+  }
+  50% {
+    left: 0%;
+  }
+  75% {
+    left: -50%;
   }
   100% {
     left: 0%;
   }
 }
-
-h1 {
+a[aria-label="LeetCode"] {
   position: relative;
   animation-name: move;
-  animation-duration: 3.5s;
+  animation-duration: 6s;
   animation-fill-mode: forwards;
   /* animation-iteration-count: 2; */
   animation-iteration-count: infinite;
+}
+
+/* Multi About Me Section Styles */
+.about-scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 5%,
+    rgba(255, 255, 255, 0) 95%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  padding: 20px 0;
+}
+
+.about-scroll-content {
+  display: flex;
+  animation: scroll-left 30s linear infinite;
+  gap: 2rem;
+  width: fit-content;
+}
+
+.about-card {
+  flex-shrink: 0;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  text-align: center;
+  min-width: 280px;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-icon {
+  font-size: 3rem;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.about-card p {
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pause animation on hover */
+.about-scroll-container:hover .about-scroll-content {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-card {
+    min-width: 250px;
+    max-width: 270px;
+    padding: 1.5rem;
+  }
+
+  .about-icon {
+    font-size: 2.5rem;
+  }
+
+  .about-card h3 {
+    font-size: 1.125rem;
+  }
+
+  .about-card p {
+    font-size: 0.875rem;
+  }
+}
+
+/* Video iframe styles */
+.video-iframe {
+  width: 100%;
+  min-height: 180px;
 }
