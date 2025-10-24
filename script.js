@@ -1,40 +1,13 @@
 // Constants
 const TYPING_DELAY = {
   HEADING: 50,
-  SUBHEADING: 30,
+  SUBHEADING:20,
 };
-
-// Utility functions
-const getElement = (id) => document.getElementById(id);
-const getElements = (selector) => document.querySelectorAll(selector);
-
-// Mobile menu functionality
-function initializeMobileMenu() {
-  const hamburger = getElement("hamburger");
-  const mobileMenu = getElement("mobile-menu");
-
-  if (!hamburger || !mobileMenu) {
-    console.warn("Mobile menu elements not found");
-    return;
-  }
-
-  hamburger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
-
-  // Add click event listeners to all mobile menu links
-  const mobileMenuLinks = mobileMenu.querySelectorAll("a");
-  mobileMenuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
-    });
-  });
-}
 
 // Typing animation configuration
 const TYPING_CONFIG = {
   heading: {
-    text: "Hi,\nI'm Topgyal 👋",
+    text: "Hi,\nI'm Topgyal 👋 ",
     elementId: "typed-heading",
     delay: TYPING_DELAY.HEADING,
   },
@@ -43,7 +16,7 @@ const TYPING_CONFIG = {
     elementId: "typed-subheading",
     delay: TYPING_DELAY.SUBHEADING,
   },
-};
+};  
 
 class TypingAnimation {
   constructor(config) {
@@ -74,6 +47,35 @@ class TypingAnimation {
     });
   }
 }
+
+// Utility functions
+const getElement = (id) => document.getElementById(id);
+const getElements = (selector) => document.querySelectorAll(selector);
+
+// Mobile menu functionality
+function initializeMobileMenu() {
+  const hamburger = getElement("hamburger");
+  const mobileMenu = getElement("mobile-menu");
+
+  if (!hamburger || !mobileMenu) {
+    console.warn("Mobile menu elements not found");
+    return;
+  }
+
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  // Add click event listeners to all mobile menu links
+  const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  });
+}
+
+
 
 // Initialize typing animations
 async function initializeTypingAnimations() {
@@ -224,9 +226,25 @@ function toggleAccordion(id, groupName = "") {
     if (icon) icon.textContent = "▲";
   }
 }
+// Initialize all functionality when DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+   try {
+    // Initialize mobile menu
+    initializeMobileMenu();
 
-// Modal functionality
-document.addEventListener("DOMContentLoaded", function () {
+    // Initialize tab systems
+    initializeTabSystems();
+
+    // Initialize typing animations
+    initializeTypingAnimations();
+
+    // Initialize visit counter
+    const visitCounter = new VisitCounter();
+    visitCounter.initialize();
+  } catch (error) {
+    console.error("Error during initialization:", error);
+  }
+
   const modalBtn = document.getElementById("aboutMeModalBtn");
   const modal = document.getElementById("aboutMeModal");
   const closeBtn = document.getElementById("closeAboutMeModal");
@@ -247,7 +265,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
 });
+
 
 // Make toggleAccordion available globally
 window.toggleAccordion = toggleAccordion;
@@ -317,23 +337,3 @@ class VisitCounter {
     if (elements.total) elements.total.textContent = data.totalVisits;
   }
 }
-
-// Initialize all functionality when DOM is ready
-document.addEventListener("DOMContentLoaded", () => {
-  try {
-    // Initialize mobile menu
-    initializeMobileMenu();
-
-    // Initialize tab systems
-    initializeTabSystems();
-
-    // Initialize typing animations
-    initializeTypingAnimations();
-
-    // Initialize visit counter
-    const visitCounter = new VisitCounter();
-    visitCounter.initialize();
-  } catch (error) {
-    console.error("Error during initialization:", error);
-  }
-});
