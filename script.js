@@ -1,7 +1,15 @@
+window.onscroll = () => {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    document.querySelector("body").style.background = "#DDE3FF";
+  } else {
+    document.querySelector("body").style.background = "white";
+  }
+};
+
 // Constants
 const TYPING_DELAY = {
   HEADING: 50,
-  SUBHEADING:20,
+  SUBHEADING: 20,
 };
 
 // Typing animation configuration
@@ -16,7 +24,7 @@ const TYPING_CONFIG = {
     elementId: "typed-subheading",
     delay: TYPING_DELAY.SUBHEADING,
   },
-};  
+};
 
 class TypingAnimation {
   constructor(config) {
@@ -74,8 +82,6 @@ function initializeMobileMenu() {
     });
   });
 }
-
-
 
 // Initialize typing animations
 async function initializeTypingAnimations() {
@@ -228,7 +234,7 @@ function toggleAccordion(id, groupName = "") {
 }
 // Initialize all functionality when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
-   try {
+  try {
     // Initialize mobile menu
     initializeMobileMenu();
 
@@ -265,9 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
 });
-
 
 // Make toggleAccordion available globally
 window.toggleAccordion = toggleAccordion;
