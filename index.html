@@ -1,1968 +1,503 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Topgyal Gurung</title>
-    <link rel="icon" href="assets/profile.jpg" type="image/jpg" />
-    <meta
-      name="Topgyal Portfolio"
-      content="Topgyal Gurung - Software Engineer with expertise in full-stack development, data engineering, and cloud technologies. View my portfolio, projects, and experience."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
-    <!-- for linkedin, gh, medium boxicons -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-    />
-    <link rel="stylesheet" href="index.css" />
-  </head>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Topgyal Gurung</title>
+  <meta name="description" content="Topgyal Gurung - Software Engineer. Full-stack development, data engineering, cloud technologies." />
+  <link rel="icon" href="assets/profile.jpg" type="image/jpg" />
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #111;
+      --muted: #636363;
+      --faint: #a0a0a0;
+      --line: #ebebeb;
+      --accent: #0057ff;
+      --accent-bg: #f0f4ff;
+      --radius: 12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: inherit; text-decoration: none; }
 
-  <body class="font-sans bg-gradient-to-r from-gray-100 to-gray-200">
-    <header
-      class="bg-white shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-30 sticky top-0 z-10"
-    >
-      <nav
-        class="max-w-4xl mx-auto flex justify-between items-center px-4 py-4"
-      >
-        <div class="hidden md:flex">
-          <ul class="flex space-x-6">
-            <li>
-              <a
-                href="#home"
-                class="text-gray-800 hover:text-blue-600 transition"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#projects"
-                class="text-gray-800 hover:text-blue-600 transition"
-                >Project</a
-              >
-            </li>
-            <li>
-              <a
-                href="#experience"
-                class="text-gray-800 hover:text-blue-600 transition"
-                >Experience</a
-              >
-            </li>
+    .wrap { width: min(1040px, 90vw); margin: 0 auto; }
 
-            <li>
-              <a
-                href="#certifications"
-                class="text-gray-800 hover:text-blue-600 transition"
-                >Certification</a
-              >
-            </li>
-            <li>
-              <a
-                href="#testimonial"
-                class="text-gray-800 hover:text-blue-600 transition"
-                >Testimonial</a
-              >
-            </li>
-          </ul>
-        </div>
-        <button
-          id="hamburger"
-          class="md:hidden"
-          aria-label="Toggle mobile menu"
-        >
-          <svg class="h-6 w-6 fill-current text-gray-800" viewBox="0 0 24 24">
-            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
-          </svg>
-        </button>
-      </nav>
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 30;
+      background: rgba(250,250,249,.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    .nav-brand { font-weight: 600; font-size: .95rem; }
+    .nav-links { display: flex; gap: 1.5rem; font-size: .88rem; color: var(--muted); }
+    .nav-links a { transition: color .15s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-toggle {
+      display: none; background: none; border: 1px solid var(--line);
+      border-radius: 8px; padding: .3rem .55rem; font-size: .82rem; cursor: pointer;
+    }
 
-      <!-- mobile menu -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden"
-        role="navigation"
-        aria-label="Mobile navigation"
-      >
-        <ul class="flex flex-col space-y-4 px-4 py-2" role="menu">
-          <li role="none">
-            <a
-              href="#home"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-              role="menuitem"
-              >Home</a
-            >
-          </li>
-          <li role="none">
-            <a
-              href="#projects"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-              role="menuitem"
-              >Project</a
-            >
-          </li>
-          <li role="none">
-            <a
-              href="#experience"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-              role="menuitem"
-              >Experience</a
-            >
-          </li>
-          <li role="none">
-            <a
-              href="#resources"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-              role="menuitem"
-              >Resource</a
-            >
-          </li>
-          <li role="none">
-            <a
-              href="#certifications"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-              role="menuitem"
-              >Certification</a
-            >
-          </li>
-          <li role="none">
-            <a
-              href="#testimonial"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-              role="menuitem"
-              >Testimonial</a
-            >
-          </li>
-        </ul>
+    /* ── Hero ── */
+    .hero { padding: 5rem 0 3rem; max-width: 680px; }
+    .hero .label {
+      font-size: .78rem; text-transform: uppercase; letter-spacing: .16em;
+      color: var(--faint); margin-bottom: .6rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+      line-height: 1.08; letter-spacing: -.025em; margin-bottom: 1rem;
+    }
+    .hero p { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.4rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+    .pill {
+      display: inline-flex; align-items: center; gap: .35rem;
+      padding: .45rem .85rem; border-radius: 999px; font-size: .86rem;
+      border: 1px solid var(--line); background: var(--surface);
+      transition: .18s ease;
+    }
+    .pill:hover { border-color: #ccc; transform: translateY(-1px); }
+    .pill.dark { background: var(--text); color: #fff; border-color: var(--text); }
+    .pill.dark:hover { opacity: .9; transform: translateY(-1px); }
+
+    /* ── Sections ── */
+    .section { padding: 3rem 0 2.5rem; border-top: 1px solid var(--line); }
+    .section-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      margin-bottom: 1.2rem; flex-wrap: wrap; gap: .5rem;
+    }
+    .section-head h2 { font-size: 1.15rem; letter-spacing: -.01em; }
+    .section-head .note { font-size: .82rem; color: var(--faint); }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 1rem 1.1rem;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.04); transform: translateY(-2px); }
+    .card h3 { font-size: .95rem; margin-bottom: .3rem; }
+    .card p, .card .desc { color: var(--muted); font-size: .88rem; }
+    .card .meta { font-size: .78rem; color: var(--faint); margin-bottom: .25rem; }
+    .card-links { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .6rem; }
+    .card-links a {
+      font-size: .78rem; padding: .25rem .55rem; border-radius: 999px;
+      background: var(--accent-bg); color: var(--accent); transition: .15s;
+    }
+    .card-links a:hover { background: #dde5ff; }
+    .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .55rem; }
+    .tag {
+      font-size: .72rem; padding: .2rem .5rem; border-radius: 999px;
+      border: 1px solid var(--line); color: #555; background: #fafafa;
+    }
+
+    /* ── Grid layouts ── */
+    .g { display: grid; gap: .75rem; }
+    .g3 { grid-template-columns: repeat(3, 1fr); }
+    .g2 { grid-template-columns: repeat(2, 1fr); }
+
+    /* ── Timeline list ── */
+    .timeline { display: grid; gap: 0; }
+    .t-item {
+      padding: 1rem 0; border-bottom: 1px solid var(--line);
+      display: grid; grid-template-columns: 1fr auto; gap: .3rem 1rem; align-items: start;
+    }
+    .t-item:last-child { border-bottom: none; }
+    .t-title { font-size: .92rem; font-weight: 600; }
+    .t-when { font-size: .78rem; color: var(--faint); text-align: right; white-space: nowrap; }
+    .t-body { grid-column: 1 / -1; color: var(--muted); font-size: .86rem; margin-top: .15rem; }
+    .t-body a { color: var(--accent); }
+    .t-body a:hover { text-decoration: underline; }
+
+    /* ── Quote ── */
+    .quote-card {
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 1.1rem 1.2rem;
+    }
+    .quote-card blockquote {
+      font-size: .9rem; color: #3a3a3a; font-style: italic;
+      border-left: 2px solid #d3d9f5; padding-left: .75rem; margin-bottom: .7rem;
+    }
+    .quote-card .cite { font-size: .82rem; }
+    .cite strong { color: var(--text); }
+    .cite span { color: var(--faint); }
+
+    /* ── Footer ── */
+    footer { border-top: 1px solid var(--line); margin-top: 2rem; }
+    .foot-inner {
+      height: 64px; display: flex; align-items: center;
+      justify-content: space-between; font-size: .82rem; color: var(--faint);
+    }
+    .foot-inner a { color: var(--muted); }
+    .foot-inner a:hover { color: var(--text); }
+
+    @media (max-width: 900px) {
+      .g3, .g2 { grid-template-columns: 1fr; }
+      .t-item { grid-template-columns: 1fr; }
+      .t-when { text-align: left; }
+    }
+    @media (max-width: 640px) {
+      .nav-toggle { display: inline-flex; }
+      .nav-links {
+        display: none; position: absolute; top: 56px; left: 0; right: 0;
+        background: var(--surface); border-bottom: 1px solid var(--line);
+        flex-direction: column; padding: .8rem 5vw; gap: .6rem;
+      }
+      .nav-links.open { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="nav-brand" href="#top">Topgyal Gurung</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">Menu</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#certs">Certifications</a>
+      <a href="#testimonials">Testimonials</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <p class="label">Software Engineer</p>
+    <h1>Clean code,<br>real impact.</h1>
+    <p>
+      Full-stack engineer with a CS degree from Hunter College. I build
+      thoughtful interfaces, reliable APIs, and data workflows that ship.
+    </p>
+    <div class="hero-actions">
+      <a class="pill dark" href="mailto:topgyaltsering3@gmail.com">Get in touch</a>
+      <a class="pill" href="https://www.linkedin.com/in/topgyalgurung" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="pill" href="https://github.com/topgyalgurung" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="pill" href="https://topgyalgurung.medium.com/" target="_blank" rel="noopener noreferrer">Medium</a>
+      <a class="pill" href="./assets/Resume.pdf" target="_blank">Resume</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="section-head"><h2>About</h2></div>
+    <div class="g g3">
+      <div class="card">
+        <h3>Education</h3>
+        <p>Hunter College (CS), CodePath Cybersecurity, TTP Residency, Springboard Full-Stack.</p>
       </div>
-    </header>
-
-    <main class="max-w-4xl mx-auto px-4 py-8">
-      <!-- Home Section -->
-      <section id="home" class="mb-20">
-        <div
-          class="flex flex-col md:flex-row items-center justify-between gap-12"
-        >
-          <!-- Left: Heading and Subheading -->
-          <div class="w-full md:w-1/2 text-center md:text-left">
-            <h1
-              class="text-5xl md:text-6xl font-extrabold font-serif tracking-tight text-gray-900 mb-4 drop-shadow-lg"
-            >
-              <span id="typed-heading"></span>
-            </h1>
-
-            <h3
-              class="text-2xl md:text-3xl text-gray-600 mb-8 font-light italic"
-            >
-              <span id="typed-subheading"></span>
-            </h3>
-          </div>
-          <!-- Social Media & Online Profiles (Previous Style) -->
-          <div class="w-full md:w-1/2 flex flex-col items-center">
-            <div
-              class="bg-white rounded-xl shadow-md px-8 py-6 w-full max-w-md border border-gray-100"
-            >
-              <h5
-                class="text-lg font-bold text-gray-700 mb-5 tracking-wide text-center"
-              >
-                Find me online
-              </h5>
-              <div class="flex justify-center space-x-6 mb-4">
-                <a
-                  href="https://www.linkedin.com/in/topgyalgurung"
-                  class="text-blue-600 text-3xl hover:text-blue-800 transition-colors duration-150 transform hover:scale-110"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  ><i class="bx bxl-linkedin"></i
-                ></a>
-                <a
-                  href="https://github.com/topgyalgurung"
-                  class="text-gray-800 text-3xl hover:text-black transition-colors duration-150 transform hover:scale-110"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                  ><i class="bx bxl-github"></i
-                ></a>
-                <a
-                  href="https://topgyalgurung.medium.com/"
-                  class="text-gray-600 text-3xl hover:text-black transition-colors duration-150 transform hover:scale-110"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Medium"
-                  ><i class="bx bxl-medium"></i
-                ></a>
-              </div>
-              <div class="flex flex-col items-center space-y-1 w-full">
-                <a
-                  href="https://leetcode.com/u/topgyaltsering3/"
-                  class="text-yellow-500 text-base font-medium hover:underline flex items-center"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LeetCode"
-                  ><i class="bx bx-code-alt mr-2 text-xl"></i>LeetCode</a
-                >
-                <!-- <a
-                  href="https://www.hackerrank.com/profile/topgyal_gurung71"
-                  class="text-green-600 text-base font-medium hover:underline flex items-center"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="HackerRank"
-                  ><i class="bx bx-terminal mr-2 text-xl"></i>HackerRank</a
-                > -->
-                <a
-                  href="https://www.coursera.org/learner/topgyal"
-                  class="text-blue-700 text-base font-medium hover:underline flex items-center"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Coursera"
-                  ><i class="bx bxl-coursera mr-2 text-xl"></i>Coursera</a
-                >
-              </div>
-              <div class="mt-4 text-xs text-gray-400 text-center">
-                Let's connect!
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="mb-16">
-        <h2
-          class="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900"
-        >
-          About Me
-        </h2>
-        <div
-          class="space-y-5 text-gray-700 leading-relaxed text-base md:text-lg"
-        >
-          <div>
-            <strong>Alumni:</strong>
-            <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
-              <li>Hunter College (CS)</li>
-              <li>CodePath (CyberSecurity)</li>
-              <li>TTP Residency @Hunter College (Full Stack - PERN)</li>
-              <li>Springboard (Full Stack - MERN/Next.js)</li>
-            </ul>
-          </div>
-
-          <div>
-            <strong>Leadership:</strong>
-            <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
-              <li>
-                Accountant,
-                <a
-                  href="https://www.lonyamshipusa.org/"
-                  class="text-blue-700 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Lo-Nyamship Association USA </a
-                >, 2026-2028
-              </li>
-              <li>President, Alumni Association, 2026-2027</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Multi About Me Section -->
-      <section class="mb-16">
-        <div class="about-scroll-container">
-          <div class="about-scroll-content">
-            <!-- First set of cards -->
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-code-alt"></i>
-              </div>
-              <h3>Full-Stack Developer</h3>
-              <p>Building scalable web applications with modern technologies</p>
-            </div>
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-data"></i>
-              </div>
-              <h3>Past Data Engineer Intern</h3>
-              <p>Resolved BigQuery Geospatial SQL issue pre-acquisition</p>
-            </div>
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-shield"></i>
-              </div>
-              <h3>Security Enthusiast</h3>
-              <p>
-                Implementing secure coding practices and vulnerability
-                assessments
-              </p>
-            </div>
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-cloud"></i>
-              </div>
-              <h3>Cloud Architect</h3>
-              <p>
-                Deploying and managing applications on AWS and other cloud
-                platforms
-              </p>
-            </div>
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-brain"></i>
-              </div>
-              <h3>AI Integration</h3>
-              <p>
-                Incorporating AI and machine learning (LLM) into practical
-                applications
-              </p>
-            </div>
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-group"></i>
-              </div>
-              <h3>Community Leader</h3>
-              <p>
-                Mentoring and supporting underrepresented communities in tech
-              </p>
-            </div>
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-graduation"></i>
-              </div>
-              <h3>Lifelong Learner</h3>
-              <p>
-                Continuously expanding skills through courses and hands-on
-                projects
-              </p>
-            </div>
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-briefcase"></i>
-              </div>
-              <h3>Problem Solver</h3>
-              <p>
-                Translating complex requirements into reliable, high-impact
-                solutions
-              </p>
-            </div>
-            <!-- Duplicate set for seamless infinite scroll -->
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-code-alt"></i>
-              </div>
-              <h3>Full-Stack Developer</h3>
-              <p>Building scalable web applications with modern technologies</p>
-            </div>
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-data"></i>
-              </div>
-              <h3>Data Engineer</h3>
-              <p>Designing and optimizing data pipelines for analytics</p>
-            </div>
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-shield"></i>
-              </div>
-              <h3>Security Enthusiast</h3>
-              <p>
-                Implementing secure coding practices and vulnerability
-                assessments
-              </p>
-            </div>
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-cloud"></i>
-              </div>
-              <h3>Cloud Architect</h3>
-              <p>
-                Deploying and managing applications on AWS and other cloud
-                platforms
-              </p>
-            </div>
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-brain"></i>
-              </div>
-              <h3>AI Integration</h3>
-              <p>
-                Incorporating AI and machine learning into practical
-                applications
-              </p>
-            </div>
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-group"></i>
-              </div>
-              <h3>Community Leader</h3>
-              <p>
-                Mentoring and supporting underrepresented communities in tech
-              </p>
-            </div>
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-graduation"></i>
-              </div>
-              <h3>Lifelong Learner</h3>
-              <p>
-                Continuously expanding skills through courses and hands-on
-                projects
-              </p>
-            </div>
-            <div class="about-card">
-              <div class="about-icon">
-                <i class="bx bx-briefcase"></i>
-              </div>
-              <h3>Problem Solver</h3>
-              <p>
-                Translating complex requirements into reliable, high-impact
-                solutions
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Modal Overlay & Content -->
-        <div class="flex justify-center my-6">
-          <button
-            id="aboutMeModalBtn"
-            class="px-5 py-2 bg-blue-600 text-white rounded-full text-base font-medium hover:bg-blue-700 transition"
-          >
-            Learn More
-          </button>
-        </div>
-        <div
-          id="aboutMeModal"
-          class="flex flex-col fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 hidden"
-        >
-          <div
-            class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative"
-          >
-            <button
-              id="closeAboutMeModal"
-              class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold"
-            >
-              &times;
-            </button>
-            <h3 class="text-xl font-bold mb-2 text-gray-900">Who I Am</h3>
-            <p class="mb-4 text-gray-700">
-              First generation college graduate with a CS degree and strong
-              backend and database expertise. Experienced in designing scalable
-              systems, deploying full-stack applications, and building secure
-              APIs.
-            </p>
-            <h3 class="text-xl font-bold mb-2 text-gray-900">What I Do</h3>
-            <p class="mb-4 text-gray-700">
-              Skilled in JavaScript, TypeScript, Python, SQL, and modern
-              frameworks. I design and deliver robust applications, data
-              engineering solutions, and security-focused APIs, leveraging cloud
-              and AI tools such as AWS, BigQuery, and LLM integrations.
-            </p>
-            <h3 class="text-xl font-bold mb-2 text-gray-900">Value Add</h3>
-            <p class="text-gray-700">
-              Adept at translating complex requirements into reliable,
-              high-impact solutions. I combine technical depth with a focus on
-              scalable architecture, security, and rapid problem-solving to
-              deliver meaningful results.
-            </p>
-            <div class="flex justify-center mt-2">
-              <a
-                href="./assets/Resume.pdf"
-                target="_blank"
-                class="px-5 py-2 text-white bg-blue-600 rounded hover:bg-blue-700 transition w-full max-w-xs text-center sm:w-auto"
-              >
-                View Resume
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Featured Project (Horizontal, Clean, One Line) -->
-      <section class="mb-16">
-        <div class="border border-gray-200 rounded-xl shadow-xl p-8 bg-white">
-          <div class="text-center mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-2">
-              Community & Service
-            </h2>
-            <p class="text-lg text-gray-700 max-w-2xl mx-auto">
-              Highlighting my commitment to community, service, and leadership
-              through technology and direct engagement.
-            </p>
-          </div>
-          <!-- Horizontal Featured Projects -->
-          <div
-            class="flex flex-col md:flex-row gap-6 justify-center items-stretch"
-          >
-            <!-- Himalayan Connect NYC -->
-            <div
-              class="flex-1 min-w-0 flex flex-col border border-gray-200 bg-white rounded-lg p-6 items-center justify-between"
-            >
-              <div class="flex flex-col flex-1 min-w-0 w-full">
-                <div class="text-center mb-2">
-                  <h3 class="text-2xl font-bold text-gray-800 mb-1">
-                    Himalayan Connect NYC
-                  </h3>
-                  <div class="text-gray-600 text-sm mb-2">
-                    Full-stack community platform for Himalayan immigrants in
-                    NYC
-                  </div>
-                </div>
-
-                <div class="w-full flex justify-center mb-3">
-                  <button
-                    class="flex items-center text-blue-600 hover:underline font-semibold text-sm"
-                    onclick="toggleAccordion('collapseDemo')"
-                  >
-                    <span>Short Demo Video</span>
-                    <span id="iconDemo" class="ml-1">▼</span>
-                  </button>
-                </div>
-                <div id="collapseDemo" class="hidden w-full mb-2">
-                  <div class="video-container">
-                    <iframe
-                      src="https://www.loom.com/embed/54b2648dda674650bc84ff399765f064?sid=3746f3f9-187a-4281-84c5-33df1aba336d"
-                      allowfullscreen
-                      title="Project Demo Video"
-                      class="rounded border video-iframe"
-                    ></iframe>
-                  </div>
-                </div>
-                <div class="flex gap-2 justify-center mt-auto pt-2">
-                  <a
-                    href="https://himalayan-connect-nyc.vercel.app/"
-                    target="_blank"
-                    rel="noopener"
-                    class="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition hover:scale-105 text-sm"
-                  >
-                    <i class="bx bx-link-external mr-2"></i>Live Demo
-                  </a>
-                  <a
-                    href="https://github.com/topgyalgurung/nextjs-fullstack-app"
-                    target="_blank"
-                    rel="noopener"
-                    class="inline-flex items-center px-4 py-2 bg-gray-800 text-white font-semibold rounded hover:bg-gray-900 transition hover:scale-105 text-sm"
-                  >
-                    <i class="bx bxl-github mr-2"></i>Source
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- Social Worker & Meditation Teacher -->
-            <div
-              class="flex-1 min-w-0 flex flex-col border border-gray-200 bg-white rounded-lg p-6 items-center justify-between"
-            >
-              <div class="flex flex-col flex-1 w-full min-w-0">
-                <div class="text-center mb-2">
-                  <h3 class="text-lg font-semibold text-gray-800">
-                    Social Worker & Meditation Teacher
-                  </h3>
-                  <div class="text-gray-600 text-sm mb-2">
-                    Simple CMS website for Lama Wongdue Sangbo
-                  </div>
-                </div>
-                <p class="text-sm text-gray-700 mb-4">
-                  Built as a free service for Lama Wongdue, a dedicated social
-                  worker and meditation teacher from my homeland.
-                </p>
-                <div class="flex justify-center mt-auto">
-                  <a
-                    href="https://lamawongduesangbo.weebly.com/"
-                    target="_blank"
-                    rel="noopener"
-                    class="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition text-sm hover:scale-105"
-                  >
-                    <i class="bx bx-link-external mr-2"></i>Visit Website
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- Leadership & Community Engagement -->
-            <div
-              class="flex-1 min-w-0 flex flex-col border border-gray-200 bg-white rounded-lg p-6 items-center justify-between"
-            >
-              <div class="flex flex-col flex-1 w-full min-w-0">
-                <div class="text-center mb-2">
-                  <h3 class="text-lg font-semibold text-gray-800">
-                    Leadership & Community Engagement
-                  </h3>
-                </div>
-                <p class="text-sm text-gray-700 mb-2">
-                  Coordinated a college internship info session for middle &
-                  high school students in my community, empowering youth with
-                  guidance and resources for future careers.
-                </p>
-                <div class="flex justify-center mb-2">
-                  <a
-                    href="https://www.canva.com/design/DAE9tm8-gls/w-DwHuXugYZoH10v0Ke_kg/edit?utm_content=DAE9tm8-gls&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-                    target="_blank"
-                    rel="noopener"
-                    class="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition text-sm hover:scale-105"
-                  >
-                    <i class="bx bx-link-external mr-2"></i>Event Flyer
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Projects Section -->
-      <section id="projects" class="mb-16">
-        <div>
-          <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
-
-          <div
-            class="flex flex-wrap justify-center gap-4 mb-8"
-            role="tablist"
-            aria-label="Project categories"
-          >
-            <button
-              class="project-tab active px-6 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition"
-              data-category="fullstack"
-              role="tab"
-              aria-selected="true"
-              aria-controls="fullstack-content"
-              id="fullstack-tab"
-            >
-              Full Stack
-            </button>
-
-            <button
-              class="project-tab px-6 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition"
-              data-category="frontend"
-              role="tab"
-              aria-selected="false"
-              aria-controls="frontend-content"
-              id="frontend-tab"
-            >
-              Frontend
-            </button>
-
-            <button
-              class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
-              data-category="backend"
-              role="tab"
-              aria-selected="false"
-              aria-controls="backend-content"
-              id="backend-tab"
-            >
-              Backend
-            </button>
-
-            <!-- <button
-              class="project-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition"
-              data-category="others"
-              role="tab"
-              aria-selected="false"
-              aria-controls="others-content"
-              id="others-tab"
-            >
-              Others
-            </button> -->
-          </div>
-
-          <!-- Next.js / MERN  Full Stack Projects -->
-          <div
-            class="project-content bg-white rounded-lg shadow-md p-6 active"
-            data-category="fullstack"
-            role="tabpanel"
-            id="fullstack-content"
-            aria-labelledby="fullstack-tab"
-          >
-            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
-              Next.js / MERN
-            </h3>
-
-            <!-- Next.js Full Stack Web App -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseOne', 'projects')"
-                aria-expanded="false"
-                aria-controls="collapseOne"
-                role="button"
-              >
-                <span>Community Platform App (Next.js, Prisma)</span>
-                <span id="iconOne" aria-hidden="true">▼</span>
-              </button>
-
-              <div
-                id="collapseOne"
-                class="hidden px-4 py-3 bg-white"
-                role="region"
-                aria-labelledby="collapseOne-header"
-              >
-                <div class="text-center">
-                  <p class="font-semibold mb-1">Himalayan Connect NYC</p>
-                  <h4 class="text-gray-700 mb-4">
-                    Full Stack Web App: Next.js, React, Prisma, PostgreSQL
-                  </h4>
-                </div>
-                <div class="mb-4">
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://himalayan-connect-nyc.vercel.app/"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                      >Live</a
-                    >
-                    <a
-                      href="https://github.com/topgyalgurung/nextjs-fullstack-app"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseAIApp')"
-              >
-                AI Text Completion App (Next.js, Vercel AI SDK)
-                <span id="iconAIApp">▼</span>
-              </button>
-
-              <div id="collapseAIApp" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">
-                    AI Text Completion (OpenAI, Next.js, Vercel AI SDK)
-                  </p>
-                  <h4 class="text-gray-700 mb-4">
-                    Building a real-time AI text completion feature by
-                    integrating OpenAI’s API with Next.js and Vercel AI SDK,
-                    implementing streaming responses and dynamic user input
-                    handling for an interactive experience.
-                  </h4>
-                </div>
-                <div class="mb-4">
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://github.com/topgyalgurung/nextjs-ai-app"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- MySpace Clone Project -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseMySpace')"
-              >
-                Social Media Clone (Next.js, Prisma, Neon Postgres)
-                <span id="iconMySpace">▼</span>
-              </button>
-              <div id="collapseMySpace" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">MySpace Clone</p>
-                  <h4 class="text-gray-700 mb-4">
-                    A modern MySpace clone built with Next.js, Neon (serverless
-                    Postgres), and Prisma ORM. Features user authentication,
-                    profile customization and follower system
-                  </h4>
-                </div>
-                <div class="mb-4">
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://github.com/topgyalgurung/myspace"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Next.js Dashboard -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseDashboard')"
-              >
-                Customer Invoice Dashboard (Next.js,Postgres)
-                <span id="iconDashboard">▼</span>
-              </button>
-
-              <div id="collapseDashboard" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">Next.js Dashboard</p>
-                  <h4 class="text-gray-700 mb-4">
-                    Next.js App Router, React Server Components, Server Actions,
-                    Search, Pagination,Tailwind CSS, Postgres, NextAuth,
-                    Handling Errors, Partial Prerendering, Streaming, parallel
-                    data fetching, Metadata
-                  </h4>
-                </div>
-                <div class="mb-4">
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://nextjs-dashboard-rho.vercel.app/"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                      >Live</a
-                    >
-                    <a
-                      href="https://github.com/topgyalgurung/nextjs-dashboard"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Yodlr Take Home MERN Project -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseYodlr')"
-              >
-                Registration Portal (MERN)
-                <span id="iconYodlr">▼</span>
-              </button>
-
-              <div id="collapseYodlr" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">Yodlr Take Home</p>
-                  <h4 class="text-gray-700 mb-4">
-                    Full Stack MERN App: React, Node.js, Express, MongoDB<br />
-                    User registration, admin dashboard, REST API, and more.
-                  </h4>
-                </div>
-                <div class="mb-4">
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://github.com/topgyalgurung/yodlr-take-home"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Frontend Projects -->
-          <div
-            class="project-content bg-white rounded-lg shadow-md p-6"
-            data-category="frontend"
-          >
-            <!-- Space Travel React App -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseTwo')"
-              >
-                Space Travel React App
-                <span id="iconTwo">▼</span>
-              </button>
-              <div id="collapseTwo" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">Space Travel</p>
-                  <h4 class="text-gray-700 mb-4">
-                    React, Styled Components, Routing
-                  </h4>
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://space-travel-jj1w.onrender.com/"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                      >Live</a
-                    >
-                    <a
-                      href="https://github.com/topgyalgurung/space-travel"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseThree')"
-              >
-                Pokedox
-                <span id="iconThree">▼</span>
-              </button>
-              <div id="collapseThree" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">Pokedox</p>
-                  <h4 class="text-gray-700 mb-4">React App with Pokémon API</h4>
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://pokedex-lj55.onrender.com/"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                      >Live</a
-                    >
-                    <a
-                      href="https://github.com/topgyalgurung/pokedox"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="border border-gray-300 rounded-lg overflow-hidden mb-4">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseFour')"
-              >
-                Space Mission Control
-                <span id="iconFour">▼</span>
-              </button>
-              <div id="collapseFour" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">Space Mission Control</p>
-                  <h4 class="text-gray-700 mb-4">React, REST API</h4>
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://space-mission-control-2.onrender.com/"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                      >Live</a
-                    >
-                    <a
-                      href="https://github.com/topgyalgurung/space-mission-control"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="border border-gray-300 rounded-lg overflow-hidden">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseFive')"
-              >
-                Jeopardy Game
-                <span id="iconFive">▼</span>
-              </button>
-              <div id="collapseFive" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">Jeopardy Game</p>
-                  <h4 class="text-gray-700 mb-4">Vanilla JS trivia game</h4>
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://topgyalgurung.me/jeopardy-game/"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                      >Live</a
-                    >
-                    <a
-                      href="https://github.com/topgyalgurung/jeopardy-game/"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Node/Express Projects -->
-          <div
-            class="project-content hidden bg-white rounded-lg shadow-md p-6"
-            data-category="backend"
-          >
-            <h3 class="text-xl font-semibold mb-4 text-center text-gray-800">
-              Backend Projects
-            </h3>
-
-            <!-- Dog Adoption Platform API -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseDogAdoption')"
-              >
-                Dog Adoption Platform API
-                <span id="iconDogAdoption">▼</span>
-              </button>
-              <div id="collapseDogAdoption" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">Dog Adoption Platform API</p>
-                  <h4 class="text-gray-700 mb-4">
-                    RESTful API backend for dog adoption platform with Node.js,
-                    Express, and MongoDB Atlas with Mocha Chai testing framework
-                  </h4>
-                  <ul class="text-left text-gray-600 mb-4 space-y-1">
-                    <li>
-                      • Built a secure and RESTful API using Node.js,
-                      Express.js, and MongoDB Atlas with modular MVC
-                      architecture.
-                    </li>
-                    <li>
-                      • Implemented user authentication with JWT tokens and
-                      bcrypt password hashing.
-                    </li>
-                    <li>
-                      • Designed scalable data models for users and dogs, with
-                      Mongoose validation.
-                    </li>
-                    <li>
-                      • Added pagination and filtering for efficient dog
-                      listings.
-                    </li>
-                    <li>
-                      • Ensured robust error handling and covered edge cases for
-                      reliable API behavior.
-                    </li>
-                  </ul>
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://github.com/topgyalgurung/dog-adoption-platform-api"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Express API -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseNodeExpress')"
-              >
-                Express API
-                <span id="iconNodeExpress">▼</span>
-              </button>
-              <div id="collapseNodeExpress" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">Mean Median Mode API</p>
-                  <h4 class="text-gray-700 mb-4">
-                    Express.js API for statistics
-                  </h4>
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://github.com/topgyalgurung/nodejs_exercise/tree/master/express-meanMedianMode"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Node Markov  -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseNodeMarkov')"
-              >
-                Node Markov Machine
-                <span id="iconNodeMarkov">▼</span>
-              </button>
-              <div id="collapseNodeMarkov" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">Node Markov Machine</p>
-                  <h4 class="text-gray-700 mb-4">
-                    An algorithm for generating realistic machine-made text from
-                    an original source text.
-                  </h4>
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://github.com/topgyalgurung/nodejs_exercise/tree/master/node-markov"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Node Shopping List -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseNodeShoppingList')"
-              >
-                Node Shopping List API
-                <span id="iconNodeShoppingList">▼</span>
-              </button>
-              <div
-                id="collapseNodeShoppingList"
-                class="hidden px-4 py-3 bg-white"
-              >
-                <div class="text-center">
-                  <p class="font-semibold mb-1">Express Shopping List API</p>
-                  <h4 class="text-gray-700 mb-4">
-                    A simple JSON API application for storing a shopping list,
-                    demonstrating routing and middleware in Express.js.
-                  </h4>
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://github.com/topgyalgurung/nodejs_exercise/tree/master/express-shopping-list"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Express Bookstore API -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseExpressBookstore')"
-              >
-                Express Bookstore API
-                <span id="iconExpressBookstore">▼</span>
-              </button>
-              <div
-                id="collapseExpressBookstore"
-                class="hidden px-4 py-3 bg-white"
-              >
-                <div class="text-center">
-                  <p class="font-semibold mb-1">
-                    Express Bookstore - API Validation with simple React
-                    frontend to test the API
-                  </p>
-                  <h4 class="text-gray-700 mb-4">
-                    Build an express.js application that validates a resource
-                    and then add integration tests.
-                  </h4>
-
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://github.com/topgyalgurung/express-bookstore"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Testing Node Express MongoDB API Routes with Mocha Chai -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseMongoDBTest')"
-              >
-                Testing Node Express MongoDB API
-                <span id="iconMongoDBTest">▼</span>
-              </button>
-              <div id="collapseMongoDBTest" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">
-                    Comprehensive API Testing Suite - Mocha Chai Integration
-                  </p>
-                  <h4 class="text-gray-700 mb-4">
-                    Build and test Node.js Express MongoDB API routes using
-                    Mocha and Chai testing framework.
-                  </h4>
-
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://github.com/topgyalgurung/test-api"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- GraphQL React Event Booking API -->
-            <div class="border border-gray-300 rounded-lg overflow-hidden mt-6">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-                onclick="toggleAccordion('collapseGraphQL')"
-              >
-                GraphQL React Event Booking API
-                <span id="iconGraphQL">▼</span>
-              </button>
-              <div id="collapseGraphQL" class="hidden px-4 py-3 bg-white">
-                <div class="text-center">
-                  <p class="font-semibold mb-1">
-                    GraphQL Event Booking System with React Frontend
-                  </p>
-                  <h4 class="text-gray-700 mb-4">
-                    Full-stack application using GraphQL, Node.js, Express, and
-                    React for event booking and management.
-                  </h4>
-
-                  <div class="flex gap-4 justify-center">
-                    <a
-                      href="https://github.com/topgyalgurung/yt-graphql-react-event-booking-api"
-                      target="_blank"
-                      rel="noopener"
-                      class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-
-      <section id="experience" class="mb-16">
-        <div class="project-content bg-white rounded-lg shadow-md p-6">
-          <h2 class="text-3xl font-bold text-center mb-8">Experience</h2>
-
-          <!-- Experience Accordion Items -->
-          <!-- Software Engineer Student @ Springboard -->
-          <div class="border border-gray-300 rounded-lg overflow-hidden mb-6">
-            <button
-              class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-              onclick="toggleAccordion('expSpringboard')"
-            >
-              Software Engineer Student @ Springboard
-              <span id="icon-expSpringboard">▼</span>
-            </button>
-            <div id="expSpringboard" class="hidden px-4 py-3 bg-white">
-              <div
-                class="flex flex-col md:flex-row md:justify-between md:items-start mb-2"
-              >
-                <div>
-                  <p class="text-gray-600 text-sm mb-1">June 2024 - May 2025</p>
-                </div>
-                <div class="mt-2 md:mt-0">
-                  <span
-                    class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full"
-                  >
-                    Online
-                  </span>
-                </div>
-              </div>
-              <ul class="text-gray-700 space-y-2">
-                <li class="flex items-start">
-                  <span class="text-blue-500 mr-2">•</span>
-                  Completed 700+ hours of full-stack web development training,
-                  mastering MERN, TypeScript, Next.js, REST/GraphQL, and
-                  databases, and built projects including a secure Dog Adoption
-                  API, interactive Pokedex, Space Travel Planner, and a
-                  full-stack community platform for Himalayan immigrants in NYC
-                  using Next.js, React, Prisma, and PostgreSQL
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Tech Operations Associate @ Soul Chants Music -->
-          <div class="border border-gray-300 rounded-lg overflow-hidden mb-6">
-            <button
-              class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-              onclick="toggleAccordion('expSoulChants')"
-            >
-              Tech Operations Associate @ Soul Chants Music
-              <span id="icon-expSoulChants">▼</span>
-            </button>
-            <div id="expSoulChants" class="hidden px-4 py-3 bg-white">
-              <div
-                class="flex flex-col md:flex-row md:justify-between md:items-start mb-2"
-              >
-                <div>
-                  <p class="text-gray-600 text-sm mb-1">
-                    November 2021 - October 2022
-                  </p>
-                </div>
-                <div class="mt-2 md:mt-0">
-                  <span
-                    class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full"
-                  >
-                    New York, NY
-                  </span>
-                </div>
-              </div>
-              <ul class="text-gray-700 space-y-2">
-                <li class="flex items-start">
-                  <span class="text-blue-500 mr-2">•</span>
-                  Managed site updates and deployments, led project planning,
-                  and automated asset tracking to improve reliability and
-                  efficiency. Streamlined vendor workflows to enhance service
-                  quality.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Cybersecurity Curriculum Consultant @ Hunter College -->
-          <div class="border border-gray-300 rounded-lg overflow-hidden mb-6">
-            <button
-              class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-              onclick="toggleAccordion('expHunterCyber')"
-            >
-              Cybersecurity Curriculum Consultant @ Hunter College
-              <span id="icon-expHunterCyber">▼</span>
-            </button>
-            <div id="expHunterCyber" class="hidden px-4 py-3 bg-white">
-              <div
-                class="flex flex-col md:flex-row md:justify-between md:items-start mb-2"
-              >
-                <div>
-                  <p class="text-gray-600 text-sm mb-1">
-                    September 2020 - February 2021
-                  </p>
-                </div>
-                <div class="mt-2 md:mt-0">
-                  <span
-                    class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full"
-                  >
-                    New York, NY
-                  </span>
-                </div>
-              </div>
-              <ul class="text-gray-700 space-y-2">
-                <li class="flex items-start">
-                  <span class="text-blue-500 mr-2">•</span>
-                  Integrated CodePath’s Cybersecurity curriculum by applying
-                  offensive and defensive techniques with Burp Suite, Kali
-                  Linux, and Metasploit to mitigate SQLi, XSS, and CSRF
-                  vulnerabilities.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Software Developer Intern @ Dextro Software Systems -->
-          <div class="border border-gray-300 rounded-lg overflow-hidden mb-6">
-            <button
-              class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-              onclick="toggleAccordion('expDextro')"
-            >
-              Software Developer Intern @ Dextro Software Systems
-              <span id="icon-expDextro">▼</span>
-            </button>
-            <div id="expDextro" class="hidden px-4 py-3 bg-white">
-              <div
-                class="flex flex-col md:flex-row md:justify-between md:items-start mb-2"
-              >
-                <div>
-                  <p class="text-gray-600 text-sm mb-1">
-                    April 2020 - August 2020
-                  </p>
-                </div>
-                <div class="mt-2 md:mt-0">
-                  <span
-                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full"
-                  >
-                    Princeton, NJ
-                  </span>
-                </div>
-              </div>
-              <ul class="text-gray-700 space-y-2">
-                <li class="flex items-start">
-                  <span class="text-blue-500 mr-2">•</span>
-                  Optimized T-SQL queries, developed SSIS ETL pipelines to
-                  centralize financial data, and built interactive SSRS and
-                  Power BI dashboards to deliver real-time revenue and portfolio
-                  insights to stakeholders.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Data Engineer Intern @ Real Factors (acquired by 7Park Data) -->
-          <div class="border border-gray-300 rounded-lg overflow-hidden mb-6">
-            <button
-              class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-              onclick="toggleAccordion('expRealFactors')"
-            >
-              Data Engineer Intern @ Real Factors (acquired by 7Park Data)
-              <span id="icon-expRealFactors">▼</span>
-            </button>
-            <div id="expRealFactors" class="hidden px-4 py-3 bg-white">
-              <div
-                class="flex flex-col md:flex-row md:justify-between md:items-start mb-2"
-              >
-                <div>
-                  <p class="text-gray-600 text-sm mb-1">
-                    June 2019 - December 2019
-                  </p>
-                </div>
-                <div class="mt-2 md:mt-0">
-                  <span
-                    class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full"
-                  >
-                    Queens, NY
-                  </span>
-                </div>
-              </div>
-              <ul class="text-gray-700 space-y-2">
-                <li class="flex items-start">
-                  <span class="text-blue-500 mr-2">•</span>
-                  Improved real estate analytics by resolving geospatial
-                  rendering issues, building Superset dashboards, and optimizing
-                  BigQuery SQL, reducing query latency and enabling faster
-                  insights
-                </li>
-              </ul>
-              <div class="mt-4">
-                <a
-                  href="https://gist.github.com/topgyalgurung/e41465c96c324534548efc6f7bf9bfcc"
-                  target="_blank"
-                  rel="noopener"
-                  class="text-blue-600 hover:text-blue-800 underline text-xs"
-                >
-                  View related BigQuery SQL code ↗
-                </a>
-              </div>
-              <div class="mt-2">
-                <a
-                  href="https://docs.google.com/presentation/d/15QmY9V2Qtz8YMCPYqxu_eg9me29T9cMlxtZCWrCSlY8/edit?usp=sharing"
-                  target="_blank"
-                  rel="noopener"
-                  class="text-green-600 hover:text-green-800 underline text-xs"
-                >
-                  Internship Slide Deck ↗
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Student Software Engineer @ NYC Tech Talent Pipeline -->
-          <div class="border border-gray-300 rounded-lg overflow-hidden mb-6">
-            <button
-              class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-              onclick="toggleAccordion('expNYCTTP')"
-            >
-              Student Software Engineer @ NYC Tech Talent Pipeline
-              <span id="icon-expNYCTTP">▼</span>
-            </button>
-            <div id="expNYCTTP" class="hidden px-4 py-3 bg-white">
-              <div
-                class="flex flex-col md:flex-row md:justify-between md:items-start mb-2"
-              >
-                <div>
-                  <p class="text-gray-600 text-sm mb-1">
-                    April 2019 - May 2019
-                  </p>
-                </div>
-                <div class="mt-2 md:mt-0">
-                  <span
-                    class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full"
-                  >
-                    New York, NY
-                  </span>
-                </div>
-              </div>
-              <ul class="text-gray-700 space-y-2">
-                <li class="flex items-start">
-                  <span class="text-blue-500 mr-2">•</span>
-                  Completed a competitive full-stack bootcamp, leading backend
-                  development with Node.js, Express, and PostgreSQL, integrating
-                  external APIs, and deploying on Heroku to deliver a
-                  production-ready PERN application
-                </li>
-              </ul>
-              <div class="mt-4">
-                <span
-                  class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded-full mb-2"
-                >
-                  Capstone Group Project
-                </span>
-                <a
-                  href="https://github.com/db101097/CunyFirst2.0"
-                  target="_blank"
-                  rel="noopener"
-                  class="text-blue-600 hover:text-blue-800 font-medium"
-                >
-                  GitHub Repo →
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Machine Learning Research Assistant @ Hunter College -->
-          <div class="border border-gray-300 rounded-lg overflow-hidden">
-            <button
-              class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
-              onclick="toggleAccordion('expHunterML')"
-            >
-              Machine Learning Research Assistant @ Hunter College
-              <span id="icon-expHunterML">▼</span>
-            </button>
-            <div id="expHunterML" class="hidden px-4 py-3 bg-white">
-              <div
-                class="flex flex-col md:flex-row md:justify-between md:items-start mb-2"
-              >
-                <div>
-                  <p class="text-gray-600 text-sm mb-1">May 2018 - June 2019</p>
-                </div>
-                <div class="mt-2 md:mt-0">
-                  <span
-                    class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full"
-                  >
-                    New York, NY
-                  </span>
-                </div>
-              </div>
-              <ul class="text-gray-700 space-y-2">
-                <li class="flex items-start">
-                  <span class="text-blue-500 mr-2">•</span>
-                  Advanced NLP research by presenting machine translation
-                  papers, reproducing Codenn with PyTorch/TensorFlow on cloud
-                  GPUs, and tuning hyperparameters to optimize model
-                  performance.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Certifications Section (Accordion Style) -->
-      <section id="certifications" class="mb-4">
-        <div>
-          <h2 class="text-3xl font-bold text-center my-6">Certification</h2>
-          <div class="space-y-4 max-w-3xl mx-auto">
-            <!-- Springboard -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center focus:outline-none transition hover:bg-blue-50"
-                onclick="toggleAccordion('certSpringboard', 'certifications')"
-                aria-expanded="false"
-                aria-controls="certSpringboard"
-                type="button"
-              >
-                <span class="flex items-center gap-2">
-                  <i class="bx bx-code-alt text-2xl text-blue-500"></i>
-                  Springboard Software Engineering
-                </span>
-                <span id="icon-certSpringboard" class="transition-transform"
-                  >▼</span
-                >
-              </button>
-              <div
-                id="certSpringboard"
-                class="hidden px-4 py-4 bg-white"
-                data-accordion-group="certifications"
-              >
-                <ul
-                  class="list-disc list-inside text-gray-700 space-y-2 text-sm"
-                >
-                  <li>700+ hours, 1:1 mentor, 4 portfolio projects</li>
-                  <li>MERN, TypeScript, Next.js, REST, GraphQL, DBs</li>
-                  <li>Built full-stack apps with PostgreSQL, Prisma, JWT</li>
-                  <li>Responsive UIs: Tailwind, MUI, Google Maps</li>
-                </ul>
-                <div class="flex flex-wrap gap-1.5 mt-3">
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >MERN</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >TypeScript</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >Next.js</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >GraphQL</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >PostgreSQL</span
-                  >
-                </div>
-                <div class="mt-8 flex justify-center">
-                  <a
-                    href="./assets/springboard.pdf"
-                    target="_blank"
-                    class="inline-flex items-center px-3 py-1.5 text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-700 transition text-sm"
-                    >View Certificate</a
-                  >
-                </div>
-              </div>
-            </div>
-            <!-- CodePath Cyber Security -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center focus:outline-none transition hover:bg-blue-50"
-                onclick="toggleAccordion('certCodePath', 'certifications')"
-                aria-expanded="false"
-                aria-controls="certCodePath"
-                type="button"
-              >
-                <span class="flex items-center gap-2">
-                  <i class="bx bx-shield text-2xl text-blue-500"></i>
-                  CodePath Cyber Security
-                </span>
-                <span id="icon-certCodePath" class="transition-transform"
-                  >▼</span
-                >
-              </button>
-              <div
-                id="certCodePath"
-                class="hidden px-4 py-4 bg-white"
-                data-accordion-group="certifications"
-              >
-                <ul
-                  class="list-disc list-inside text-gray-700 space-y-2 text-sm"
-                >
-                  <li>14-week hands-on web app security</li>
-                  <li>Vulnerabilities: SQLi, XSS, CSRF, session hijack</li>
-                  <li>Tools: Metasploit, Wireshark, Kali, Burp Suite</li>
-                  <li>Wrote technical docs and security reports</li>
-                </ul>
-                <div class="flex flex-wrap gap-1.5 mt-3">
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >Kali Linux</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >CSRF</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >Cryptography</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >NetSec</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >CTF</span
-                  >
-                </div>
-                <div class="flex flex-wrap gap-3 mt-5">
-                  <div
-                    class="flex flex-col sm:flex-row gap-2 w-full justify-center items-center"
-                  >
-                    <a
-                      href="https://gist.github.com/topgyalgurung/3fd1e61297d34d4bd9d491ee0f8adfb0"
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex items-center px-3 py-1.5 text-yellow-700 hover:underline transition text-sm"
-                    >
-                      View Course Topics
-                    </a>
-                    <a
-                      href="https://medium.com/cybersecured"
-                      target="_blank"
-                      rel="noopener"
-                      class="inline-flex items-center px-3 py-1.5 text-yellow-700 hover:underline transition text-sm"
-                    >
-                      My Articles on Medium
-                    </a>
-                  </div>
-                  <div class="w-full flex justify-center">
-                    <a
-                      href="./assets/cybersecurity.pdf"
-                      target="_blank"
-                      class="inline-flex items-center px-3 py-1.5 text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-700 transition text-sm"
-                      >View Certificate</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Coursera Python -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center focus:outline-none transition hover:bg-blue-50"
-                onclick="toggleAccordion('certPython', 'certifications')"
-                aria-expanded="false"
-                aria-controls="certPython"
-                type="button"
-              >
-                <span class="flex items-center gap-2">
-                  <i class="bx bx-code text-2xl text-blue-500"></i>
-                  Python for Everybody - UMich
-                </span>
-                <span id="icon-certPython" class="transition-transform">▼</span>
-              </button>
-              <div
-                id="certPython"
-                class="hidden px-4 py-4 bg-white"
-                data-accordion-group="certifications"
-              >
-                <ul
-                  class="list-disc list-inside text-gray-700 space-y-2 text-sm"
-                >
-                  <li>5-course Python specialization</li>
-                  <li>Data structures, web data, DB integration</li>
-                  <li>Data retrieval, processing, visualization</li>
-                  <li>Projects: scraping, API, data tools</li>
-                </ul>
-                <div class="flex flex-wrap gap-1.5 mt-3">
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >Python</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >Data Structures</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >Web APIs</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >Databases</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >Visualization</span
-                  >
-                </div>
-                <div class="mt-8 flex justify-center">
-                  <a
-                    href="https://www.coursera.org/account/accomplishments/specialization/certificate/NEVGFASUB5EK"
-                    target="_blank"
-                    rel="noopener"
-                    class="inline-flex items-center px-3 py-1.5 text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-700 transition text-sm"
-                    >View Certificate</a
-                  >
-                </div>
-              </div>
-            </div>
-            <!-- AWS Certification -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden">
-              <button
-                class="w-full text-left px-4 py-3 font-semibold flex justify-between items-center focus:outline-none transition hover:bg-blue-50"
-                onclick="toggleAccordion('certAWS', 'certifications')"
-                aria-expanded="false"
-                aria-controls="certAWS"
-                type="button"
-              >
-                <span class="flex items-center gap-2">
-                  <i class="bx bx-certification text-2xl text-blue-500"></i>
-                  AWS Academy Cloud Foundations
-                </span>
-                <span id="icon-certAWS" class="transition-transform">▼</span>
-              </button>
-              <div
-                id="certAWS"
-                class="hidden px-4 py-4 bg-white"
-                data-accordion-group="certifications"
-              >
-                <ul
-                  class="list-disc list-inside text-gray-700 space-y-2 text-sm"
-                >
-                  <li>Core AWS: EC2, S3, Lambda, RDS, IAM</li>
-                  <li>Cloud concepts: infra, pricing, scaling, security</li>
-                  <li>Hands-on: deploy, configure, IAM, Lambda</li>
-                  <li>Use cases: VPC, CloudWatch, auto-scaling</li>
-                </ul>
-                <div class="flex flex-wrap gap-1.5 mt-3">
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >EC2</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >S3</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >Lambda</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >RDS</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >IAM</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >VPC</span
-                  >
-                  <span
-                    class="px-2 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium"
-                    >CloudWatch</span
-                  >
-                </div>
-                <div class="mt-8 flex justify-center">
-                  <a
-                    href="https://topgyal.notion.site/AWS-Cloud-23cb226080838039a675c6a2bac8f2be"
-                    target="_blank"
-                    rel="noopener"
-                    class="inline-flex items-center px-3 py-1.5 text-yellow-700 hover:underline transition text-sm"
-                  >
-                    <i class="bx bxs-notepad mr-2"></i>
-                    AWS Notes on Notion
-                  </a>
-                </div>
-                <div class="mt-2 flex justify-center">
-                  <a
-                    href="./assets/aws.png"
-                    target="_blank"
-                    class="inline-flex items-center px-3 py-1.5 text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-700 transition text-sm"
-                    >View Certificate</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="testimonial" class="mb-4">
-        <h2 class="text-3xl font-bold text-center my-6">Testimonial</h2>
-        <div class="space-y-4 max-w-3xl mx-auto">
-          <div class="flex flex-col items-center">
-            <div
-              class="flex flex-col md:flex-row md:space-x-8 items-stretch w-full justify-center"
-            >
-              <div
-                class="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 border border-gray-200 flex flex-col justify-between"
-              >
-                <blockquote class="text-gray-700 italic text-lg mb-4 relative">
-                  <span
-                    class="text-3xl text-purple-400 absolute -left-6 -top-2 select-none"
-                    >“</span
-                  >
-                  I believe that he is truly an exceptional individual with a
-                  remarkable work ethic, attention to details, specialized
-                  knowledge, and an unwavering commitment to achieving
-                  outstanding results.<br /><br />
-                  He exhibited a keen ability to develop and maintain
-                  comprehensive project schedules, task lists, and progress
-                  tracking using Basecamp project management software.<br /><br />
-                  Topgyal excelled in fostering collaboration and teamwork. He
-                  was skilled at coordinating the sharing of required files,
-                  documents, and other project resources. He effectively
-                  communicated any necessary adjustments and was skilled in
-                  negotiating when required.
-                  <span
-                    class="text-3xl text-purple-400 absolute -right-6 -bottom-2 select-none"
-                    >”</span
-                  >
-                </blockquote>
-                <div class="flex items-center mt-6">
-                  <div class="flex-shrink-0">
-                    <img
-                      src="https://media.licdn.com/dms/image/C4E03AQFQkQwZ0pniSg/profile-displayphoto-shrink_200_200/0/1516246828742?e=1721865600&v=beta&t=2QwQ6l0e6QF6UVxZ4WRzE7dHGnvmhjYQvQkQwZ0pniSg"
-                      alt="Marc Lumer"
-                      class="w-14 h-14 rounded-full object-cover border-2 border-purple-400"
-                      onerror="this.style.display = 'none'"
-                    />
-                  </div>
-                  <div class="ml-4">
-                    <p class="font-semibold text-gray-800">Marc Lumer</p>
-                    <p class="text-sm text-gray-600">
-                      Founder and Creative Director<br />Marc Lumer Productions
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 border border-gray-200 flex flex-col justify-between mt-12 md:mt-0"
-              >
-                <blockquote class="text-gray-700 italic text-lg mb-4 relative">
-                  <span
-                    class="text-3xl text-pink-400 absolute -left-6 -top-2 select-none"
-                    >“</span
-                  >
-                  Topgyal was an absolute pleasure to work with-- he is
-                  extremely intelligent and diligent, while also maintaining a
-                  very affable demeanor and sense of humor. His role demanded
-                  versatility, as he was frequently called on to handle diverse
-                  tasks ranging from data collection and input, research and
-                  analysis, and logistics planning.<br /><br />
-                  With a background and training in computer science, Topgyal
-                  has high level technical skills. He is proficient in all
-                  existing (and evolving) office software and can find
-                  innovative solutions when needed to increase office
-                  efficiency. Topgyal also has excellent interpersonal skills.
-                  He was frequently the first point of contact in our office and
-                  proved adept at interacting with new and established vendors,
-                  outside consultants, and VIP contacts...
-
-                  <span
-                    class="text-3xl text-pink-400 absolute -right-6 -bottom-2 select-none"
-                    >”</span
-                  >
-                </blockquote>
-                <div class="flex items-center mt-6">
-                  <div class="flex-shrink-0">
-                    <img
-                      src="https://media.licdn.com/dms/image/C4E03AQFQkQwZ0pniSg/profile-displayphoto-shrink_200_200/0/1516246828742?e=1721865600&v=beta&t=2QwQ6l0e6QF6UVxZ4WRzE7dHGnvmhjYQvQkQwZ0pniSg"
-                      alt="Peter Cobb"
-                      class="w-14 h-14 rounded-full object-cover border-2 border-pink-400"
-                      onerror="this.style.display = 'none'"
-                    />
-                  </div>
-                  <div class="ml-4">
-                    <p class="font-semibold text-gray-800">Peter Cobb</p>
-                    <p class="text-sm text-gray-600">
-                      Chief of Staff<br />Krishnamurthy Tandon Foundation
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mt-8 text-center text-gray-700 text-sm">
-              Full Reference Letters available on request.
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="bg-gray-800 text-white py-8">
-      <div class="max-w-4xl mx-auto flex flex-col items-center">
-        <p>&copy; 2025 Topgyal Gurung</p>
+      <div class="card">
+        <h3>Focus Areas</h3>
+        <p>Product engineering, data pipelines, cloud delivery, and AI integration.</p>
       </div>
-      <div class="mt-4 text-center text-sm">
-        <a
-          href="mailto:topgyaltsering3@gmail.com"
-          class="text-blue-200 hover:underline"
-          >topgyaltsering3@gmail.com</a
-        >
+      <div class="card">
+        <h3>Leadership</h3>
+        <p>Accountant at <a href="https://www.lonyamshipusa.org/" target="_blank" rel="noopener noreferrer" style="color:var(--accent)">Lo-Nyamship USA</a>. President, Alumni Association.</p>
       </div>
-    </footer>
-  </body>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="section-head">
+      <h2>Projects</h2>
+      <span class="note">Full-stack &middot; Frontend &middot; Backend</span>
+    </div>
+
+    <div class="g g3">
+      <!-- Himalayan Connect -->
+      <article class="card">
+        <h3>Himalayan Connect NYC</h3>
+        <p>Community platform for Himalayan immigrants. Next.js, Prisma, PostgreSQL.</p>
+        <div class="card-links">
+          <a href="https://himalayan-connect-nyc.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/topgyalgurung/nextjs-fullstack-app" target="_blank" rel="noopener">Source</a>
+        </div>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">Prisma</span><span class="tag">PostgreSQL</span></div>
+      </article>
+
+      <!-- AI Text Completion -->
+      <article class="card">
+        <h3>AI Text Completion</h3>
+        <p>Real-time text completion with OpenAI streaming via Vercel AI SDK.</p>
+        <div class="card-links">
+          <a href="https://github.com/topgyalgurung/nextjs-ai-app" target="_blank" rel="noopener">Source</a>
+        </div>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">OpenAI</span><span class="tag">Vercel AI</span></div>
+      </article>
+
+      <!-- MySpace Clone -->
+      <article class="card">
+        <h3>Social Media Clone</h3>
+        <p>MySpace-inspired app with auth, profiles, and follower system.</p>
+        <div class="card-links">
+          <a href="https://github.com/topgyalgurung/myspace" target="_blank" rel="noopener">Source</a>
+        </div>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">Neon</span><span class="tag">Prisma</span></div>
+      </article>
+
+      <!-- Next.js Dashboard -->
+      <article class="card">
+        <h3>Invoice Dashboard</h3>
+        <p>Server components, search, pagination, streaming, and partial prerendering.</p>
+        <div class="card-links">
+          <a href="https://nextjs-dashboard-rho.vercel.app/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/topgyalgurung/nextjs-dashboard" target="_blank" rel="noopener">Source</a>
+        </div>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">Postgres</span><span class="tag">NextAuth</span></div>
+      </article>
+
+      <!-- Dog Adoption API -->
+      <article class="card">
+        <h3>Dog Adoption API</h3>
+        <p>RESTful backend with JWT auth, pagination, and Mocha/Chai tests.</p>
+        <div class="card-links">
+          <a href="https://github.com/topgyalgurung/dog-adoption-platform-api" target="_blank" rel="noopener">Source</a>
+        </div>
+        <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span></div>
+      </article>
+
+      <!-- Yodlr -->
+      <article class="card">
+        <h3>Registration Portal</h3>
+        <p>MERN user registration with admin dashboard and REST API.</p>
+        <div class="card-links">
+          <a href="https://github.com/topgyalgurung/yodlr-take-home" target="_blank" rel="noopener">Source</a>
+        </div>
+        <div class="tags"><span class="tag">React</span><span class="tag">Express</span><span class="tag">MongoDB</span></div>
+      </article>
+
+      <!-- GraphQL Event Booking -->
+      <article class="card">
+        <h3>Event Booking (GraphQL)</h3>
+        <p>Full-stack event booking and management with GraphQL API.</p>
+        <div class="card-links">
+          <a href="https://github.com/topgyalgurung/yt-graphql-react-event-booking-api" target="_blank" rel="noopener">Source</a>
+        </div>
+        <div class="tags"><span class="tag">GraphQL</span><span class="tag">React</span><span class="tag">Node.js</span></div>
+      </article>
+
+      <!-- Space Travel -->
+      <article class="card">
+        <h3>Space Travel</h3>
+        <p>React app with styled components and client-side routing.</p>
+        <div class="card-links">
+          <a href="https://space-travel-jj1w.onrender.com/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/topgyalgurung/space-travel" target="_blank" rel="noopener">Source</a>
+        </div>
+        <div class="tags"><span class="tag">React</span><span class="tag">Styled Components</span></div>
+      </article>
+
+      <!-- Jeopardy -->
+      <article class="card">
+        <h3>Jeopardy Game</h3>
+        <p>Vanilla JS trivia game with dynamic category loading.</p>
+        <div class="card-links">
+          <a href="https://topgyalgurung.me/jeopardy-game/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/topgyalgurung/jeopardy-game/" target="_blank" rel="noopener">Source</a>
+        </div>
+        <div class="tags"><span class="tag">JavaScript</span><span class="tag">HTML/CSS</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section class="section">
+    <div class="section-head"><h2>Community & Service</h2></div>
+    <div class="g g3">
+      <article class="card">
+        <h3>Himalayan Connect NYC</h3>
+        <p>Full-stack community platform connecting Himalayan immigrants with local resources.</p>
+        <div class="card-links">
+          <a href="https://himalayan-connect-nyc.vercel.app/" target="_blank" rel="noopener">Live</a>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Lama Wongdue Website</h3>
+        <p>Built a free CMS website for a social worker and meditation teacher from my homeland.</p>
+        <div class="card-links">
+          <a href="https://lamawongduesangbo.weebly.com/" target="_blank" rel="noopener">Visit</a>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Youth Internship Session</h3>
+        <p>Organized a college internship info session for middle and high school students.</p>
+        <div class="card-links">
+          <a href="https://www.canva.com/design/DAE9tm8-gls/w-DwHuXugYZoH10v0Ke_kg/edit?utm_content=DAE9tm8-gls&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener">Event Flyer</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <div class="section-head"><h2>Experience</h2></div>
+    <div class="timeline">
+
+      <div class="t-item">
+        <div class="t-title">Software Engineer Student &mdash; Springboard</div>
+        <div class="t-when">Jun 2024 &ndash; May 2025</div>
+        <div class="t-body">700+ hours of full-stack training. MERN, TypeScript, Next.js, REST/GraphQL. Built secure APIs and production-grade apps.</div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-title">Tech Operations Associate &mdash; Soul Chants Music</div>
+        <div class="t-when">Nov 2021 &ndash; Oct 2022</div>
+        <div class="t-body">Managed site updates, led project planning, automated asset tracking, and streamlined vendor workflows.</div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-title">Cybersecurity Curriculum Consultant &mdash; Hunter College</div>
+        <div class="t-when">Sep 2020 &ndash; Feb 2021</div>
+        <div class="t-body">Applied offensive/defensive techniques with Burp Suite, Kali Linux, and Metasploit to mitigate SQLi, XSS, and CSRF.</div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-title">Software Developer Intern &mdash; Dextro Software Systems</div>
+        <div class="t-when">Apr &ndash; Aug 2020</div>
+        <div class="t-body">Optimized T-SQL queries, built SSIS ETL pipelines, and created Power BI dashboards for real-time financial insights.</div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-title">Data Engineer Intern &mdash; Real Factors <span style="color:var(--faint)">(acq. by 7Park Data)</span></div>
+        <div class="t-when">Jun &ndash; Dec 2019</div>
+        <div class="t-body">
+          Resolved geospatial rendering issues, built Superset dashboards, and optimized BigQuery SQL.
+          <a href="https://gist.github.com/topgyalgurung/e41465c96c324534548efc6f7bf9bfcc" target="_blank" rel="noopener">SQL code</a> &middot;
+          <a href="https://docs.google.com/presentation/d/15QmY9V2Qtz8YMCPYqxu_eg9me29T9cMlxtZCWrCSlY8/edit?usp=sharing" target="_blank" rel="noopener">Slide deck</a>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-title">Student Software Engineer &mdash; NYC Tech Talent Pipeline</div>
+        <div class="t-when">Apr &ndash; May 2019</div>
+        <div class="t-body">
+          Full-stack bootcamp. Led backend dev with Node.js, Express, PostgreSQL. Deployed PERN capstone on Heroku.
+          <a href="https://github.com/db101097/CunyFirst2.0" target="_blank" rel="noopener">Capstone repo</a>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-title">ML Research Assistant &mdash; Hunter College</div>
+        <div class="t-when">May 2018 &ndash; Jun 2019</div>
+        <div class="t-body">Advanced NLP research. Reproduced Codenn with PyTorch/TensorFlow on cloud GPUs and tuned hyperparameters.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certs" class="section">
+    <div class="section-head"><h2>Certifications</h2></div>
+    <div class="g g2">
+
+      <div class="card">
+        <h3>Springboard Software Engineering</h3>
+        <p>700+ hours, MERN, TypeScript, Next.js, GraphQL, PostgreSQL.</p>
+        <div class="card-links">
+          <a href="./assets/springboard.pdf" target="_blank">Certificate</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>CodePath Cybersecurity</h3>
+        <p>14-week hands-on security: SQLi, XSS, CSRF, Kali, Burp Suite.</p>
+        <div class="card-links">
+          <a href="./assets/cybersecurity.pdf" target="_blank">Certificate</a>
+          <a href="https://medium.com/cybersecured" target="_blank" rel="noopener">Articles</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Python for Everybody &mdash; UMich</h3>
+        <p>5-course specialization: data structures, web APIs, databases, visualization.</p>
+        <div class="card-links">
+          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/NEVGFASUB5EK" target="_blank" rel="noopener">Certificate</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>AWS Academy Cloud Foundations</h3>
+        <p>EC2, S3, Lambda, RDS, IAM, VPC, CloudWatch, auto-scaling.</p>
+        <div class="card-links">
+          <a href="./assets/aws.png" target="_blank">Certificate</a>
+          <a href="https://topgyal.notion.site/AWS-Cloud-23cb226080838039a675c6a2bac8f2be" target="_blank" rel="noopener">Notes</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <div class="section-head"><h2>Testimonials</h2></div>
+    <div class="g g2">
+
+      <div class="quote-card">
+        <blockquote>
+          He is truly an exceptional individual with a remarkable work ethic,
+          attention to detail, and an unwavering commitment to achieving
+          outstanding results. Topgyal excelled in fostering collaboration,
+          coordinating project resources, and communicating adjustments.
+        </blockquote>
+        <div class="cite">
+          <strong>Marc Lumer</strong><br>
+          <span>Founder &amp; Creative Director, Marc Lumer Productions</span>
+        </div>
+      </div>
+
+      <div class="quote-card">
+        <blockquote>
+          Extremely intelligent and diligent, while maintaining a very affable
+          demeanor. Topgyal handled diverse tasks from data collection to
+          logistics planning. He has high-level technical skills and excellent
+          interpersonal abilities.
+        </blockquote>
+        <div class="cite">
+          <strong>Peter Cobb</strong><br>
+          <span>Chief of Staff, Krishnamurthy Tandon Foundation</span>
+        </div>
+      </div>
+
+    </div>
+    <p style="text-align:center; font-size:.82rem; color:var(--faint); margin-top:1rem;">
+      Full reference letters available on request.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>&copy; <span id="yr"></span> Topgyal Gurung</span>
+    <a href="mailto:topgyaltsering3@gmail.com">topgyaltsering3@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("yr").textContent = new Date().getFullYear();
+  const toggle = document.getElementById("navToggle");
+  const links = document.getElementById("navLinks");
+  toggle.addEventListener("click", () => links.classList.toggle("open"));
+  links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => links.classList.remove("open")));
+</script>
+</body>
 </html>
