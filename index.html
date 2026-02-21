@@ -1,503 +1,606 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Topgyal Gurung</title>
-  <meta name="description" content="Topgyal Gurung - Software Engineer. Full-stack development, data engineering, cloud technologies." />
-  <link rel="icon" href="assets/profile.jpg" type="image/jpg" />
-  <style>
-    :root {
-      --bg: #fafaf9;
-      --surface: #ffffff;
-      --text: #111;
-      --muted: #636363;
-      --faint: #a0a0a0;
-      --line: #ebebeb;
-      --accent: #0057ff;
-      --accent-bg: #f0f4ff;
-      --radius: 12px;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    a { color: inherit; text-decoration: none; }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Topgyal Gurung</title>
+    <meta
+      name="description"
+      content="Topgyal Gurung - Software Engineer. Full-stack development, data engineering, cloud technologies."
+    />
+    <link rel="icon" href="assets/profile.jpg" type="image/jpg" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-    .wrap { width: min(1040px, 90vw); margin: 0 auto; }
-
-    /* ── Nav ── */
-    nav {
-      position: sticky; top: 0; z-index: 30;
-      background: rgba(250,250,249,.88);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 56px;
-    }
-    .nav-brand { font-weight: 600; font-size: .95rem; }
-    .nav-links { display: flex; gap: 1.5rem; font-size: .88rem; color: var(--muted); }
-    .nav-links a { transition: color .15s; }
-    .nav-links a:hover { color: var(--text); }
-    .nav-toggle {
-      display: none; background: none; border: 1px solid var(--line);
-      border-radius: 8px; padding: .3rem .55rem; font-size: .82rem; cursor: pointer;
-    }
-
-    /* ── Hero ── */
-    .hero { padding: 5rem 0 3rem; max-width: 680px; }
-    .hero .label {
-      font-size: .78rem; text-transform: uppercase; letter-spacing: .16em;
-      color: var(--faint); margin-bottom: .6rem;
-    }
-    .hero h1 {
-      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-      line-height: 1.08; letter-spacing: -.025em; margin-bottom: 1rem;
-    }
-    .hero p { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.4rem; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
-    .pill {
-      display: inline-flex; align-items: center; gap: .35rem;
-      padding: .45rem .85rem; border-radius: 999px; font-size: .86rem;
-      border: 1px solid var(--line); background: var(--surface);
-      transition: .18s ease;
-    }
-    .pill:hover { border-color: #ccc; transform: translateY(-1px); }
-    .pill.dark { background: var(--text); color: #fff; border-color: var(--text); }
-    .pill.dark:hover { opacity: .9; transform: translateY(-1px); }
-
-    /* ── Sections ── */
-    .section { padding: 3rem 0 2.5rem; border-top: 1px solid var(--line); }
-    .section-head {
-      display: flex; align-items: baseline; justify-content: space-between;
-      margin-bottom: 1.2rem; flex-wrap: wrap; gap: .5rem;
-    }
-    .section-head h2 { font-size: 1.15rem; letter-spacing: -.01em; }
-    .section-head .note { font-size: .82rem; color: var(--faint); }
-
-    /* ── Cards ── */
-    .card {
-      background: var(--surface); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 1rem 1.1rem;
-      transition: box-shadow .2s, transform .2s;
-    }
-    .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.04); transform: translateY(-2px); }
-    .card h3 { font-size: .95rem; margin-bottom: .3rem; }
-    .card p, .card .desc { color: var(--muted); font-size: .88rem; }
-    .card .meta { font-size: .78rem; color: var(--faint); margin-bottom: .25rem; }
-    .card-links { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .6rem; }
-    .card-links a {
-      font-size: .78rem; padding: .25rem .55rem; border-radius: 999px;
-      background: var(--accent-bg); color: var(--accent); transition: .15s;
-    }
-    .card-links a:hover { background: #dde5ff; }
-    .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .55rem; }
-    .tag {
-      font-size: .72rem; padding: .2rem .5rem; border-radius: 999px;
-      border: 1px solid var(--line); color: #555; background: #fafafa;
-    }
-
-    /* ── Grid layouts ── */
-    .g { display: grid; gap: .75rem; }
-    .g3 { grid-template-columns: repeat(3, 1fr); }
-    .g2 { grid-template-columns: repeat(2, 1fr); }
-
-    /* ── Timeline list ── */
-    .timeline { display: grid; gap: 0; }
-    .t-item {
-      padding: 1rem 0; border-bottom: 1px solid var(--line);
-      display: grid; grid-template-columns: 1fr auto; gap: .3rem 1rem; align-items: start;
-    }
-    .t-item:last-child { border-bottom: none; }
-    .t-title { font-size: .92rem; font-weight: 600; }
-    .t-when { font-size: .78rem; color: var(--faint); text-align: right; white-space: nowrap; }
-    .t-body { grid-column: 1 / -1; color: var(--muted); font-size: .86rem; margin-top: .15rem; }
-    .t-body a { color: var(--accent); }
-    .t-body a:hover { text-decoration: underline; }
-
-    /* ── Quote ── */
-    .quote-card {
-      background: var(--surface); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 1.1rem 1.2rem;
-    }
-    .quote-card blockquote {
-      font-size: .9rem; color: #3a3a3a; font-style: italic;
-      border-left: 2px solid #d3d9f5; padding-left: .75rem; margin-bottom: .7rem;
-    }
-    .quote-card .cite { font-size: .82rem; }
-    .cite strong { color: var(--text); }
-    .cite span { color: var(--faint); }
-
-    /* ── Footer ── */
-    footer { border-top: 1px solid var(--line); margin-top: 2rem; }
-    .foot-inner {
-      height: 64px; display: flex; align-items: center;
-      justify-content: space-between; font-size: .82rem; color: var(--faint);
-    }
-    .foot-inner a { color: var(--muted); }
-    .foot-inner a:hover { color: var(--text); }
-
-    @media (max-width: 900px) {
-      .g3, .g2 { grid-template-columns: 1fr; }
-      .t-item { grid-template-columns: 1fr; }
-      .t-when { text-align: left; }
-    }
-    @media (max-width: 640px) {
-      .nav-toggle { display: inline-flex; }
-      .nav-links {
-        display: none; position: absolute; top: 56px; left: 0; right: 0;
-        background: var(--surface); border-bottom: 1px solid var(--line);
-        flex-direction: column; padding: .8rem 5vw; gap: .6rem;
-      }
-      .nav-links.open { display: flex; }
-    }
-  </style>
-</head>
-<body>
-
-<nav>
-  <div class="wrap nav-inner">
-    <a class="nav-brand" href="#top">Topgyal Gurung</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">Menu</button>
-    <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#certs">Certifications</a>
-      <a href="#testimonials">Testimonials</a>
-    </div>
-  </div>
-</nav>
-
-<main class="wrap">
-
-  <!-- Hero -->
-  <section id="top" class="hero">
-    <p class="label">Software Engineer</p>
-    <h1>Clean code,<br>real impact.</h1>
-    <p>
-      Full-stack engineer with a CS degree from Hunter College. I build
-      thoughtful interfaces, reliable APIs, and data workflows that ship.
-    </p>
-    <div class="hero-actions">
-      <a class="pill dark" href="mailto:topgyaltsering3@gmail.com">Get in touch</a>
-      <a class="pill" href="https://www.linkedin.com/in/topgyalgurung" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a class="pill" href="https://github.com/topgyalgurung" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a class="pill" href="https://topgyalgurung.medium.com/" target="_blank" rel="noopener noreferrer">Medium</a>
-      <a class="pill" href="./assets/Resume.pdf" target="_blank">Resume</a>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="section-head"><h2>About</h2></div>
-    <div class="g g3">
-      <div class="card">
-        <h3>Education</h3>
-        <p>Hunter College (CS), CodePath Cybersecurity, TTP Residency, Springboard Full-Stack.</p>
-      </div>
-      <div class="card">
-        <h3>Focus Areas</h3>
-        <p>Product engineering, data pipelines, cloud delivery, and AI integration.</p>
-      </div>
-      <div class="card">
-        <h3>Leadership</h3>
-        <p>Accountant at <a href="https://www.lonyamshipusa.org/" target="_blank" rel="noopener noreferrer" style="color:var(--accent)">Lo-Nyamship USA</a>. President, Alumni Association.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <div class="section-head">
-      <h2>Projects</h2>
-      <span class="note">Full-stack &middot; Frontend &middot; Backend</span>
-    </div>
-
-    <div class="g g3">
-      <!-- Himalayan Connect -->
-      <article class="card">
-        <h3>Himalayan Connect NYC</h3>
-        <p>Community platform for Himalayan immigrants. Next.js, Prisma, PostgreSQL.</p>
-        <div class="card-links">
-          <a href="https://himalayan-connect-nyc.vercel.app/" target="_blank" rel="noopener">Live</a>
-          <a href="https://github.com/topgyalgurung/nextjs-fullstack-app" target="_blank" rel="noopener">Source</a>
-        </div>
-        <div class="tags"><span class="tag">Next.js</span><span class="tag">Prisma</span><span class="tag">PostgreSQL</span></div>
-      </article>
-
-      <!-- AI Text Completion -->
-      <article class="card">
-        <h3>AI Text Completion</h3>
-        <p>Real-time text completion with OpenAI streaming via Vercel AI SDK.</p>
-        <div class="card-links">
-          <a href="https://github.com/topgyalgurung/nextjs-ai-app" target="_blank" rel="noopener">Source</a>
-        </div>
-        <div class="tags"><span class="tag">Next.js</span><span class="tag">OpenAI</span><span class="tag">Vercel AI</span></div>
-      </article>
-
-      <!-- MySpace Clone -->
-      <article class="card">
-        <h3>Social Media Clone</h3>
-        <p>MySpace-inspired app with auth, profiles, and follower system.</p>
-        <div class="card-links">
-          <a href="https://github.com/topgyalgurung/myspace" target="_blank" rel="noopener">Source</a>
-        </div>
-        <div class="tags"><span class="tag">Next.js</span><span class="tag">Neon</span><span class="tag">Prisma</span></div>
-      </article>
-
-      <!-- Next.js Dashboard -->
-      <article class="card">
-        <h3>Invoice Dashboard</h3>
-        <p>Server components, search, pagination, streaming, and partial prerendering.</p>
-        <div class="card-links">
-          <a href="https://nextjs-dashboard-rho.vercel.app/" target="_blank" rel="noopener">Live</a>
-          <a href="https://github.com/topgyalgurung/nextjs-dashboard" target="_blank" rel="noopener">Source</a>
-        </div>
-        <div class="tags"><span class="tag">Next.js</span><span class="tag">Postgres</span><span class="tag">NextAuth</span></div>
-      </article>
-
-      <!-- Dog Adoption API -->
-      <article class="card">
-        <h3>Dog Adoption API</h3>
-        <p>RESTful backend with JWT auth, pagination, and Mocha/Chai tests.</p>
-        <div class="card-links">
-          <a href="https://github.com/topgyalgurung/dog-adoption-platform-api" target="_blank" rel="noopener">Source</a>
-        </div>
-        <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span></div>
-      </article>
-
-      <!-- Yodlr -->
-      <article class="card">
-        <h3>Registration Portal</h3>
-        <p>MERN user registration with admin dashboard and REST API.</p>
-        <div class="card-links">
-          <a href="https://github.com/topgyalgurung/yodlr-take-home" target="_blank" rel="noopener">Source</a>
-        </div>
-        <div class="tags"><span class="tag">React</span><span class="tag">Express</span><span class="tag">MongoDB</span></div>
-      </article>
-
-      <!-- GraphQL Event Booking -->
-      <article class="card">
-        <h3>Event Booking (GraphQL)</h3>
-        <p>Full-stack event booking and management with GraphQL API.</p>
-        <div class="card-links">
-          <a href="https://github.com/topgyalgurung/yt-graphql-react-event-booking-api" target="_blank" rel="noopener">Source</a>
-        </div>
-        <div class="tags"><span class="tag">GraphQL</span><span class="tag">React</span><span class="tag">Node.js</span></div>
-      </article>
-
-      <!-- Space Travel -->
-      <article class="card">
-        <h3>Space Travel</h3>
-        <p>React app with styled components and client-side routing.</p>
-        <div class="card-links">
-          <a href="https://space-travel-jj1w.onrender.com/" target="_blank" rel="noopener">Live</a>
-          <a href="https://github.com/topgyalgurung/space-travel" target="_blank" rel="noopener">Source</a>
-        </div>
-        <div class="tags"><span class="tag">React</span><span class="tag">Styled Components</span></div>
-      </article>
-
-      <!-- Jeopardy -->
-      <article class="card">
-        <h3>Jeopardy Game</h3>
-        <p>Vanilla JS trivia game with dynamic category loading.</p>
-        <div class="card-links">
-          <a href="https://topgyalgurung.me/jeopardy-game/" target="_blank" rel="noopener">Live</a>
-          <a href="https://github.com/topgyalgurung/jeopardy-game/" target="_blank" rel="noopener">Source</a>
-        </div>
-        <div class="tags"><span class="tag">JavaScript</span><span class="tag">HTML/CSS</span></div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Community -->
-  <section class="section">
-    <div class="section-head"><h2>Community & Service</h2></div>
-    <div class="g g3">
-      <article class="card">
-        <h3>Himalayan Connect NYC</h3>
-        <p>Full-stack community platform connecting Himalayan immigrants with local resources.</p>
-        <div class="card-links">
-          <a href="https://himalayan-connect-nyc.vercel.app/" target="_blank" rel="noopener">Live</a>
-        </div>
-      </article>
-      <article class="card">
-        <h3>Lama Wongdue Website</h3>
-        <p>Built a free CMS website for a social worker and meditation teacher from my homeland.</p>
-        <div class="card-links">
-          <a href="https://lamawongduesangbo.weebly.com/" target="_blank" rel="noopener">Visit</a>
-        </div>
-      </article>
-      <article class="card">
-        <h3>Youth Internship Session</h3>
-        <p>Organized a college internship info session for middle and high school students.</p>
-        <div class="card-links">
-          <a href="https://www.canva.com/design/DAE9tm8-gls/w-DwHuXugYZoH10v0Ke_kg/edit?utm_content=DAE9tm8-gls&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener">Event Flyer</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="section">
-    <div class="section-head"><h2>Experience</h2></div>
-    <div class="timeline">
-
-      <div class="t-item">
-        <div class="t-title">Software Engineer Student &mdash; Springboard</div>
-        <div class="t-when">Jun 2024 &ndash; May 2025</div>
-        <div class="t-body">700+ hours of full-stack training. MERN, TypeScript, Next.js, REST/GraphQL. Built secure APIs and production-grade apps.</div>
-      </div>
-
-      <div class="t-item">
-        <div class="t-title">Tech Operations Associate &mdash; Soul Chants Music</div>
-        <div class="t-when">Nov 2021 &ndash; Oct 2022</div>
-        <div class="t-body">Managed site updates, led project planning, automated asset tracking, and streamlined vendor workflows.</div>
-      </div>
-
-      <div class="t-item">
-        <div class="t-title">Cybersecurity Curriculum Consultant &mdash; Hunter College</div>
-        <div class="t-when">Sep 2020 &ndash; Feb 2021</div>
-        <div class="t-body">Applied offensive/defensive techniques with Burp Suite, Kali Linux, and Metasploit to mitigate SQLi, XSS, and CSRF.</div>
-      </div>
-
-      <div class="t-item">
-        <div class="t-title">Software Developer Intern &mdash; Dextro Software Systems</div>
-        <div class="t-when">Apr &ndash; Aug 2020</div>
-        <div class="t-body">Optimized T-SQL queries, built SSIS ETL pipelines, and created Power BI dashboards for real-time financial insights.</div>
-      </div>
-
-      <div class="t-item">
-        <div class="t-title">Data Engineer Intern &mdash; Real Factors <span style="color:var(--faint)">(acq. by 7Park Data)</span></div>
-        <div class="t-when">Jun &ndash; Dec 2019</div>
-        <div class="t-body">
-          Resolved geospatial rendering issues, built Superset dashboards, and optimized BigQuery SQL.
-          <a href="https://gist.github.com/topgyalgurung/e41465c96c324534548efc6f7bf9bfcc" target="_blank" rel="noopener">SQL code</a> &middot;
-          <a href="https://docs.google.com/presentation/d/15QmY9V2Qtz8YMCPYqxu_eg9me29T9cMlxtZCWrCSlY8/edit?usp=sharing" target="_blank" rel="noopener">Slide deck</a>
+  <body>
+    <nav>
+      <div class="wrap nav-inner">
+        <a class="nav-brand" href="#top">Topgyal Gurung</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          Menu
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#certs">Certifications</a>
+          <a href="#testimonials">Testimonials</a>
         </div>
       </div>
+    </nav>
 
-      <div class="t-item">
-        <div class="t-title">Student Software Engineer &mdash; NYC Tech Talent Pipeline</div>
-        <div class="t-when">Apr &ndash; May 2019</div>
-        <div class="t-body">
-          Full-stack bootcamp. Led backend dev with Node.js, Express, PostgreSQL. Deployed PERN capstone on Heroku.
-          <a href="https://github.com/db101097/CunyFirst2.0" target="_blank" rel="noopener">Capstone repo</a>
+    <main class="wrap">
+      <!-- Hero -->
+      <section id="top" class="hero">
+        <img
+          src="assets/profile.jpg"
+          alt="Topgyal Gurung"
+          class="profile-img"
+        />
+        <p class="label">Software Engineer</p>
+        <h1>Clean code,<br />real impact.</h1>
+        <p>
+          Full-stack engineer with a CS degree from Hunter College. I build
+          thoughtful interfaces, reliable APIs, and data workflows that ship.
+        </p>
+        <p>
+          First-generation college graduate. Life principle: Live as close to
+          the truth as possible.
+        </p>
+        <div class="hero-actions">
+          <a class="pill dark" href="mailto:topgyaltsering3@gmail.com"
+            >Get in touch</a
+          >
+          <a
+            class="pill"
+            href="https://www.linkedin.com/in/topgyalgurung"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            class="pill"
+            href="https://github.com/topgyalgurung"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            class="pill"
+            href="https://topgyalgurung.medium.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Medium</a
+          >
+          <a class="pill" href="./assets/Resume.pdf" target="_blank">Resume</a>
         </div>
-      </div>
+      </section>
 
-      <div class="t-item">
-        <div class="t-title">ML Research Assistant &mdash; Hunter College</div>
-        <div class="t-when">May 2018 &ndash; Jun 2019</div>
-        <div class="t-body">Advanced NLP research. Reproduced Codenn with PyTorch/TensorFlow on cloud GPUs and tuned hyperparameters.</div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Certifications -->
-  <section id="certs" class="section">
-    <div class="section-head"><h2>Certifications</h2></div>
-    <div class="g g2">
-
-      <div class="card">
-        <h3>Springboard Software Engineering</h3>
-        <p>700+ hours, MERN, TypeScript, Next.js, GraphQL, PostgreSQL.</p>
-        <div class="card-links">
-          <a href="./assets/springboard.pdf" target="_blank">Certificate</a>
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="section-head">
+          <h2>About</h2>
         </div>
-      </div>
-
-      <div class="card">
-        <h3>CodePath Cybersecurity</h3>
-        <p>14-week hands-on security: SQLi, XSS, CSRF, Kali, Burp Suite.</p>
-        <div class="card-links">
-          <a href="./assets/cybersecurity.pdf" target="_blank">Certificate</a>
-          <a href="https://medium.com/cybersecured" target="_blank" rel="noopener">Articles</a>
+        <div class="g g3">
+          <div class="card">
+            <h3>Education</h3>
+            <p>
+              Hunter College (CS), CodePath Cybersecurity, TTP Residency,
+              Springboard Full-Stack.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Focus Areas</h3>
+            <p>
+              Product engineering, data pipelines, cloud delivery, and AI
+              integration.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Leadership</h3>
+            <p>
+              Accountant at
+              <a
+                href="https://www.lonyamshipusa.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="accent-link"
+                >Lo-Nyamship USA</a
+              >. President, Alumni Association.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="card">
-        <h3>Python for Everybody &mdash; UMich</h3>
-        <p>5-course specialization: data structures, web APIs, databases, visualization.</p>
-        <div class="card-links">
-          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/NEVGFASUB5EK" target="_blank" rel="noopener">Certificate</a>
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <span class="note"
+            >Full-stack &middot; Frontend &middot; Backend</span
+          >
         </div>
-      </div>
 
-      <div class="card">
-        <h3>AWS Academy Cloud Foundations</h3>
-        <p>EC2, S3, Lambda, RDS, IAM, VPC, CloudWatch, auto-scaling.</p>
-        <div class="card-links">
-          <a href="./assets/aws.png" target="_blank">Certificate</a>
-          <a href="https://topgyal.notion.site/AWS-Cloud-23cb226080838039a675c6a2bac8f2be" target="_blank" rel="noopener">Notes</a>
+        <div class="g g3">
+          <!-- Himalayan Connect -->
+          <article class="card">
+            <h3>Himalayan Connect NYC</h3>
+            <p>
+              Community platform for Himalayan immigrants. Next.js, Prisma,
+              PostgreSQL.
+            </p>
+            <div class="card-links">
+              <a
+                href="https://himalayan-connect-nyc.vercel.app/"
+                target="_blank"
+                rel="noopener"
+                >Live</a
+              >
+              <a
+                href="https://github.com/topgyalgurung/nextjs-fullstack-app"
+                target="_blank"
+                rel="noopener"
+                >Source</a
+              >
+            </div>
+            <div class="tags">
+              <span class="tag">Next.js</span><span class="tag">Prisma</span
+              ><span class="tag">PostgreSQL</span>
+            </div>
+          </article>
+
+          <!-- AI Text Completion -->
+          <article class="card">
+            <h3>AI Text Completion</h3>
+            <p>
+              Real-time text completion with OpenAI streaming via Vercel AI SDK.
+            </p>
+            <div class="card-links">
+              <a
+                href="https://github.com/topgyalgurung/nextjs-ai-app"
+                target="_blank"
+                rel="noopener"
+                >Source</a
+              >
+            </div>
+            <div class="tags">
+              <span class="tag">Next.js</span><span class="tag">OpenAI</span
+              ><span class="tag">Vercel AI</span>
+            </div>
+          </article>
+
+          <!-- MySpace Clone -->
+          <article class="card">
+            <h3>Social Media Clone</h3>
+            <p>
+              MySpace-inspired app with auth, profiles, and follower system.
+            </p>
+            <div class="card-links">
+              <a
+                href="https://github.com/topgyalgurung/myspace"
+                target="_blank"
+                rel="noopener"
+                >Source</a
+              >
+            </div>
+            <div class="tags">
+              <span class="tag">Next.js</span><span class="tag">Neon</span
+              ><span class="tag">Prisma</span>
+            </div>
+          </article>
+
+          <!-- Next.js Dashboard -->
+          <article class="card">
+            <h3>Invoice Dashboard</h3>
+            <p>
+              Server components, search, pagination, streaming, and partial
+              prerendering.
+            </p>
+            <div class="card-links">
+              <a
+                href="https://nextjs-dashboard-rho.vercel.app/"
+                target="_blank"
+                rel="noopener"
+                >Live</a
+              >
+              <a
+                href="https://github.com/topgyalgurung/nextjs-dashboard"
+                target="_blank"
+                rel="noopener"
+                >Source</a
+              >
+            </div>
+            <div class="tags">
+              <span class="tag">Next.js</span><span class="tag">Postgres</span
+              ><span class="tag">NextAuth</span>
+            </div>
+          </article>
+
+          <!-- Dog Adoption API -->
+          <article class="card">
+            <h3>Dog Adoption API</h3>
+            <p>
+              RESTful backend with JWT auth, pagination, and Mocha/Chai tests.
+            </p>
+            <div class="card-links">
+              <a
+                href="https://github.com/topgyalgurung/dog-adoption-platform-api"
+                target="_blank"
+                rel="noopener"
+                >Source</a
+              >
+            </div>
+            <div class="tags">
+              <span class="tag">Node.js</span><span class="tag">Express</span
+              ><span class="tag">MongoDB</span>
+            </div>
+          </article>
+
+          <!-- Yodlr -->
+          <article class="card">
+            <h3>Registration Portal</h3>
+            <p>MERN user registration with admin dashboard and REST API.</p>
+            <div class="card-links">
+              <a
+                href="https://github.com/topgyalgurung/yodlr-take-home"
+                target="_blank"
+                rel="noopener"
+                >Source</a
+              >
+            </div>
+            <div class="tags">
+              <span class="tag">React</span><span class="tag">Express</span
+              ><span class="tag">MongoDB</span>
+            </div>
+          </article>
+
+          <!-- GraphQL Event Booking -->
+          <article class="card">
+            <h3>Event Booking (GraphQL)</h3>
+            <p>Full-stack event booking and management with GraphQL API.</p>
+            <div class="card-links">
+              <a
+                href="https://github.com/topgyalgurung/yt-graphql-react-event-booking-api"
+                target="_blank"
+                rel="noopener"
+                >Source</a
+              >
+            </div>
+            <div class="tags">
+              <span class="tag">GraphQL</span><span class="tag">React</span
+              ><span class="tag">Node.js</span>
+            </div>
+          </article>
+
+          <!-- Space Travel -->
+          <article class="card">
+            <h3>Space Travel</h3>
+            <p>React app with styled components and client-side routing.</p>
+            <div class="card-links">
+              <a
+                href="https://space-travel-jj1w.onrender.com/"
+                target="_blank"
+                rel="noopener"
+                >Live</a
+              >
+              <a
+                href="https://github.com/topgyalgurung/space-travel"
+                target="_blank"
+                rel="noopener"
+                >Source</a
+              >
+            </div>
+            <div class="tags">
+              <span class="tag">React</span
+              ><span class="tag">Styled Components</span>
+            </div>
+          </article>
+
+          <!-- Jeopardy -->
+          <article class="card">
+            <h3>Jeopardy Game</h3>
+            <p>Vanilla JS trivia game with dynamic category loading.</p>
+            <div class="card-links">
+              <a
+                href="https://topgyalgurung.me/jeopardy-game/"
+                target="_blank"
+                rel="noopener"
+                >Live</a
+              >
+              <a
+                href="https://github.com/topgyalgurung/jeopardy-game/"
+                target="_blank"
+                rel="noopener"
+                >Source</a
+              >
+            </div>
+            <div class="tags">
+              <span class="tag">JavaScript</span
+              ><span class="tag">HTML/CSS</span>
+            </div>
+          </article>
         </div>
-      </div>
+      </section>
 
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonials" class="section">
-    <div class="section-head"><h2>Testimonials</h2></div>
-    <div class="g g2">
-
-      <div class="quote-card">
-        <blockquote>
-          He is truly an exceptional individual with a remarkable work ethic,
-          attention to detail, and an unwavering commitment to achieving
-          outstanding results. Topgyal excelled in fostering collaboration,
-          coordinating project resources, and communicating adjustments.
-        </blockquote>
-        <div class="cite">
-          <strong>Marc Lumer</strong><br>
-          <span>Founder &amp; Creative Director, Marc Lumer Productions</span>
+      <!-- Community -->
+      <section class="section">
+        <div class="section-head">
+          <h2>Community & Service</h2>
         </div>
-      </div>
-
-      <div class="quote-card">
-        <blockquote>
-          Extremely intelligent and diligent, while maintaining a very affable
-          demeanor. Topgyal handled diverse tasks from data collection to
-          logistics planning. He has high-level technical skills and excellent
-          interpersonal abilities.
-        </blockquote>
-        <div class="cite">
-          <strong>Peter Cobb</strong><br>
-          <span>Chief of Staff, Krishnamurthy Tandon Foundation</span>
+        <div class="g g3">
+          <article class="card">
+            <h3>Himalayan Connect NYC</h3>
+            <p>
+              Full-stack community platform connecting Himalayan immigrants with
+              local resources.
+            </p>
+            <div class="card-links">
+              <a
+                href="https://himalayan-connect-nyc.vercel.app/"
+                target="_blank"
+                rel="noopener"
+                >Live</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <h3>Lama Wongdue Website</h3>
+            <p>
+              Built a free CMS website for a social worker and meditation
+              teacher from my homeland.
+            </p>
+            <div class="card-links">
+              <a
+                href="https://lamawongduesangbo.weebly.com/"
+                target="_blank"
+                rel="noopener"
+                >Visit</a
+              >
+            </div>
+          </article>
+          <article class="card">
+            <h3>Youth Internship Session</h3>
+            <p>
+              Organized a college internship info session for middle and high
+              school students.
+            </p>
+            <div class="card-links">
+              <a
+                href="https://www.canva.com/design/DAE9tm8-gls/w-DwHuXugYZoH10v0Ke_kg/edit?utm_content=DAE9tm8-gls&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                target="_blank"
+                rel="noopener"
+                >Event Flyer</a
+              >
+            </div>
+          </article>
         </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <div class="section-head">
+          <h2>Experience</h2>
+        </div>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-title">
+              Software Engineer Student &mdash; Springboard
+            </div>
+            <div class="t-when">Jun 2024 &ndash; May 2025</div>
+            <div class="t-body">
+              700+ hours of full-stack training. MERN, TypeScript, Next.js,
+              REST/GraphQL. Built secure APIs and production-grade apps.
+            </div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-title">
+              Tech Operations Associate &mdash; Soul Chants Music
+            </div>
+            <div class="t-when">Nov 2021 &ndash; Oct 2022</div>
+            <div class="t-body">
+              Managed site updates, led project planning, automated asset
+              tracking, and streamlined vendor workflows.
+            </div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-title">
+              Cybersecurity Curriculum Consultant &mdash; Hunter College
+            </div>
+            <div class="t-when">Sep 2020 &ndash; Feb 2021</div>
+            <div class="t-body">
+              Applied offensive/defensive techniques with Burp Suite, Kali
+              Linux, and Metasploit to mitigate SQLi, XSS, and CSRF.
+            </div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-title">
+              Software Developer Intern &mdash; Dextro Software Systems
+            </div>
+            <div class="t-when">Apr &ndash; Aug 2020</div>
+            <div class="t-body">
+              Optimized T-SQL queries, built SSIS ETL pipelines, and created
+              Power BI dashboards for real-time financial insights.
+            </div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-title">
+              Data Engineer Intern &mdash; Real Factors
+              <span class="faint-text">(acq. by 7Park Data)</span>
+            </div>
+            <div class="t-when">Jun &ndash; Dec 2019</div>
+            <div class="t-body">
+              Resolved geospatial rendering issues, built Superset dashboards,
+              and optimized BigQuery SQL.
+              <a
+                href="https://gist.github.com/topgyalgurung/e41465c96c324534548efc6f7bf9bfcc"
+                target="_blank"
+                rel="noopener"
+                >SQL code</a
+              >
+              &middot;
+              <a
+                href="https://docs.google.com/presentation/d/15QmY9V2Qtz8YMCPYqxu_eg9me29T9cMlxtZCWrCSlY8/edit?usp=sharing"
+                target="_blank"
+                rel="noopener"
+                >Slide deck</a
+              >
+            </div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-title">
+              Student Software Engineer &mdash; NYC Tech Talent Pipeline
+            </div>
+            <div class="t-when">Apr &ndash; May 2019</div>
+            <div class="t-body">
+              Full-stack bootcamp. Led backend dev with Node.js, Express,
+              PostgreSQL. Deployed PERN capstone on Heroku.
+              <a
+                href="https://github.com/db101097/CunyFirst2.0"
+                target="_blank"
+                rel="noopener"
+                >Capstone repo</a
+              >
+            </div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-title">
+              ML Research Assistant &mdash; Hunter College
+            </div>
+            <div class="t-when">May 2018 &ndash; Jun 2019</div>
+            <div class="t-body">
+              Advanced NLP research. Reproduced Codenn with PyTorch/TensorFlow
+              on cloud GPUs and tuned hyperparameters.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section id="certs" class="section">
+        <div class="section-head">
+          <h2>Certifications</h2>
+        </div>
+        <div class="g g2">
+          <div class="card">
+            <h3>Springboard Software Engineering</h3>
+            <p>700+ hours, MERN, TypeScript, Next.js, GraphQL, PostgreSQL.</p>
+            <div class="card-links">
+              <a href="./assets/springboard.pdf" target="_blank">Certificate</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>CodePath Cybersecurity</h3>
+            <p>14-week hands-on security: SQLi, XSS, CSRF, Kali, Burp Suite.</p>
+            <div class="card-links">
+              <a href="./assets/cybersecurity.pdf" target="_blank"
+                >Certificate</a
+              >
+              <a
+                href="https://medium.com/cybersecured"
+                target="_blank"
+                rel="noopener"
+                >Articles</a
+              >
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Python for Everybody &mdash; UMich</h3>
+            <p>
+              5-course specialization: data structures, web APIs, databases,
+              visualization.
+            </p>
+            <div class="card-links">
+              <a
+                href="https://www.coursera.org/account/accomplishments/specialization/certificate/NEVGFASUB5EK"
+                target="_blank"
+                rel="noopener"
+                >Certificate</a
+              >
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>AWS Academy Cloud Foundations</h3>
+            <p>EC2, S3, Lambda, RDS, IAM, VPC, CloudWatch, auto-scaling.</p>
+            <div class="card-links">
+              <a href="./assets/aws.png" target="_blank">Certificate</a>
+              <a
+                href="https://topgyal.notion.site/AWS-Cloud-23cb226080838039a675c6a2bac8f2be"
+                target="_blank"
+                rel="noopener"
+                >Notes</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials" class="section">
+        <div class="section-head">
+          <h2>Testimonials</h2>
+        </div>
+        <div class="g g2">
+          <div class="quote-card">
+            <blockquote>
+              He is truly an exceptional individual with a remarkable work
+              ethic, attention to detail, and an unwavering commitment to
+              achieving outstanding results. Topgyal excelled in fostering
+              collaboration, coordinating project resources, and communicating
+              adjustments.
+            </blockquote>
+            <div class="cite">
+              <strong>Marc Lumer</strong><br />
+              <span
+                >Founder &amp; Creative Director, Marc Lumer Productions</span
+              >
+            </div>
+          </div>
+
+          <div class="quote-card">
+            <blockquote>
+              Extremely intelligent and diligent, while maintaining a very
+              affable demeanor. Topgyal handled diverse tasks from data
+              collection to logistics planning. He has high-level technical
+              skills and excellent interpersonal abilities.
+            </blockquote>
+            <div class="cite">
+              <strong>Peter Cobb</strong><br />
+              <span>Chief of Staff, Krishnamurthy Tandon Foundation</span>
+            </div>
+          </div>
+        </div>
+        <p class="section-footnote">
+          Full reference letters available on request.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap foot-inner">
+        <span>&copy; <span id="yr"></span> Topgyal Gurung</span>
+        <a href="mailto:topgyaltsering3@gmail.com">topgyaltsering3@gmail.com</a>
       </div>
+    </footer>
 
-    </div>
-    <p style="text-align:center; font-size:.82rem; color:var(--faint); margin-top:1rem;">
-      Full reference letters available on request.
-    </p>
-  </section>
-
-</main>
-
-<footer>
-  <div class="wrap foot-inner">
-    <span>&copy; <span id="yr"></span> Topgyal Gurung</span>
-    <a href="mailto:topgyaltsering3@gmail.com">topgyaltsering3@gmail.com</a>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("yr").textContent = new Date().getFullYear();
-  const toggle = document.getElementById("navToggle");
-  const links = document.getElementById("navLinks");
-  toggle.addEventListener("click", () => links.classList.toggle("open"));
-  links.querySelectorAll("a").forEach(a => a.addEventListener("click", () => links.classList.remove("open")));
-</script>
-</body>
+    <script>
+      document.getElementById("yr").textContent = new Date().getFullYear();
+      const toggle = document.getElementById("navToggle");
+      const links = document.getElementById("navLinks");
+      toggle.addEventListener("click", () => links.classList.toggle("open"));
+      links
+        .querySelectorAll("a")
+        .forEach((a) =>
+          a.addEventListener("click", () => links.classList.remove("open")),
+        );
+    </script>
+  </body>
 </html>
