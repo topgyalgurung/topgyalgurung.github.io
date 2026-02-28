@@ -1,0 +1,16 @@
+#!/bin/bash
+# Preview the Jekyll site locally. Run: ./serve
+set -e
+cd "$(dirname "$0")"
+# Install gems into ./vendor/bundle (no sudo needed)
+bundle config set --local path 'vendor/bundle'
+echo "Running: bundle install (if needed)..."
+bundle install
+# Use port 4001 if 4000 is in use (e.g. another Jekyll already running)
+PORT=4000
+if lsof -ti:$PORT >/dev/null 2>&1; then
+  PORT=4001
+  echo "Port 4000 in use, using $PORT instead"
+fi
+echo "Starting Jekyll at http://localhost:$PORT"
+bundle exec jekyll serve --port $PORT

@@ -1,0 +1,35 @@
+---
+layout: default
+title: Blog
+description: Weekly learnings and things I picked up along the way
+---
+
+<section class="section">
+  <div class="section-head">
+    <h2>Weekly learnings</h2>
+    <span class="note">Something I learned this week</span>
+  </div>
+
+  {% if site.posts.size > 0 %}
+  <div class="g g2">
+    {% for post in site.posts %}
+    <article class="card">
+      <h3>
+        <a href="{{ post.url | relative_url }}" class="accent-link"
+          >{{ post.title }}</a
+        >
+      </h3>
+      <p class="faint-text" style="font-size: 0.88rem; margin-bottom: 0.5rem">
+        {{ post.date | date: "%B %d, %Y" }}
+      </p>
+      <p>
+        {{ post.excerpt | default: post.content | strip_html | truncate: 120 }}
+      </p>
+      <a href="{{ post.url | relative_url }}">Read more</a>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="section-footnote">No posts yet. Check back soon.</p>
+  {% endif %}
+</section>
