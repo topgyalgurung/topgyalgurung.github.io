@@ -179,6 +179,16 @@ nav {
   transform: translateY(-1px);
 }
 
+.pill.category {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+  border-style: dashed;
+  background: transparent;
+  pointer-events: none;
+}
+
 /* ── Sections ── */
 
 .section {
