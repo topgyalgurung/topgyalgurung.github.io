@@ -1,20 +1,41 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7J2XLZ17GV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-7J2XLZ17GV");
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}</title>
-    <meta name="description" content="{{ page.description | default: site.description }}" />
-    <link rel="icon" href="{{ '/assets/profile.jpg' | relative_url }}" type="image/jpg" />
+    <title>
+      {% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}
+    </title>
+    <meta
+      name="description"
+      content="{{ page.description | default: site.description }}"
+    />
+    <link
+      rel="icon"
+      href="{{ '/assets/profile.jpg' | relative_url }}"
+      type="image/jpg"
+    />
     <link rel="stylesheet" href="{{ '/index.css' | relative_url }}" />
   </head>
 
   <body>
     {% include nav.html %}
 
-    <main class="wrap">
-      {{ content }}
-    </main>
+    <main class="wrap">{{ content }}</main>
 
     {% include footer.html %}
   </body>
