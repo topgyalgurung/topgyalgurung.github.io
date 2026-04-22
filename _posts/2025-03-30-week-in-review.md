@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Week in review – Mar 30"
-date: 2025-04-05
+date: 2026-04-05
 ---
 
 Over the last two weeks, I’ve been thinking a lot about dreams and manifestation. Not in a vague, wishful way, but in the sense of showing up daily and pushing forward even when there’s no immediate result. There’s a lot of advice out there from people like Elon Musk or Marc Andreessen that leans toward pure execution over introspection. And while that mindset works at a certain level, I’ve realized that for most of us, taking time to reflect matters. Figuring out what you actually want, your mission, your direction, that clarity becomes fuel. Once you truly know it, then you can go all in.

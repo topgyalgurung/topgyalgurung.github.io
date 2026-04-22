@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Week in review – Mar 8"
-date: 2025-03-08
+date: 2026-03-08
 ---
 
 **Take Bold Action. Luck Favors the Prepared.**
