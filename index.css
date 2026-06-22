@@ -339,6 +339,52 @@ nav {
 
 .t-body a:hover {
   text-decoration: underline;
+
+}
+
+/* featured project */
+.featured-project {
+  padding: 2rem;
+}
+
+.featured-project h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.featured-project p {
+  max-width: 800px;
+  margin-bottom: 1.5rem;
+}
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.project-gallery figure {
+  margin: 0;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.project-gallery img:hover {
+  transform: translateY(-3px);
+}
+
+.project-gallery figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 /* ── Quotes ── */
@@ -372,27 +418,9 @@ nav {
 }
 
 /* ── Footer ── */
-
-footer {
+.site-footer {
   border-top: 1px solid var(--line);
-  margin-top: 2rem;
-}
-
-.foot-inner {
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.82rem;
-  color: var(--faint);
-}
-
-.foot-inner a {
-  color: var(--muted);
-}
-
-.foot-inner a:hover {
-  color: var(--text);
+  padding: 2rem 0;
 }
 
 /* ── Responsive ── */

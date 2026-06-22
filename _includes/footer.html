@@ -1,49 +1,7 @@
-<footer>
- <section class="section">
+<footer class="site-footer">
+  <div class="wrap">
 
-<div class="section-head">
-<h2>Let's Build Something Together</h2>
-</div>
+    <p>© <span id="yr"></span> Topgyal Gurung</p>
 
-<p style="max-width:700px;">
-I'm currently seeking Software Engineering opportunities where I can contribute
-to building reliable software while continuing to grow in backend engineering,
-distributed systems, and AI-powered applications.
-</p>
-
-<div class="hero-actions">
-
-<a class="pill dark" href="./assets/Resume.pdf" target="_blank">
-Resume
-</a>
-
-<a class="pill" href="mailto:topgyaltsering3@gmail.com">
-Email
-</a>
-
-<a class="pill" href="https://www.linkedin.com/in/topgyal" target="_blank">
-LinkedIn
-</a>
-
-<a class="pill" href="https://github.com/topgyalgurung" target="_blank">
-GitHub
-</a>
-
-</div>
-
-</section>
+  </div>
 </footer>
-
-<script>
-  document.getElementById("yr").textContent = new Date().getFullYear();
-  const toggle = document.getElementById("navToggle");
-  const links = document.getElementById("navLinks");
-  if (toggle && links) {
-    toggle.addEventListener("click", () => links.classList.toggle("open"));
-    links
-      .querySelectorAll("a")
-      .forEach((a) =>
-        a.addEventListener("click", () => links.classList.remove("open")),
-      );
-  }
-</script>
