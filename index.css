@@ -356,19 +356,12 @@ nav {
   max-width: 800px;
   margin-bottom: 1.5rem;
 }
-.project-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-}
 
-.project-gallery img {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: contain;
-    border-radius: 12px;
-    border: 1px solid var(--line);
-    background: white;
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
 }
 
 .project-gallery figure {
@@ -377,10 +370,12 @@ nav {
 
 .project-gallery img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  max-height: 260px;
+  object-fit: contain;
+  object-position: top;
   border: 1px solid var(--line);
   border-radius: 12px;
+  background: #fff;
   transition: transform 0.2s ease;
 }
 
@@ -389,10 +384,10 @@ nav {
 }
 
 .project-gallery figcaption {
-  margin-top: 0.5rem;
+  margin-top: .5rem;
   text-align: center;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: .9rem;
 }
 
 /* ── Quotes ── */
