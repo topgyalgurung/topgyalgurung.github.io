@@ -386,6 +386,26 @@ nav {
   font-size: .9rem;
 }
 
+.project-shot {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.project-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-shot figcaption {
+  padding: .75rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
 /* ── Quotes ── */
 
 .quote-card {
