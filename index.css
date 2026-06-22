@@ -357,10 +357,18 @@ nav {
   margin-bottom: 1.5rem;
 }
 .project-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.project-gallery img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: white;
 }
 
 .project-gallery figure {
