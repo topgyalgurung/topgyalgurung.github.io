@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Topgyal Gurung — Full-Stack Engineer</title>
-<meta name="description" content="Topgyal Gurung — full-stack software engineer in New York City. Built and shipped Himalayan Connect NYC end to end. React, Next.js, Node, PostgreSQL.">
+<meta name="description" content="Topgyal Gurung — full-stack software engineer in New York City with backend and database expertise. JavaScript, TypeScript, Python, Java, SQL, React, Next.js, Node.js, PostgreSQL, AWS. B.A. Computer Science, Hunter College.">
 <meta name="theme-color" content="#F3EEE3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -153,16 +153,20 @@
 
   .scroll-cue{
     margin-top: clamp(48px,7vw,88px);
-    display:flex; align-items:center; gap:12px;
+    display:inline-flex; align-items:center; gap:12px; width: fit-content;
     font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft);
     text-transform: uppercase; letter-spacing:.08em;
+    text-decoration: none; transition: color .2s;
   }
+  .scroll-cue:hover, .scroll-cue:focus-visible{ color: var(--clay-deep); }
   .scroll-cue::after{ content:"↓"; font-size:14px; animation: bob 2.2s ease-in-out infinite; }
+  .scroll-cue:hover::after{ animation-play-state: paused; transform: translateY(3px); }
   @media (prefers-reduced-motion: reduce){ .scroll-cue::after{ animation:none; } }
   @keyframes bob{ 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(5px); } }
 
   /* ---------- section shell ---------- */
   section{ padding: clamp(56px,9vw,108px) 0; position:relative; }
+  section[id]{ scroll-margin-top: 62px; }
   .section-head{ display:grid; grid-template-columns: 1fr; gap: 14px; margin-bottom: clamp(32px,5vw,56px); max-width: 70ch; }
   .section-head h2{ font-size: clamp(28px,4vw,42px); }
 
@@ -232,6 +236,13 @@
   .work-card .yr{ font-family: var(--font-mono); font-size: 11.5px; color: var(--clay-deep); letter-spacing:.06em; }
   .work-card p{ font-size: 14.5px; color: var(--ink-soft); margin:0; }
   .work-card .chip-row{ margin-top:auto; }
+  .work-link{
+    font-family: var(--font-mono); font-size: 12px; letter-spacing:.04em;
+    color: var(--clay-deep); text-decoration:none; width: fit-content;
+    border-bottom: 1px solid transparent; padding-bottom: 2px;
+    transition: border-color .2s;
+  }
+  .work-link:hover, .work-link:focus-visible{ border-color: var(--clay-deep); }
 
   .work-card.span-3{ grid-column: span 3; }
   .work-card.span-2{ grid-column: span 2; }
@@ -246,7 +257,7 @@
   }
 
   /* ---------- stack ---------- */
-  .stack-groups{ display:grid; grid-template-columns: repeat(4,1fr); gap: 28px; margin-top: 8px; }
+  .stack-groups{ display:grid; grid-template-columns: repeat(3,1fr); gap: 28px 32px; margin-top: 8px; }
   .stack-group h3{
     font-family: var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em;
     color: var(--clay-deep); margin-bottom: 12px; font-weight:500;
@@ -258,7 +269,7 @@
   /* ---------- contact / footer ---------- */
   #contact{ padding-bottom: clamp(72px,10vw,120px); }
   .contact-grid{ display:grid; grid-template-columns: 1.3fr 1fr; gap: var(--gutter); align-items:start; }
-  .contact-grid h2{ font-size: clamp(30px,5vw,48px); max-width: 16ch; }
+  .contact-grid h2{ font-size: clamp(30px,4.4vw,44px); max-width: 22ch; }
   .contact-grid p{ font-size: 16.5px; color: var(--ink-soft); max-width: 50ch; margin-top: 16px; }
   .contact-links{ display:flex; flex-direction:column; gap: 14px; font-family: var(--font-mono); font-size: 14px; }
   .contact-links a{ text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:6px; transition: color .2s, border-color .2s; }
@@ -326,19 +337,20 @@
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <p class="eyebrow">Full-stack engineer — New York, NY</p>
+          <p class="eyebrow">Full-stack software engineer — New York, NY</p>
           <h1>Topgyal<br><em>Gurung</em></h1>
-          <p class="hero-tagline">I build the infrastructure communities actually use — from the auth layer to the search bar that finds someone a place to live tonight.</p>
+          <p class="hero-tagline">Full-stack engineer with backend and database depth. I design scalable systems and ship production applications end to end — API layer through deployment.</p>
         </div>
         <div class="hero-meta">
           <span>B.A. Computer Science, Hunter College</span>
           <span>Springboard Software Engineering Fellow</span>
+          <span>AWS Developer Associate — in progress</span>
           <a href="mailto:topgyal.gurung@gmail.com">topgyal.gurung@gmail.com</a>
           <a href="https://github.com/topgyalgurung" target="_blank" rel="noopener">github.com/topgyalgurung</a>
           <a href="https://linkedin.com/in/topgyal" target="_blank" rel="noopener">linkedin.com/in/topgyal</a>
         </div>
       </div>
-      <p class="scroll-cue">Flagship build below</p>
+      <a class="scroll-cue" href="#flagship">Flagship build below</a>
     </div>
   </section>
 
@@ -347,41 +359,46 @@
   <section id="about" class="reveal">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">The long way here</p>
-        <h2>Hospitality, operations, data — then code.</h2>
+        <p class="eyebrow">About</p>
+        <h2>Backend depth, full-stack range.</h2>
       </div>
       <div class="about-grid">
-        <p class="pull-fact">Systems fail in the seams. Someone has to own them.</p>
+        <p class="pull-fact">Systems fail in the seams. I build like someone has to own them.</p>
         <div>
-          <p>Before production code, I ran the floor at Michelin-starred dining rooms, kept a nonprofit's vendor relationships and digital records from falling apart, and chased a geospatial parsing bug through SQL and BigQuery against an acquisition deadline. Different rooms, same job: notice where things break, and fix the part underneath.</p>
-          <p>A B.A. in Computer Science and a Springboard fellowship gave that instinct a stack — React, Next.js, Node, PostgreSQL — and a focus. I'm building for the Himalayan and immigrant community I grew up around in New York City, because that community deserves software built for it, not software it has to get by on.</p>
+          <p>I'm a full-stack software engineer in New York City with a B.A. in Computer Science from Hunter College and a Springboard Software Engineering Fellowship. My strength is backend and database work — designing APIs, modeling data, and taking applications through to production deployment.</p>
+          <p>My route into engineering ran through data and operations: geospatial pipelines in SQL and BigQuery at Real Factors, neural machine-translation research on CUNY's HPC cluster, and ownership of digital systems at a nonprofit. That background shapes how I build — I plan for the failure modes, not just the happy path.</p>
+          <p>Most recently I designed, built, and deployed <a href="#flagship">Himalayan Connect NYC</a> as sole engineer, from Figma designs through a hardened production release. I'm currently extending into cloud and AI — AWS Developer Associate in progress, plus LLM application development with LangChain, RAG pipelines, and the Vercel AI SDK.</p>
         </div>
       </div>
 
       <div class="timeline">
         <div class="timeline-row">
-          <time>2018–19</time><div class="timeline-rule"></div>
-          <div><h3>Machine Learning Researcher — Hunter College</h3><p>Trained and optimized a neural attention model (Codenn) in PyTorch on CUNY's HPC cluster; researched NLP machine-translation methods with Prof. Jia Xu.</p></div>
+          <time>2026–28</time><div class="timeline-rule"></div>
+          <div><h3>Board Member (Volunteer) — Lo-Nyamship Association USA</h3><p>Elected to the board alongside serving as President of the School Student Alumni Association (2026–27).</p></div>
         </div>
         <div class="timeline-row">
-          <time>2019</time><div class="timeline-rule"></div>
-          <div><h3>Data Engineer Intern — Real Factors (acquired by 7Park Data)</h3><p>Resolved geospatial data-parsing errors in SQL/BigQuery, restoring map visualizations ahead of an acquisition deadline; built dashboards in Apache Superset.</p></div>
+          <time>2026</time><div class="timeline-rule"></div>
+          <div><h3>Data Analytics — COOP Careers</h3><p>Analytics program covering SQL, data modeling, and business intelligence practice.</p></div>
+        </div>
+        <div class="timeline-row">
+          <time>2024–25</time><div class="timeline-rule"></div>
+          <div><h3>Software Engineer Fellow — Springboard</h3><p>Designed, built, and deployed Himalayan Connect NYC end to end — Figma through production. Also shipped a secure Node/Express/MongoDB REST API and a fully tested React application.</p></div>
+        </div>
+        <div class="timeline-row">
+          <time>2021–22</time><div class="timeline-rule"></div>
+          <div><h3>Tech Operations Associate — Krishnamurthy Tandon Foundation</h3><p>Managed vendor relationships and third-party integrations; rebuilt contact databases, records, and project documentation to improve accuracy and accessibility.</p></div>
         </div>
         <div class="timeline-row">
           <time>2020</time><div class="timeline-rule"></div>
           <div><h3>B.A. in Computer Science — Hunter College</h3><p>CUNY 2X Tech Talent Pipeline Residency.</p></div>
         </div>
         <div class="timeline-row">
-          <time>2021–22</time><div class="timeline-rule"></div>
-          <div><h3>Tech Operations Associate — Krishnamurthy Tandon Foundation</h3><p>Ran vendor relationships and digital infrastructure across business, music, and nonprofit initiatives; rebuilt contact and records systems from scratch.</p></div>
+          <time>2019</time><div class="timeline-rule"></div>
+          <div><h3>Data Engineer Intern — Real Factors (acquired by 7Park Data)</h3><p>Resolved geospatial data-parsing errors in SQL/BigQuery, restoring map visualizations ahead of an acquisition deadline; built BI dashboards in Apache Superset.</p></div>
         </div>
         <div class="timeline-row">
-          <time>2024–25</time><div class="timeline-rule"></div>
-          <div><h3>Software Engineer Fellow — Springboard</h3><p>Designed, built, and deployed Himalayan Connect NYC end to end — Figma through production.</p></div>
-        </div>
-        <div class="timeline-row">
-          <time>2026—</time><div class="timeline-rule"></div>
-          <div><h3> Volunteer Accountant, Lo-Nyamship Association USA</h3><p>Staying rooted in community leadership alongside the engineering search.</p></div>
+          <time>2018–19</time><div class="timeline-rule"></div>
+          <div><h3>Machine Learning Researcher — Hunter College</h3><p>Trained and optimized a neural attention model (Codenn) in PyTorch on CUNY's HPC cluster; evaluated NLP machine-translation models with Prof. Jia Xu.</p></div>
         </div>
       </div>
     </div>
@@ -452,6 +469,20 @@
 
       <div class="work-grid">
         <div class="work-card span-3">
+          <span class="yr">Nov 2025</span>
+          <h3>Silicon Valley Trail</h3>
+          <p>Modular Flask simulation game built with the Application Factory pattern and Blueprints — a rule-based game engine with persistent state and OpenWeather API integration backed by mock fallbacks for reliability.</p>
+          <div class="chip-row"><span class="chip">Flask</span><span class="chip">SQLAlchemy</span><span class="chip">PyTest</span></div>
+          <a class="work-link" href="https://github.com/topgyalgurung/silicon-valley-trail" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+        <div class="work-card span-3">
+          <span class="yr">Sep 2025</span>
+          <h3>RAG-based Knowledge Retrieval App</h3>
+          <p>Retrieval-Augmented Generation system for semantic document search and conversational Q&amp;A — chunking, vector embeddings, and cosine-similarity retrieval grounding LLM responses via prompt engineering.</p>
+          <div class="chip-row"><span class="chip">Python</span><span class="chip">LangChain</span><span class="chip">ChromaDB</span></div>
+          <a class="work-link" href="https://github.com/topgyalgurung/llm-project-monorepo/tree/master/LANGCHAIN-RAG" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+        <div class="work-card span-3">
           <span class="yr">2025</span>
           <h3>Financial Invoice Dashboard</h3>
           <p>Secure full-stack Next.js dashboard with Auth.js authentication, streaming Suspense, and a Postgres.js data layer — search, pagination, and caching across invoice CRUD workflows.</p>
@@ -496,19 +527,27 @@
       <div class="stack-groups">
         <div class="stack-group">
           <h3>Languages</h3>
-          <p>JavaScript, TypeScript, Python, SQL, HTML, CSS, Shell Scripting</p>
+          <p>JavaScript, TypeScript, Python, Java, SQL, HTML, CSS, Shell Scripting</p>
         </div>
         <div class="stack-group">
           <h3>Frameworks &amp; Libraries</h3>
-          <p>React, Redux, Next.js, Node.js, Express</p>
+          <p>React, Redux, Next.js, Node.js, Express, Spring Boot, Flask</p>
         </div>
         <div class="stack-group">
           <h3>Databases &amp; Cloud</h3>
           <p>PostgreSQL, MongoDB, Redis, GCP BigQuery, Docker, Kubernetes, AWS (Developer Associate in progress)</p>
         </div>
         <div class="stack-group">
+          <h3>AI &amp; Emerging Tech</h3>
+          <p>Vercel AI SDK, LangChain, OpenAI APIs, Claude APIs, RAG pipelines, vector databases</p>
+        </div>
+        <div class="stack-group">
           <h3>APIs &amp; Practices</h3>
           <p>REST, GraphQL, Git, GitHub Actions (CI/CD), Test-Driven Development, Postman</p>
+        </div>
+        <div class="stack-group">
+          <h3>Certifications</h3>
+          <p>Google AI Essentials, AWS Academy Cloud Foundations, Google Data Analytics Professional, Claude Code in Action (Anthropic)</p>
         </div>
       </div>
     </div>
@@ -518,8 +557,8 @@
     <div class="wrap">
       <div class="contact-grid">
         <div>
-          <h2>Let's build something that has to actually work.</h2>
-          <p>Open to full-stack roles in New York City and remote. If your team needs someone who treats the seams as seriously as the features — I'd like to hear about it.</p>
+          <h2>Open to full-stack, backend, and AI/GenAI engineering roles.</h2>
+          <p>Available for full-time roles in New York City or remote. If your team needs an engineer who owns work from API design through production deployment — or who can build RAG and LLM features on top of it — I'd like to hear from you.</p>
           <a class="resume-btn" href="/assets/Resume.pdf" download>Download résumé →</a>
         </div>
         <div class="contact-links">
@@ -537,7 +576,6 @@
 <footer>
   <span>© <span id="yr"></span> Topgyal Gurung</span>
   <svg class="summit-mark" viewBox="0 0 100 60" aria-hidden="true"><use href="#contour" x="-260" y="-190" width="600" height="420" transform="scale(0.62)"></use></svg>
-  <span>Designed &amp; built by hand</span>
 </footer>
 
 <script>
