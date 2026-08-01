@@ -236,6 +236,13 @@
   .work-card .yr{ font-family: var(--font-mono); font-size: 11.5px; color: var(--clay-deep); letter-spacing:.06em; }
   .work-card p{ font-size: 14.5px; color: var(--ink-soft); margin:0; }
   .work-card .chip-row{ margin-top:auto; }
+  .work-link{
+    font-family: var(--font-mono); font-size: 12px; letter-spacing:.04em;
+    color: var(--clay-deep); text-decoration:none; width: fit-content;
+    border-bottom: 1px solid transparent; padding-bottom: 2px;
+    transition: border-color .2s;
+  }
+  .work-link:hover, .work-link:focus-visible{ border-color: var(--clay-deep); }
 
   .work-card.span-3{ grid-column: span 3; }
   .work-card.span-2{ grid-column: span 2; }
@@ -466,12 +473,14 @@
           <h3>Silicon Valley Trail</h3>
           <p>Modular Flask simulation game built with the Application Factory pattern and Blueprints — a rule-based game engine with persistent state and OpenWeather API integration backed by mock fallbacks for reliability.</p>
           <div class="chip-row"><span class="chip">Flask</span><span class="chip">SQLAlchemy</span><span class="chip">PyTest</span></div>
+          <a class="work-link" href="https://github.com/topgyalgurung/silicon-valley-trail" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
         <div class="work-card span-3">
           <span class="yr">Sep 2025</span>
           <h3>RAG-based Knowledge Retrieval App</h3>
           <p>Retrieval-Augmented Generation system for semantic document search and conversational Q&amp;A — chunking, vector embeddings, and cosine-similarity retrieval grounding LLM responses via prompt engineering.</p>
           <div class="chip-row"><span class="chip">Python</span><span class="chip">LangChain</span><span class="chip">ChromaDB</span></div>
+          <a class="work-link" href="https://github.com/topgyalgurung/llm-project-monorepo/tree/master/LANGCHAIN-RAG" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
         <div class="work-card span-3">
           <span class="yr">2025</span>
