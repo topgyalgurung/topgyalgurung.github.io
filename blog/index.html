@@ -1,35 +1,21 @@
 ---
 layout: default
 title: Blog
-description: Weekly learnings and things I picked up along the way
+description: Notes on things I have been learning.
 ---
 
-<section class="section">
-  <div class="section-head">
-    <h2>Weekly learnings</h2>
-    <span class="note">Something I learned this week</span>
-  </div>
+<h1>Blog</h1>
+<p>Notes on things I have been learning.</p>
 
-  {% if site.posts.size > 0 %}
-  <div class="g g2">
-    {% for post in site.posts %}
-    <article class="card">
-      <h3>
-        <a href="{{ post.url | relative_url }}" class="accent-link"
-          >{{ post.title }}</a
-        >
-      </h3>
-      <p class="faint-text" style="font-size: 0.88rem; margin-bottom: 0.5rem">
-        {{ post.date | date: "%B %d, %Y" }}
-      </p>
-      <p>
-        {{ post.excerpt | default: post.content | strip_html | truncate: 120 }}
-      </p>
-      <a href="{{ post.url | relative_url }}">Read more</a>
-    </article>
-    {% endfor %}
-  </div>
-  {% else %}
-  <p class="section-footnote">No posts yet. Check back soon.</p>
-  {% endif %}
-</section>
+{% if site.posts.size > 0 %}
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <p class="meta">{{ post.date | date: "%B %d, %Y" }}</p>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No posts yet.</p>
+{% endif %}
